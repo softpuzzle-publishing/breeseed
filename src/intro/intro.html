@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @@include('@@webRoot/_include/_head.html')
+</head>
+
+<body>
+    <!-- 실컨텐츠 -->
+    <div id="wrap">
+        <div class="intro">
+            <div class="skip">
+                <a href="../login/index.html" class="text-underline">건너뛰기</a>
+            </div>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="intro-item intro-item-1">
+                            <strong>Lorem ipsum dolor</strong>
+                            <p>Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit.
+                            Quis feugiat duis quam urna, posuere odio
+                            massa pharetra. Sit lectus
+                            lementum. Netus vel velit maecenas
+                            maecenas sed orci</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="intro-item intro-item-2">
+                            <strong>Lorem ipsum dolor</strong>
+                            <p>Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit.
+                                Quis feugiat duis quam urna, posuere odio
+                                massa pharetra. Sit lectus
+                                lementum. Netus vel velit maecenas
+                                maecenas sed orci</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="intro-item intro-item-3">
+                            <strong>Lorem ipsum dolor</strong>
+                            <p>Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit.
+                                Quis feugiat duis quam urna, posuere odio
+                                massa pharetra. Sit lectus
+                                lementum. Netus vel velit maecenas
+                                maecenas sed orci</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <div class="start">
+                <a href="../login/index.html" class="btn btn-light w-100 text-primary">시작하기</a>
+            </div>
+            <script>
+                const introSwiper = new Swiper('.intro .swiper-container', {
+                    pagination: {
+                        el: '.swiper-pagination',
+                        type: 'bullets',
+                    },
+                    on: {
+                        beforeTransitionStart: function(){
+                            document.querySelector('.intro').setAttribute('data-active-index', introSwiper.realIndex);
+                        }
+                    }
+                });
+            </script>
+        </div>
+    </div>
+    <!-- //실컨텐츠 -->
+
+</body>
+
+</html>

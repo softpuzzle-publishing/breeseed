@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @@include('@@webRoot/_include/_head.html')
+</head>
+
+<body>
+    <div id="wrap">
+
+        @@include('@@webRoot/_include/_header.html')
+        <div id="container">
+            <main id="main">
+
+                <!-- 실컨텐츠 -->
+                <div class="d-flex flex-column h-100">
+                    <div class="flex-grow-1">
+                        <div class="review-form">
+                            <span class="badge bg-primary">필수</span>
+                            <div class="title">과제제목과제제목과제제목과제제목과제제목과제제목최대글자스물네자</div>
+                            <div class="desc">과제설명다설줄과제설명다설줄과제설명다설줄과제설명다설줄과제설명다설줄과제설명다설줄과제설명다설줄과제설명다설줄과제설명다설줄과제설명다설줄과제설명다설줄과제설명다설줄과제설명다설줄과제설명다설줄과제설명다설줄과제설명다설줄과제설명다설줄과제설명다설줄과제설명글자수백자내외권장</div>
+                            <div>
+                                <h2 class="line-through-title">감정</h2>
+                                <textarea class="form-control" rows="2"></textarea>
+                                <div class="length-count">
+                                    <strong>0</strong> / 250
+                                </div>
+                            </div>
+                            <div>
+                                <h2 class="line-through-title">신체감각</h2>
+                                <textarea class="form-control" rows="2"></textarea>
+                                <div class="length-count">
+                                    <strong>0</strong> / 250
+                                </div>
+                            </div>
+                            <div>
+                                <h2 class="line-through-title">생각</h2>
+                                <textarea class="form-control" rows="2"></textarea>
+                                <div class="length-count">
+                                    <strong>0</strong> / 250
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom">
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-primary" type="button">저장</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- //실컨텐츠 -->
+
+            </main>
+        </div>
+    </div>
+    @@include('@@webRoot/_include/_modal.html')
+</body>
+
+</html>

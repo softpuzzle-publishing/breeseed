@@ -1,0 +1,13 @@
+.login-wrap{
+    margin: -30px -30px 0;background: $primary;height: 100vh;padding: 30px 30px 15px;
+    .copyright{color: #fff;font-size: 13px;letter-spacing: -0.5px;text-align: center;}
+}
+
+.login-type{
+    .btn{position: relative;}
+    i[class^=icon]{position: absolute;left: 10px;top: 50%;transform: translateY(-50%);}
+    .tip{
+        background: #ffee00;font-size: 13px;color: #312227;padding: 5px 15px;border-radius: 10px; position: absolute;left: 5px;top: -43px;
+        &::before{content: '';width: 0;height: 0;border-style: solid;border-width: 10px 6px 0 6px;border-color: #ffee00 transparent transparent transparent;position: absolute;left: 19px;bottom: -10px;}
+    }
+}

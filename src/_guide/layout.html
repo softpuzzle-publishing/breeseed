@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @@include('@@webRoot/_include/_head.html')
+</head>
+
+<body>
+    <div id="wrap">
+
+        @@include('@@webRoot/_include/_header.html')
+        <div id="container">
+            <main id="main">
+
+                <!-- 실컨텐츠 -->
+                <div class="d-flex flex-column h-100">
+                    <div class="flex-grow-1">
+                        <div style="background-color: #ddd;">
+                            contents <br>contents <br>contents <br>
+                        </div>
+                    </div>
+                    <div class="bottom">
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-primary" type="button">Button</button>
+                            <button class="btn btn-secondary" type="button">Button</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- //실컨텐츠 -->
+
+            </main>
+        </div>
+    </div>
+    @@include('@@webRoot/_include/_modal.html')
+</body>
+
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @@include('@@webRoot/_include/_head.html')
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+
+        @@include('@@webRoot/_include/_header.html')
+        <div id="container">
+            <main id="main">
+
+                <!-- 실컨텐츠 -->
+                <div class="d-flex flex-column h-100">
+                    <div class="flex-grow-1">
+                        <div class="congratulation">
+                            <p class="text-heading">
+                                <span class="text-primary">Congratulation!</span><br>
+                                회원가입을 축하드립니다 :)
+                            </p>
+                            <div class="code-swipe">
+                                <div class="text-end">
+                                    <strong>기관코드 인증하기</strong>
+                                    <p>기관코드가 있으신 경우에만 <br>당겨주세요.</p>
+                                </div>
+                                <div class="swipe-area">
+                                    <div class="swipe"><i class="icon-swiper-arrow"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper">
+                            <div href="#none" id="swipe-end" class="swipe-end">
+                                <a id="swipe-btn" class="swipe-btn">1</a>
+                            </div>
+
+                            <div class="unlock">
+                                Unlocked
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom">
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-primary" type="button">가입완료</button>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    var swiperDragged = false,
+                        startX,
+                        endX = 0;
+
+                    function swipe() {
+                        var $swipe = $('.swiper'),
+                            $btn = $('.swipe-btn', $swipe);
+
+                        TweenLite.to('#swipe-end', 0, { x: 0, y: 12 });
+
+                        $btn.on('click touchend', function (e) {
+                            e.preventDefault();
+                        }).on('touchstart mousedown', function (e) {
+                            e.preventDefault();
+                            swiperDragged = true;
+                            startX = typeof e.pageX != 'undefined' ? e.pageX : e.originalEvent.touches[0].pageX;
+                            endX = 0;
+                        })
+
+                        $(document).on('touchmove mousemove', function (e) {
+                            if (swiperDragged) {
+                                actualX = typeof e.pageX != 'undefined' ? e.pageX : e.originalEvent.touches[0].pageX;
+                                endX = Math.max(0, Math.min(115, startX - actualX));
+                                TweenLite.to('#swipe-btn', 0, { x: -endX });
+                            }
+                        }).on('touchend mouseup', function (e) {
+                            if (swiperDragged) {
+                                swiperDragged = false;
+                                if (endX < 100) {
+                                    TweenLite.to('#swipe-btn', .5, { x: 0 });
+                                } else {
+                                    TweenLite.to('#swipe-btn', .1, { x: -115 });
+                                    setTimeout(function () {
+                                        document.location.href = 'code.html';
+                                    }, 1200);
+                                }
+                                endX = 0;
+                            }
+                        });
+                    }
+
+                    swipe();
+                </script>
+                <!-- //실컨텐츠 -->
+
+            </main>
+        </div>
+    </div>
+    @@include('@@webRoot/_include/_modal.html')
+</body>
+
+</html>

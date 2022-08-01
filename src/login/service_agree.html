@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @@include('@@webRoot/_include/_head.html')
+</head>
+
+<body>
+    <div id="wrap">
+
+        @@include('@@webRoot/_include/_header.html')
+        <div id="container">
+            <main id="main">
+
+                <!-- 실컨텐츠 -->
+                <div class="d-flex flex-column h-100">
+                    <div class="flex-grow-1">
+                        <div class="agree point">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="agreeAll">
+                                <label class="form-check-label" for="agreeAll">
+                                    전체 동의하기
+                                </label>
+                            </div>
+                        </div>
+                        <div class="agree">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="agree1">
+                                <label class="form-check-label" for="agree1">
+                                    이용약관 동의 <span class="text-primary">(필수)</span>
+                                </label>
+                            </div>
+                            <button type="button" aria-label="내용보기"><i class="icon-arrow-right"></i></button>
+                        </div>
+                        <div class="agree">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="agree2">
+                                <label class="form-check-label" for="agree2">
+                                    개인정보처리방침 동의 <span class="text-primary">(필수)</span>
+                                </label>
+                            </div>
+                            <button type="button" aria-label="내용보기"><i class="icon-arrow-right"></i></button>
+                        </div>
+                        <div class="agree">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="agree3">
+                                <label class="form-check-label" for="agree3">
+                                    개인정보 수집 및 이용 동의 <span class="text-primary">(필수)</span>
+                                </label>
+                            </div>
+                            <button type="button" aria-label="내용보기"><i class="icon-arrow-right"></i></button>
+                        </div>
+                        <div class="agree">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="agree4">
+                                <label class="form-check-label" for="agree4">
+                                    마케팅 수신 동의 <span class="text-primary">(필수)</span>
+                                </label>
+                            </div>
+                            <button type="button" aria-label="내용보기"><i class="icon-arrow-right"></i></button>
+                        </div>
+                        <div class="agree point">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="agree5">
+                                <label class="form-check-label" for="agree5">
+                                    만 14세 이상입니다. <span class="text-primary">(필수)</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom">
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-primary" type="button" disabled onclick="document.location.href='../join/join_step_1.html'">회원가입</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- //실컨텐츠 -->
+
+            </main>
+        </div>
+    </div>
+    @@include('@@webRoot/_include/_modal.html')
+</body>
+
+</html>

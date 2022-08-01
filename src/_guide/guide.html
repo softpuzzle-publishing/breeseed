@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title>(guide)BreeSeed</title>
+    @@include('@@webRoot/_include/_head.html')
+    <style>
+        body{background: #fff;padding: 1rem 0 2rem;}
+        .container-fluid{ display:flex; flex-wrap: wrap;}
+        section {border-bottom: 1px solid #e8e8e8;flex: 0 0 50%;padding:1rem;}
+        h1 {font-size: 1.5rem;color: #df1f1f;margin-bottom: .5rem;}
+        p{font-size: 1rem;}
+        section > div > div{margin-bottom: 3px;}
+        section > div > div .form-select{margin-bottom: 2px;}
+        section > div > div .form-control{margin-bottom: 2px;}
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <section>
+            <h1>Text</h1>
+            <div>
+                <p>
+                    <span>text normal(400)</span>
+                    <span class="fw-medium">text medium(500)</span>
+                    <span class="fw-bold">text bold(700)</span>
+                </p>
+                <p class="text-dark">text default #3c3c3c</p>
+                <p class="text-secondary">text secondary</p>
+                <p class="text-info">text info</p>
+                <p class="text-success">text success</p>
+                <p class="text-danger">text danger</p>
+                <p class="text-start">align start</p>
+                <p class="text-center">align center</p>
+                <p class="text-end">align end</p>
+                <div class="text-heading">비밀번호를 6개월 동안 <br><span class="text-primary">변경하지 않으셨습니다.</span></div>
+                <div class="text-basis">회원님, 같은 비밀번호를 오래 사용하셨네요.</div>
+            </div>
+        </section>
+        <section>
+            <h1>badge</h1>
+            <div>
+                <span class="badge bg-primary">primary</span>
+                <span class="badge bg-secondary">secondary</span>
+                <span class="badge bg-success">사용 가능</span>
+                <span class="badge bg-danger">사용 불가</span>
+                <span class="badge bg-warning">일시 중지</span>
+                <span class="badge badge-outline-primary">공지</span>
+                <span class="badge badge-outline-danger">긴급</span>
+            </div>
+        </section>
+        <section>
+            <h1>버튼</h1>
+            <div class="mb-2">
+                <div>
+                    <button class="btn btn-primary w-100" type="button">button block</button>
+                    <button class="btn btn-primary w-100" type="button" disabled>button block disabled</button>
+                </div>
+                <div>
+                    <button class="btn btn-secondary" type="button">secondary</button>
+                    <button class="btn btn-dark" type="button">dark</button>
+                    <button class="btn btn-outline-dark" type="button">outline-dark</button>
+                </div>
+                <div>
+                    <button class="btn btn-primary">primary</button>
+                    <button class="btn btn-primary btn-sm btn-flat" type="button">button small</button>
+                    <button class="btn btn-outline-dark btn-sm" type="button">button small</button>
+                    <button class="btn btn-primary" disabled>primary disabled</button>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h1>Form - input & select</h1>
+            <div>
+                <div><input type="text" class="form-control" placeholder="placeholder"></div>
+                <div class="position-relative">
+                    <input type="tel" class="form-control" id="" placeholder="인증번호 입력">
+                    <button type="button" class="btn-input-x" aria-label="삭제"><i class="icon-x"></i></button>
+                </div>
+                <div>
+                    <select class="form-select" aria-label="Default select">
+                        <option selected>선택하세요</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                </div>
+                <p class="invalid-feedback" style="display: block">유효성 invalid feedback</p>
+                <p class="valid-feedback" style="display: block">유효성 valid feedback</p>
+            </div>
+        </section>
+        <section>
+            <h1>Form - radio & checkbox</h1>
+            <div>
+                <div class="d-flex">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Default checkbox
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDisabled" disabled>
+                        <label class="form-check-label" for="flexCheckDisabled">
+                            Disabled checkbox
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckCheckedDisabled" checked disabled>
+                        <label class="form-check-label" for="flexCheckCheckedDisabled">
+                            Disabled checked checkbox
+                        </label>
+                    </div>
+                </div>
+                <div class="d-flex mt-1">
+                    <div class="form-check form-check-circle">
+                        <input class="form-check-input" type="checkbox" name="flexCheckCircle" id="flexCheckCircle1">
+                        <label class="form-check-label" for="flexCheckCircle1">
+                            Circle checkbox
+                        </label>
+                    </div>
+                    <div class="form-check form-check-circle">
+                        <input class="form-check-input" type="checkbox" name="flexCheckCircle" id="flexCheckCircle2" checked>
+                        <label class="form-check-label" for="flexCheckCircle2">
+                            Circle checked checkbox
+                        </label>
+                    </div>
+                    <div class="form-check form-check-circle">
+                        <input class="form-check-input" type="checkbox" name="flexRadioDisabled" id="flexRadioDisabled" disabled>
+                        <label class="form-check-label" for="flexRadioDisabled">
+                            Disabled checkbox
+                        </label>
+                    </div>
+                    <div class="form-check form-check-circle">
+                        <input class="form-check-input" type="checkbox" name="flexRadioDisabled" id="flexRadioCheckedDisabled" checked disabled>
+                        <label class="form-check-label" for="flexRadioCheckedDisabled">
+                            Disabled checked checkbox
+                        </label>
+                    </div>
+                </div>
+                <div class="d-flex mt-1">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            Default radio
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                        <label class="form-check-label" for="flexRadioDefault2">
+                            Default checked radio
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDisabled" id="flexRadioDisabled" disabled>
+                        <label class="form-check-label" for="flexRadioDisabled">
+                            Disabled radio
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDisabled" id="flexRadioCheckedDisabled" checked disabled>
+                        <label class="form-check-label" for="flexRadioCheckedDisabled">
+                            Disabled checked radio
+                        </label>
+                    </div>
+                </div>
+                <div class="mt-1">
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                        <label class="form-check-label" for="flexSwitchCheckDefault">Default switch checkbox input</label>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+                        <label class="form-check-label" for="flexSwitchCheckChecked">Checked switch checkbox input</label>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDisabled" disabled>
+                        <label class="form-check-label" for="flexSwitchCheckDisabled">Disabled switch checkbox input</label>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckCheckedDisabled" checked disabled>
+                        <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">Disabled checked switch checkbox input</label>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @@include('@@webRoot/_include/_head.html')
+</head>
+
+<body>
+    <div id="wrap">
+
+        @@include('@@webRoot/_include/_header.html')
+        <div id="container">
+            <main id="main">
+
+                <!-- 실컨텐츠 -->
+                <div class="d-flex flex-column h-100">
+                    <div class="flex-grow-1">
+                        <div class="text-center">
+                            <div class="text-basis text-gray">회원님께서 가입하신 아이디 입니다.</div>
+                            <div class="text-heading m-t-30"><span class="text-primary">med*****</span></div>
+                        </div>
+                    </div>
+                    <div class="bottom">
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-primary" type="button" onclick="document.location.href='../login/login.html'">로그인</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- //실컨텐츠 -->
+
+            </main>
+        </div>
+    </div>
+    @@include('@@webRoot/_include/_modal.html')
+</body>
+
+</html>

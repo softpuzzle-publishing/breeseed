@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title>(pagelist)BreeSeed</title>
+    @@include('@@webRoot/_include/_head.html')
+    <style>
+        body{padding:20px;position:relative;background: #fff;}
+        *{margin:0;padding:0;font-size:12px;color:#222;line-height:1.5em;font-family:'NanumGothic';}
+        h1{margin-bottom:20px;font-size:24px;text-align: center;}
+        table{width:100%;border-collapse:collapse;margin: 0 auto;max-width: 1500px;}
+        table th,
+        table td{border:1px solid #7992b9;padding:2px 10px;word-break: keep-all}
+        table th{background:#283c5d;color:#fff;padding:10px;font-size:14px;}
+        table td a{color:#283c5d;text-decoration:none;}
+        table td a:hover{text-decoration:underline;}
+        table tbody tr:hover{background-color: #ecf8fc;}
+        .noteTable{display: table;width: 100%;}
+        .noteTable .date{display: table-cell;color: #ff523c;width: 40px;}
+        .noteTable .note{display: table-cell;}
+        .center{text-align: center;}
+        .bg{background: #fff5f5;}
+        ul.float{position:absolute;right:20px;top:20px;}
+        ul.float li{list-style:none;border:1px solid #ccc;padding:2px 5px;display:inline-block;}
+        .end{background:#ffffcc;}
+        .ing{background:#f6b1a6;}
+        .list{text-align:center;padding:0 0 20px;}
+        .list a{text-decoration:none;margin:0 10px;}
+        .list a:hover{text-decoration:underline;}
+        .box{border: 2px dotted #aaa;padding: 1rem;margin-bottom: 1rem;text-align: center;line-height: 1.6;}
+        .box > ul{display: inline-block;text-align-last: left;}
+    </style>
+</head>
+
+<body>
+    <h1>BreeSeed PAGELIST</h1>
+    <table>
+        <thead>
+            <tr>
+                <th></th>
+                <th>Depth 1</th>
+                <th>Depth 2</th>
+                <th>Depth 3</th>
+                <th>Depth 4</th>
+                <th>File</th>
+                <th>pageLink</th>
+                <th></th>
+                <th>Popup&Modal</th>
+            </tr>
+        </thead>
+        <tbody id="pageList">
+            <tr>
+                <td></td>
+                <td>* Guide</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="_guide/guide.html">guide.html</a></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>* Layout</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="_guide/layout.html">layout.html</a></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>* Modal</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="_guide/modal.html">modal.html</a></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>Intro</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>/intro</td>
+                <td><a target="_blank" href="intro/intro.html">intro.html</a></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>로그인</td>
+                <td>index</td>
+                <td></td>
+                <td></td>
+                <td>/login</td>
+                <td><a target="_blank" href="login/index.html">index.html</a></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>로그인</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="login/login.html">login.html</a></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>Breeseed 서비스 동의</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="login/service_agree.html">service_agree.html</a></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>아이디 찾기</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="login/id_find.html">id_find.html</a></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>아이디 찾기 완료</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="login/id_find_result.html">id_find_result.html</a></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>비밀번호 재설정</td>
+                <td>본인 인증</td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="login/password_reset_1.html">password_reset_1.html</a></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>신규 비밀번호 입력</td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="login/password_reset_2.html">password_reset_2.html</a></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>비밀번호 재설정 완료</td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="login/password_reset_result.html">password_reset_result.html</a></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>회원가입</td>
+                <td>약관 동의</td>
+                <td></td>
+                <td></td>
+                <td>/join</td>
+                <td><a target="_blank" href="join/join_step_1.html">join_step_1.html</a></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>휴대폰 번호 인증</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="join/join_step_2.html">join_step_2.html</a></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>아이디로 가입하기</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="join/join_step_3.html">join_step_3.html</a></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>회원가입 완료</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="join/congratulation.html">congratulation.html</a></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>기관코드 인증</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="join/code.html">code.html</a></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>프로필 설정</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="join/profile.html">profile.html</a></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>씨앗명상 상세</td>
+                <td>(layer)오디오 환경설정</td>
+                <td></td>
+                <td></td>
+                <td>/meditation</td>
+                <td><a target="_blank" href="meditation/audio_setting.html">audio_setting.html</a></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>(layer)첫호감 표시</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="meditation/first_feeling.html">first_feeling.html</a></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>(layer)어떤 점이 불편하셨나요?</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="meditation/why_bad.html">why_bad.html</a></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>(layer)자람 효과</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="meditation/grow_up.html">grow_up.html</a></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>과제명상 후기</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="meditation/review_write.html">review_write.html</a></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>알아차림</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><a target="_blank" href="meditation/realize_write.html">realize_write.html</a></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        var leng = document.querySelectorAll('tbody td a');
+        console.log(leng.length);
+
+                // var rows = document.getElementById("pageList").getElementsByTagName("tr");
+                // console.log(rows.length);
+    </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @@include('@@webRoot/_include/_head.html')
+</head>
+
+<body>
+    <div id="wrap">
+
+        @@include('@@webRoot/_include/_header.html')
+        <div id="container">
+            <main id="main">
+
+                <!-- 실컨텐츠 -->
+                <div class="d-flex flex-column h-100">
+                    <div class="flex-grow-1">
+                        <div class="mb-5">
+                            <label for="" class="form-label">휴대폰 번호</label>
+                            <p class="form-text">가입하신 휴대폰 번호를 입력해주세요.</p>
+                            <div class="row gx-3 align-items-center">
+                                <div class="col">
+                                    <div class="position-relative">
+                                        <input type="tel" class="form-control" id="" placeholder="(-)제외하고 숫자만 입력">
+                                        <button type="button" class="btn-input-x" aria-label="삭제"><i class="icon-x"></i></button>
+                                    </div>
+                                </div>
+                                <div class="col-auto">
+                                    <button type="button" class="btn btn-primary btn-sm btn-flat">인증하기</button>
+                                </div>
+                            </div>
+                            <p class="valid-feedback" style="display: block">인증하기 버튼을 클릭해주세요.</p>
+                        </div>
+                        <div>
+                            <div class="row align-items-center m-b-5">
+                                <div class="col d-flex align-items-center">
+                                    <label for="" class="form-label mb-0">인증 번호</label>
+                                    <span class="time-count align-middle m-s-10">03:00</span>
+                                </div>
+                                <div class="col-auto">
+                                    <span class="time-count">인증번호 재발송(2/5)</span>
+                                </div>
+                            </div>
+                            <div class="row gx-3 align-items-center">
+                                <div class="col">
+                                    <div class="position-relative">
+                                        <input type="tel" class="form-control" id="" placeholder="인증번호 입력">
+                                        <button type="button" class="btn-input-x" aria-label="삭제"><i class="icon-x"></i></button>
+                                    </div>
+                                </div>
+                                <div class="col-auto">
+                                    <button type="button" class="btn btn-primary btn-sm btn-flat">인증확인</button>
+                                </div>
+                            </div>
+                            <p class="invalid-feedback" style="display: block">인증번호가 일치하지 않습니다.</p>
+                        </div>
+                    </div>
+                    <div class="bottom">
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-primary" type="button" onclick="document.location.href='../login/id_find_result.html'">아이디 찾기</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- //실컨텐츠 -->
+
+            </main>
+        </div>
+    </div>
+    @@include('@@webRoot/_include/_modal.html')
+</body>
+
+</html>

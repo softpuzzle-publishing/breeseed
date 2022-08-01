@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="26px" viewBox="0 0 26 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="checkbox-active" transform="translate(-7.000000, -7.000000)">
+            <g id="Group" transform="translate(8.000000, 8.000000)">
+                <g id="Oval">
+                    <circle fill="#56B36B" fill-rule="nonzero" cx="12" cy="12" r="12"></circle>
+                    <circle stroke="#56B36B" cx="12" cy="12" r="11.5"></circle>
+                </g>
+                <polyline id="Path" stroke="#FFFFFF" stroke-width="2" points="7.006 12.005 11.064 15.405 16.995 9.335"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>

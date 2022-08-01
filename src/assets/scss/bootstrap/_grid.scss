@@ -1,0 +1,53 @@
+// Row
+//
+// Rows contain your columns.
+
+@if $enable-grid-classes {
+  .row {
+    @include make-row();
+
+    > * {
+      @include make-col-ready();
+    }
+  }
+}
+
+@if $enable-cssgrid {
+  .grid {
+    display: grid;
+    grid-template-rows: repeat(var(--#{$variable-prefix}rows, 1), 1fr);
+    grid-template-columns: repeat(var(--#{$variable-prefix}columns, #{$grid-columns}), 1fr);
+    gap: var(--#{$variable-prefix}gap, #{$grid-gutter-width});
+
+    @include make-cssgrid();
+  }
+}
+
+
+// Columns
+//
+// Common styles for small and large grid columns
+
+@if $enable-grid-classes {
+  @include make-grid-columns();
+}
+
+// 커스텀 row padding size
+@include make-custom-row(5, 5px);
+@include make-custom-row(10, 10px);
+@include make-custom-row(15, 15px);
+@include make-custom-row(20, 20px);
+@include make-custom-row(25, 25px);
+@include make-custom-row(30, 30px);
+@include make-custom-row(40, 40px);
+
+// 커스텀 margin, padding ex) m-s-1 m-t-0
+@include generate($nameMap, $position, 4);
+@include generate($nameMap, $position, 5);
+@include generate($nameMap, $position, 10);
+@include generate($nameMap, $position, 15);
+@include generate($nameMap, $position, 20);
+@include generate($nameMap, $position, 25);
+@include generate($nameMap, $position, 30);
+@include generate($nameMap, $position, 40);
+@include generate($nameMap, $position, 50);
