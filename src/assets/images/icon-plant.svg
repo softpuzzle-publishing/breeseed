@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="45.303" height="58" viewBox="0 0 45.303 58">
+    <defs>
+        <clipPath id="0164roxx2a">
+            <path data-name="사각형 2324" style="fill:none" d="M0 0h45.303v58H0z"/>
+        </clipPath>
+    </defs>
+    <g data-name="그룹 2262">
+        <path data-name="선 167" transform="translate(22.652 10.453)" style="stroke:#4ba000;stroke-miterlimit:10;fill:none" d="M0 18.236V0"/>
+        <g data-name="그룹 2261">
+            <g data-name="그룹 2260" style="clip-path:url(#0164roxx2a)">
+                <path data-name="패스 10820" d="M28.794 9.866a2.409 2.409 0 0 0 .513 1.659c.733.722 4.922.61 8.145-2.663 2.619-2.66 2.985-6.733 3.03-8.167-5.2.857-9.206 4.551-11.688 9.171" transform="translate(-7.212 -.174)" style="fill-rule:evenodd;fill:#4ba000"/>
+                <path data-name="패스 10821" d="M40.482.522c.011-.331 0-.521 0-.521s-5.417-.107-8.64 3.166a9.722 9.722 0 0 0-3.051 6.526c2.482-4.62 6.493-8.315 11.688-9.171" transform="translate(-7.211)" style="fill:#62d841;fill-rule:evenodd"/>
+                <path data-name="패스 10822" d="M7.594 10.8s.908 5.341 4.727 7.895 7.943 1.818 8.515.962c.451-.674.291-2.162-.62-3.79-3.349-2.726-7.816-4.167-12.378-5.119-.157.028-.244.048-.244.048" transform="translate(-1.902 -2.692)" style="fill-rule:evenodd;fill:#4ba000"/>
+                <path data-name="패스 10823" d="M16.777 12.073C13.445 9.844 9 10.474 7.92 10.67c4.566.952 9.029 2.393 12.377 5.116a11.027 11.027 0 0 0-3.52-3.713" transform="translate(-1.984 -2.614)" style="fill:#62d841;fill-rule:evenodd"/>
+                <path data-name="사각형 2322" transform="translate(0 25.566)" style="fill:#996c3f" d="M0 0h45.303v5.921H0z"/>
+                <path data-name="사각형 2323" transform="translate(0 25.567)" style="fill:#bc8f5e" d="M0 0h45.303v.696H0z"/>
+                <path data-name="패스 10824" d="M7.588 70.065h33l1.857-21.891H5.731z" transform="translate(-1.435 -12.065)" style="fill:#996c3f"/>
+                <path data-name="패스 10825" d="M5.208 42.008 5.6 46.63h36.712l.392-4.622z" transform="translate(-1.304 -10.521)" style="fill:#775433"/>
+                <path data-name="선 168" transform="translate(18.421 16.33)" style="stroke:#4ba000;stroke-miterlimit:10;fill:none" d="M4.231 4.018 0 0"/>
+            </g>
+        </g>
+    </g>
+</svg>

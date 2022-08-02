@@ -55,11 +55,5 @@ let Common = {
     }
 }
 
-let Aside = {
-    init: function () {
-        //this.lnb();
-    },
-}
 
 Common.init();
-Aside.init();
