@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @@include('@@webRoot/_include/_head.html')
+</head>
+
+<body>
+    <div id="wrap">
+
+        @@include('@@webRoot/_include/_header.html', {
+            "title": "구매내역",
+        })
+        <div id="container">
+            <main id="main">
+
+                <!-- 실컨텐츠 -->
+                <div class="d-flex flex-column h-100">
+                    <div class="flex-grow-1">
+                        <div class="history-empty">
+                            <i class="icon-list-empty"></i>
+                            <p>구매 내역이 없습니다.</p>
+                        </div>
+                    </div>
+                    <div class="program-recommand">
+                        <h2 class="program">마음챙김 프로그램</h2>
+                        <div class="list-item">
+                            <div class="thumb lock"> <!-- 구독전 .lock 추가 -->
+                                <img src="../assets/images/@thumbnail.png" alt="">
+                                <span class="badge bg-danger">Premium</span>
+                                <!-- <span class="badge bg-primary">구독중</span> -->
+                            </div>
+                            <div class="title">프로그램제목프로그램제목프로그램멕스스물두자</div>
+                            <div class="desc">35일 프로그램</div>
+                            <div class="desc">프로그램간략설명프로그램간략설명프로그램간략설명프로그램간략설명프로그램간략설명프로그램간략설명오십자내외</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- //실컨텐츠 -->
+
+            </main>
+        </div>
+
+    </div>
+    @@include('@@webRoot/_include/_modal.html')
+</body>
+
+</html>

@@ -9,7 +9,7 @@
     <div id="wrap">
 
         @@include('@@webRoot/_include/_header.html', {
-            "title": "페이지 타이틀",
+            "title": "기관코드 수정",
         })
         <div id="container">
             <main id="main">
@@ -17,14 +17,18 @@
                 <!-- 실컨텐츠 -->
                 <div class="d-flex flex-column h-100">
                     <div class="flex-grow-1">
-                        <div style="background-color: #ddd;">
-                            contents <br>contents <br>contents <br>
+                        <div class="mb-5">
+                            <label for="" class="form-label">기관코드 해제</label>
+                            <div class="form-text">기존 기관코드를 해제하실 수 있습니다.</div>
+                        </div>
+                        <div class="mb-5">
+                            <label for="" class="form-label">기존 기관명</label>
+                            <input type="text" class="form-control" id="" placeholder="전달받은 기관코드 입력" value="메디플러스솔루션" readonly>
                         </div>
                     </div>
                     <div class="bottom">
                         <div class="d-grid gap-2">
-                            <button class="btn btn-primary" type="button">Button</button>
-                            <button class="btn btn-secondary" type="button">Button</button>
+                            <button class="btn btn-primary" type="button">연결 해제하기</button>
                         </div>
                     </div>
                 </div>
@@ -32,6 +36,7 @@
 
             </main>
         </div>
+
     </div>
     @@include('@@webRoot/_include/_modal.html')
 </body>

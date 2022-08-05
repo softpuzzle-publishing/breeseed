@@ -32,8 +32,8 @@
   } */
 
   .btn-check:checked + &,
-  .btn-check:active + &,
-  &:active,
+  //.btn-check:active + &,
+  //&:active,
   &.active {
     @include box-shadow($btn-active-box-shadow);
 

@@ -9,7 +9,7 @@
 $white:    #fff !default;
 $gray-100: #f8f9fa !default;
 $gray-200: #e9ecef !default;
-$gray-300: #dee2e6 !default;
+$gray-300: #ccc !default;
 $gray-400: #ced4da !default;
 $gray-500: #adb5bd !default;
 $gray-600: #6c757d !default;
@@ -677,9 +677,9 @@ $legend-font-weight:          null !default;
 
 $mark-padding:                .2em !default;
 
-$dt-font-weight:              $font-weight-bold !default;
+$dt-font-weight:              $font-weight-normal !default;
 
-$nested-kbd-font-weight:      $font-weight-bold !default;
+$nested-kbd-font-weight:      $font-weight-normal !default;
 
 $list-inline-padding:         .5rem !default;
 
@@ -859,7 +859,7 @@ $input-padding-x-lg:                    $input-btn-padding-x-lg !default;
 $input-font-size-lg:                    $input-btn-font-size-lg !default;
 
 $input-bg:                              $body-bg !default;
-$input-disabled-bg:                     $gray-200 !default;
+$input-disabled-bg:                     #fff !default;
 $input-disabled-border-color:           null !default;
 
 $input-color:                           $body-color !default;

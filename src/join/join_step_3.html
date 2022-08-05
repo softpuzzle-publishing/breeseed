@@ -8,7 +8,9 @@
 <body>
     <div id="wrap">
 
-        @@include('@@webRoot/_include/_header.html')
+        @@include('@@webRoot/_include/_header.html', {
+            "title": "아이디로 가입하기",
+        })
         <div id="container">
             <main id="main">
 
@@ -47,7 +49,7 @@
                             </div>
                             <p class="valid-feedback" style="display: block">안전한 비밀번호입니다.</p>
                         </div>
-                        <div class="">
+                        <div>
                             <label for="" class="form-label">비밀번호 확인</label>
                             <div class="position-relative">
                                 <input type="password" class="form-control" id="" placeholder="8-20자 이내, 문자/숫자/기호 2종류 조합">

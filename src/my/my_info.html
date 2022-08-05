@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @@include('@@webRoot/_include/_head.html')
+</head>
+
+<body>
+    <div id="wrap">
+
+        @@include('@@webRoot/_include/_header.html', {
+            "title": "내 계정",
+        })
+        <div id="container">
+            <main id="main">
+
+                <!-- 실컨텐츠 -->
+                <div class="d-flex flex-column h-100">
+                    <div class="flex-grow-1">
+                        <!-- 회원정보 -->
+                        <div class="d-flex align-items-center justify-content-between m-b-10">
+                            <h2 class="menu-title mb-0">마이메뉴</h2>
+                            <a href="my_info_edit.html" class="btn btn-outline-dark btn-sm">수정하기</a>
+                        </div>
+                        <ul class="info-list">
+                            <li>
+                                <div class="label">닉네임</div><div class="data">달콤한피클샐러드레싱</div>
+                            </li>
+                            <li>
+                                <div class="label">가입방법</div><div class="data"><i class="icon-login-kakao"></i><i class="icon-login-apple"></i><i class="icon-login-logo"></i>medi@medi.co.kr</div>
+                            </li>
+                            <li>
+                                <div class="label">가입일시</div><div class="data">2022-12-31 14:32:12</div>
+                            </li>
+                            <li>
+                                <div class="label">회원번호</div><div class="data">123456789AA</div>
+                            </li>
+                        </ul>
+                        <!-- 기관코드 -->
+                        <div class="d-flex align-items-center justify-content-between m-b-10 m-t-30">
+                            <h2 class="menu-title mb-0">기관코드</h2>
+                            <a href="my_code_edit.html" class="btn btn-outline-dark btn-sm">수정하기</a>
+                        </div>
+                        <ul class="info-list">
+                            <li>
+                                <div class="label">기관명</div><div class="data">(주)메디플러스솔루션</div>
+                            </li>
+                            <li>
+                                <div class="label">연결된 기관코드가 없습니다.</div>
+                            </li>
+                        </ul>
+                        <!-- 비밀번호 -->
+                        <div class="d-flex align-items-center justify-content-between m-b-10 m-t-30">
+                            <h2 class="menu-title mb-0">비밀번호</h2>
+                            <a href="my_password_reset.html" class="btn btn-outline-dark btn-sm">수정하기</a>
+                        </div>
+                        <dl class="latest-connect">
+                            <dt>최근 접속일시</dt>
+                            <dd>2022-12-31 14:32:12</dd>
+                        </dl>
+                    </div>
+                    <div class="bottom m-t-20">
+                        <div class="d-grid gap-2 w-100">
+                            <button type="button" class="btn btn-dark">로그아웃</button>
+                            <a href="leave.html" class="btn btn-outline-dark">회원탈퇴</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- //실컨텐츠 -->
+
+            </main>
+        </div>
+
+    </div>
+    @@include('@@webRoot/_include/_modal.html')
+</body>
+
+</html>

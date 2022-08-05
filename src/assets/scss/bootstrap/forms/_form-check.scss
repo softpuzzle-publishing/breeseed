@@ -139,6 +139,14 @@
       }
     }
   }
+
+  &.label-empty{
+    padding-left: $form-switch-width;
+    .form-check-input{
+        margin-left: -$form-switch-width;
+        margin-top: 0;
+    }
+  }
 }
 
 .form-check-inline {

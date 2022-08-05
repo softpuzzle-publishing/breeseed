@@ -8,7 +8,9 @@
 <body>
     <div id="wrap">
 
-        @@include('@@webRoot/_include/_header.html')
+        @@include('@@webRoot/_include/_header.html', {
+            "title": "아이디로 가입하기",
+        })
         <div id="container">
             <main id="main">
 
@@ -37,7 +39,7 @@
                                     이용약관 동의 <span class="text-primary">(필수)</span>
                                 </label>
                             </div>
-                            <button type="button" aria-label="내용보기" data-bs-toggle="modal" data-bs-target="#modal-terms-privacy"><i class="icon-arrow-right"></i></button>
+                            <button type="button" aria-label="내용보기"><i class="icon-arrow-right"></i></button>
                         </div>
                         <div class="agree">
                             <div class="form-check">
@@ -55,7 +57,7 @@
                                     개인정보 수집 및 이용 동의 <span class="text-primary">(필수)</span>
                                 </label>
                             </div>
-                            <button type="button" aria-label="내용보기"><i class="icon-arrow-right"></i></button>
+                            <button type="button" aria-label="내용보기" data-bs-toggle="modal" data-bs-target="#modal-terms-privacy-use"><i class="icon-arrow-right"></i></button>
                         </div>
                         <div class="agree">
                             <div class="form-check">

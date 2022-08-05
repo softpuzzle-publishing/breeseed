@@ -58,6 +58,7 @@ body {
   -webkit-text-size-adjust: 100%; // 3
   -webkit-tap-highlight-color: rgba($black, 0); // 4
   -webkit-font-smoothing: antialiased;
+  letter-spacing: -0.5px;
 }
 // scss-docs-end reboot-body-rules
 
@@ -156,7 +157,7 @@ abbr[data-bs-original-title] { // 1
 // Address
 
 address {
-  margin-bottom: 1rem;
+  //margin-bottom: 1rem;
   font-style: normal;
   line-height: inherit;
 }
@@ -190,7 +191,7 @@ dt {
 // 1. Undo browser default
 
 dd {
-  margin-bottom: .5rem;
+  //margin-bottom: .5rem;
   margin-left: 0; // 1
 }
 

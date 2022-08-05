@@ -43,9 +43,9 @@
   } */
 
   .btn-check:checked + &,
-  .btn-check:active + &,
-  &:active,
-  &.active,
+  //.btn-check:active + &,
+  //&:active,
+  //&.active,
   .show > &.dropdown-toggle {
     color: $active-color;
     background-color: $active-background;
@@ -97,9 +97,9 @@
   } */
 
   .btn-check:checked + &,
-  .btn-check:active + &,
-  &:active,
-  &.active,
+  //.btn-check:active + &,
+  //&:active,
+  //&.active,
   &.dropdown-toggle.show {
     color: $active-color;
     background-color: $active-background;

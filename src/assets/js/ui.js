@@ -37,21 +37,29 @@ let Common = {
         let btnTypeToggle = document.querySelectorAll(".btn-type-toggle");
         btnTypeToggle.forEach(function (btn) {
             btn.addEventListener("click", function () {
-                btn.previousElementSibling.setAttribute("type", "text");
+                console.log(22);
+                if (btn.previousElementSibling.getAttribute("type") === "password") {
+                    btn.previousElementSibling.setAttribute("type", "text");
+                } else {
+                    btn.previousElementSibling.setAttribute("type", "password");
+                }
             });
         });
 
         //textarea auto growing
-        function calcHeight(value) {
-            let numberOfLineBreaks = (value.match(/\n/g) || []).length;
-            // min-height + lines x line-height + padding + border
-            let newHeight = 42 + numberOfLineBreaks * 21 + 20 + 0;
-            return newHeight;
-        }
         let textarea = document.querySelector(".auto-growing");
-        textarea.addEventListener("keyup", () => {
+        if (textarea) {
             textarea.style.height = calcHeight(textarea.value) + "px";
-        });
+            function calcHeight(value) {
+                let numberOfLineBreaks = (value.match(/\n/g) || []).length;
+                // min-height + lines x line-height + padding + border
+                let newHeight = 42 + numberOfLineBreaks * 21 + 20 + 0;
+                return newHeight;
+            }
+            textarea.addEventListener("keyup", () => {
+                textarea.style.height = calcHeight(textarea.value) + "px";
+            });
+        }
     }
 }
 
