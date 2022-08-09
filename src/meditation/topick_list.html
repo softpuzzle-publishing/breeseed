@@ -17,32 +17,34 @@
                 <!-- 실컨텐츠 -->
                 <div class="d-flex flex-column h-100">
                     <div class="flex-grow-1">
-                        <div class="text-desc">토픽명상설명문구두줄오십자토픽명상설명문구두줄오십자토픽명상설명문구두줄오십자토픽명상설명문구두줄오십자</div>
-                        <div class="text-center m-t-30">
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="voice" id="voiceMail" checked>
-                                <label class="form-check-label" for="voiceMail">
-                                    남자 보이스
-                                </label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="voice" id="voiceFeail">
-                                <label class="form-check-label" for="voiceFeail">
-                                    여자 보이스
-                                </label>
-                            </div>
-                        </div>
-                        <div class="gallery">
-                            @@for (var i = 1; i < 6; i++) {
-                            <div class="list-item m-t-40">
-                                <div class="thumb">
-                                    <img src="../assets/images/@thumbnail.png" alt="">
+                        <div class="bottom-padding">
+                            <div class="text-desc">토픽명상설명문구두줄오십자토픽명상설명문구두줄오십자토픽명상설명문구두줄오십자토픽명상설명문구두줄오십자</div>
+                            <div class="text-center m-t-30">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="voice" id="voiceMail" checked>
+                                    <label class="form-check-label" for="voiceMail">
+                                        남자 보이스
+                                    </label>
                                 </div>
-                                <div class="title">토픽명상타이틀제목명</div>
-                                <div class="desc">10분</div>
-                                <div class="desc">토픽명상간략설명토픽명상간략설명토픽명상간략설명</div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="voice" id="voiceFeail">
+                                    <label class="form-check-label" for="voiceFeail">
+                                        여자 보이스
+                                    </label>
+                                </div>
                             </div>
-                            }
+                            <div class="gallery">
+                                @@for (var i = 1; i < 6; i++) {
+                                <div class="program-item m-t-40">
+                                    <a href="#none" class="program-thumb">
+                                        <img src="../assets/images/@thumbnail.png" alt="">
+                                    </a>
+                                    <div class="program-title">토픽명상타이틀제목명</div>
+                                    <div class="program-type">10분</div>
+                                    <div class="program-desc">토픽명상간략설명토픽명상간략설명토픽명상간략설명</div>
+                                </div>
+                                }
+                            </div>
                         </div>
                     </div>
                 </div>

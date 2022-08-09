@@ -41,7 +41,7 @@ function html() {
 
 function js() {
     return gulp.src(paths.js) //개발코드 위치
-        .pipe(babel()) // es6 -> es5로 컴파일
+        //.pipe(babel()) // es6 -> es5로 컴파일
         .pipe(gulp.dest(dist + '/assets/js'))// dist에 복사
         .pipe(connect.reload());//변경되면 실시간 새로고침
 }

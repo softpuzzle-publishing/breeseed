@@ -1,9 +1,14 @@
 $Z_INDEX_HEADER: 10 !default;
-$Z_INDEX_MENUBAR: 10 !default;
+$Z_INDEX_SIDEBAR: 11 !default;
+$Z_INDEX_MENUBAR: 12 !default;
+$Z_INDEX_VOICE_CHOICE: $Z_INDEX_HEADER !default;
+$Z_INDEX_GROW_SEED: calc($Z_INDEX_HEADER + 1) !default;
 
 html,
 body{width: 100%;height: 100%;}
 body{overflow-x: hidden;}
+
+#app{height: 100%;}
 
 #wrap{height: 100%;display: flex;flex-direction: column;}
 
@@ -12,9 +17,9 @@ body{overflow-x: hidden;}
     & + #container{padding-top: 50px;}
 }
 
-#container{flex-grow: 1;}
+#container{flex-grow: 1;height: 100%;}
 
-#main{height: 100%;padding-left: 30px;padding-right: 30px;padding-top: 30px;width: 100%;
+#main{height: 100%;padding: 30px;width: 100%;
     &.p-b-30{
         padding-bottom: calc(constant(safe-area-inset-bottom) + 30px) !important;
         padding-bottom: calc(env(safe-area-inset-bottom) + 30px) !important;
@@ -62,17 +67,9 @@ body{overflow-x: hidden;}
     }
 }
 
-.has-menubar{
-    main{
-        padding-bottom: calc(60px + 30px); //menubar + 컨텐츠 padding bottom
-        padding-bottom: calc(constant(safe-area-inset-bottom) + 90px);
-        padding-bottom: calc(env(safe-area-inset-bottom) + 90px);
-    }
-}
-
 #footer{
     background: #404040;margin-left: -30px;margin-right: -30px;color: #fff;
-    margin-bottom: -30px;padding-bottom: 30px;margin-top: 20px;
+    margin-bottom: -30px;padding-bottom: 90px;margin-top: 20px;
 }
 .company-info{
     font-size: 13px;padding-bottom: 10px;
@@ -85,3 +82,6 @@ body{overflow-x: hidden;}
     &[aria-expanded="true"]::before{transform: rotate(270deg);}
 }
 .copyright{font-size: 13px;letter-spacing: -0.52px;}
+
+#aside{flex: 0 0 75px}
+

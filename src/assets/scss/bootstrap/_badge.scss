@@ -20,6 +20,10 @@
   &:empty {
     display: none;
   }
+
+  &.border-2{
+    padding: calc($badge-padding-y - 2px) $badge-padding-x;
+  }
 }
 
 // Quick fix for badges in buttons

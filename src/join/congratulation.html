@@ -23,22 +23,17 @@
                                 회원가입을 축하드립니다 :)
                             </p>
                             <div class="code-swipe">
-                                <div class="text-end">
+                                <div class="text-end" id="swipe-text">
                                     <strong>기관코드 인증하기</strong>
                                     <p>기관코드가 있으신 경우에만 <br>당겨주세요.</p>
                                 </div>
                                 <div class="swipe-area">
-                                    <div class="swipe"><i class="icon-swiper-arrow"></i></div>
+                                    <div class="swiper">
+                                        <div id="swipe-end" class="swipe-end">
+                                            <a id="swipe-btn" class="swipe-btn"><i class="icon-swiper-arrow"></i></a>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="swiper">
-                            <div href="#none" id="swipe-end" class="swipe-end">
-                                <a id="swipe-btn" class="swipe-btn">1</a>
-                            </div>
-
-                            <div class="unlock">
-                                Unlocked
                             </div>
                         </div>
                     </div>
@@ -54,10 +49,10 @@
                         endX = 0;
 
                     function swipe() {
-                        var $swipe = $('.swiper'),
-                            $btn = $('.swipe-btn', $swipe);
+                        var $btn = $('.swipe-btn');
 
-                        TweenLite.to('#swipe-end', 0, { x: 0, y: 12 });
+                        TweenLite.to('#swipe-btn', 0, { x: -endX });
+                        TweenLite.to('#swipe-text', 0, { x: -endX });
 
                         $btn.on('click touchend', function (e) {
                             e.preventDefault();
@@ -71,25 +66,27 @@
                         $(document).on('touchmove mousemove', function (e) {
                             if (swiperDragged) {
                                 actualX = typeof e.pageX != 'undefined' ? e.pageX : e.originalEvent.touches[0].pageX;
-                                endX = Math.max(0, Math.min(115, startX - actualX));
+                                endX = Math.max(0, Math.min(135, startX - actualX));
                                 TweenLite.to('#swipe-btn', 0, { x: -endX });
+                                TweenLite.to('#swipe-text', 0, { x: -endX });
                             }
                         }).on('touchend mouseup', function (e) {
                             if (swiperDragged) {
                                 swiperDragged = false;
-                                if (endX < 100) {
+                                if (endX < 80) {
                                     TweenLite.to('#swipe-btn', .5, { x: 0 });
+                                    TweenLite.to('#swipe-text', .5, { x: 0 });
                                 } else {
-                                    TweenLite.to('#swipe-btn', .1, { x: -115 });
+                                    TweenLite.to('#swipe-btn', .1, { x: -135 });
+                                    TweenLite.to('#swipe-text', .1, { x: -135 });
                                     setTimeout(function () {
                                         document.location.href = 'code.html';
-                                    }, 1200);
+                                    }, 700);
                                 }
                                 endX = 0;
                             }
                         });
                     }
-
                     swipe();
                 </script>
                 <!-- //실컨텐츠 -->

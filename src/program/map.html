@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @@include('@@webRoot/_include/_head.html')
+</head>
+
+<body>
+    <div id="wrap">
+
+        @@include('@@webRoot/_include/_header.html', {
+            "title": "프로그램명",
+            "back" : "false"
+        })
+        <div id="container">
+            <main id="main">
+
+                <!-- 실컨텐츠 -->
+                <div class="stage-map">
+                    <style>
+                        #anim{
+                        background-color: #FFCB00;
+                        margin: 56px auto;
+
+                        height: 200px;
+                        width: 320px;
+
+                        border-radius: 20px;
+                        box-shadow: 0px 0px 80px 0px rgba(0,0,0,0.15);
+
+                        width:200px;
+                        }
+                    </style>
+                    <div id="anim"></div>
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.5.9/lottie.min.js"></script>
+                    <script src="../assets/js/map.js"></script>
+                </div>
+                <!-- //실컨텐츠 -->
+
+            </main>
+        </div>
+        @@include('@@webRoot/_include/_menubar.html')
+    </div>
+    @@include('@@webRoot/_include/_modal.html')
+</body>
+
+</html>
