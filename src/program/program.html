@@ -57,7 +57,7 @@
                             </div>
                         </div>
                     </aside>
-                    <a href="#none" class="btn-grow-seed" aria-label="씨앗 키우기"></a>
+                    <a href="../program/grow_seed.html" class="btn-grow-seed" aria-label="씨앗 키우기"></a>
                     <div class="voice-choice">
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="voice" id="voiceMail" checked>
@@ -129,13 +129,8 @@
                             e.preventDefault();
                             document.querySelector('.theme-order .active').classList.remove('active');
                             this.parentElement.classList.add("active");
-                            /* document.querySelector(this.getAttribute('href')).scrollIntoView({
+                            document.querySelector(this.getAttribute('href')).scrollIntoView({
                                 behavior: 'smooth'
-                            }); */
-                            const t = this.getAttribute("href");
-                            console.log(t);
-                            document.querySelector(t).scrollIntoView({
-                              behavior: "smooth"
                             });
                         });
                     });
