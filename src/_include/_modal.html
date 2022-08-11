@@ -38,7 +38,7 @@
                         <button type="button" class="btn btn-outline-secondary w-100" data-bs-dismiss="modal">취소</button>
                     </div>
                     <div class="col">
-                        <button type="button" class="btn btn-outline-danger w-100" data-bs-dismiss="modal">탈퇴하기</button>
+                        <button type="button" class="btn btn-outline-danger w-100">탈퇴하기</button>
                     </div>
                 </div>
             </div>
@@ -98,7 +98,7 @@
 </div>
 
 <!-- modal : 비밀번호 변경 캠페인 -->
-<div class="modal" id="modal-inactive-account" tabindex="-1" data-bs-backdrop="static">
+<div class="modal" id="modal-password-campaign" tabindex="-1" data-bs-backdrop="static">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-fullscreen">
         <div class="modal-content">
             <div class="modal-header">
@@ -280,7 +280,7 @@
     //아쉬워요 선택 -> 어떤 점이 불편하셨나요 modal 호출
     const btnSubmit = document.querySelector('#btnSubmit');
     btnSubmit.addEventListener('click', function(){
-        var myModal = new bootstrap.Modal(document.getElementById('modal-why-bad'), {
+        var myModal = new bootstrap.Modal(document.getElementById('modal-uncomfortable-reason'), {
             keyboard: false
         })
         myModal.show();
@@ -288,7 +288,7 @@
 </script>
 
 <!-- modal : 어떤 점이 불편하셨나요? -->
-<div class="modal modal-slide-up" id="modal-why-bad" tabindex="-1">
+<div class="modal modal-slide-up" id="modal-uncomfortable-reason" tabindex="-1">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-body">
@@ -350,7 +350,8 @@
             <div class="modal-body">
                 <h1 class="slide-up-title"><span class="text-primary">햇살 비추기</span> 성공</h1>
                 <div class="grow-up-success grow-up-success-1">
-                    오늘의 과제도 파이팅 해주세요!
+                  <!-- grow-up-success-1 ~ 4 -->
+                  오늘의 과제도 파이팅 해주세요!
                 </div>
                 <div class="m-t-40">
                     <button type="button" class="btn btn-primary w-100" data-bs-dismiss="modal">닫기</button>

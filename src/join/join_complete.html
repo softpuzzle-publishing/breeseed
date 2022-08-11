@@ -49,28 +49,34 @@
                         endX = 0;
 
                     function swipe() {
-                        var $btn = $('.swipe-btn');
+                        var $btn = document.querySelector('.swipe-btn');
 
                         TweenLite.to('#swipe-btn', 0, { x: -endX });
                         TweenLite.to('#swipe-text', 0, { x: -endX });
 
-                        $btn.on('click touchend', function (e) {
+                        $btn.addEventListener('click touchend', function (e) {
                             e.preventDefault();
-                        }).on('touchstart mousedown', function (e) {
+                            console.log('click touchend');
+                        });
+                        $btn.addEventListener('touchstart mousedown', function (e) {
                             e.preventDefault();
+                            console.log('touchstart mousedown');
                             swiperDragged = true;
                             startX = typeof e.pageX != 'undefined' ? e.pageX : e.originalEvent.touches[0].pageX;
                             endX = 0;
                         })
 
-                        $(document).on('touchmove mousemove', function (e) {
+                        window.addEventListener('touchmove mousemove', function (e) {
+                          console.log('touchmove mousemove');
                             if (swiperDragged) {
                                 actualX = typeof e.pageX != 'undefined' ? e.pageX : e.originalEvent.touches[0].pageX;
                                 endX = Math.max(0, Math.min(135, startX - actualX));
                                 TweenLite.to('#swipe-btn', 0, { x: -endX });
                                 TweenLite.to('#swipe-text', 0, { x: -endX });
                             }
-                        }).on('touchend mouseup', function (e) {
+                        });
+                        window.addEventListener('touchend mouseup', function (e) {
+                          console.log('touchend mouseup');
                             if (swiperDragged) {
                                 swiperDragged = false;
                                 if (endX < 80) {
@@ -80,7 +86,7 @@
                                     TweenLite.to('#swipe-btn', .1, { x: -135 });
                                     TweenLite.to('#swipe-text', .1, { x: -135 });
                                     setTimeout(function () {
-                                        document.location.href = 'code.html';
+                                        document.location.href = 'code_authentication.html';
                                     }, 700);
                                 }
                                 endX = 0;

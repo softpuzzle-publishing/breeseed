@@ -16,14 +16,14 @@
             <main id="main">
 
                 <!-- 실컨텐츠 -->
-                <div class="program" id="programWrap">
+                <div class="program">
                     <aside id="aside">
                         <div class="sidebar">
                             <div class="go-stage-map">
                                 <button type="button" class="btn-stage-map" aria-label="씨앗 여정맵 보기"></button>
                             </div>
                             <div class="scroll-area">
-                                <h2><div>테마<span class="num">01</span></ㅇ></h2>
+                                <h2><div>테마<span class="num">01</span></div></h2>
                                 <ol class="theme-order">
                                     <li class="active ing"><a href="#contents1">1</a></li>
                                     @@for (var j = 2; j < 8; j++) {
@@ -121,7 +121,7 @@
                 </div>
                 <script>
                     //로드 후 .show 추가
-                    document.querySelector('#programWrap').classList.add('show');
+                    document.querySelector('.program').classList.add('show');
 
                     //사이드바 navi
                     document.querySelectorAll('.theme-order a').forEach(anchor => {
@@ -129,8 +129,13 @@
                             e.preventDefault();
                             document.querySelector('.theme-order .active').classList.remove('active');
                             this.parentElement.classList.add("active");
-                            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                            /* document.querySelector(this.getAttribute('href')).scrollIntoView({
                                 behavior: 'smooth'
+                            }); */
+                            const t = this.getAttribute("href");
+                            console.log(t);
+                            document.querySelector(t).scrollIntoView({
+                              behavior: "smooth"
                             });
                         });
                     });

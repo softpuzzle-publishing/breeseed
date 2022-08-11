@@ -37,7 +37,6 @@ let Common = {
         let btnTypeToggle = document.querySelectorAll(".btn-type-toggle");
         btnTypeToggle.forEach(function (btn) {
             btn.addEventListener("click", function () {
-                console.log(22);
                 if (btn.previousElementSibling.getAttribute("type") === "password") {
                     btn.previousElementSibling.setAttribute("type", "text");
                 } else {
