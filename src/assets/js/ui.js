@@ -44,21 +44,6 @@ let Common = {
                 }
             });
         });
-
-        //textarea auto growing
-        let textarea = document.querySelector(".auto-growing");
-        if (textarea) {
-            textarea.style.height = calcHeight(textarea.value) + "px";
-            function calcHeight(value) {
-                let numberOfLineBreaks = (value.match(/\n/g) || []).length;
-                // min-height + lines x line-height + padding + border
-                let newHeight = 42 + numberOfLineBreaks * 21 + 20 + 0;
-                return newHeight;
-            }
-            textarea.addEventListener("keyup", () => {
-                textarea.style.height = calcHeight(textarea.value) + "px";
-            });
-        }
     }
 }
 

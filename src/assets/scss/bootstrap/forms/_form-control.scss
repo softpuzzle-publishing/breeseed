@@ -190,6 +190,7 @@ textarea {
   &.form-control {
     min-height: $input-height;
     background: #f5f5f5;border-radius: 10px;border: 0;padding: 20px;font-size: 15px;color: $primary;
+    letter-spacing: -0.9px;
     &:focus{background: #f5f5f5;color: $primary;}
     &.auto-growing{
         &::-webkit-scrollbar {

@@ -336,6 +336,8 @@ $SIDEBAR_WIDTH: 75px;
     .theme-title + &{margin-top: 0;}
 }
 
+.btn-grow-seed-about{display: inline-block;background: url('../images/icon-question.svg') no-repeat 0 0;width: 30px;height: 30px;position: fixed;right: 30px;top: 10px;z-index: $Z_INDEX_GROW_SEED;}
+
 .overall-progress{
   display: flex;align-items: flex-end;margin-top: 45px;margin-bottom: 30px;padding-right: 15px;
   &::before{content: '';display: block;width: 60px;height: 60px;background: url('../images/icon-seed-card.svg') no-repeat 0 0;margin-right: 10px;}
@@ -347,8 +349,6 @@ $SIDEBAR_WIDTH: 75px;
   .progress-area{flex-grow: 1;padding-bottom: 5px;}
   .marker{display: inline-block;width: 30px;height: 30px; background: url('../images/icon-marker.svg') no-repeat 0 0;position: absolute;right: -15px;top: -30px;}
 }
-
-.grow-theme{}
 
 .grow-theme-item{
   background-color: $muted;padding: 20px;border-radius: 10px;position: relative;
