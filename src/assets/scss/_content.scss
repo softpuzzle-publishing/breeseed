@@ -492,3 +492,19 @@ $SIDEBAR_WIDTH: 75px;
   }
 }
 
+.map{
+  margin: 0;
+  section{
+    height: 100vh;background-color: $primary;background-repeat: no-repeat;background-position: 0 0;background-size: 100% auto;
+    &.theme1-1{background-image: url('../images/bg-map-01-01.svg');}
+    &.theme1-2{background-image: url('../images/bg-map-01-02.svg');}
+    &.theme2-1{background-image: url('../images/bg-map-02-01.svg');}
+    &.theme2-2{background-image: url('../images/bg-map-02-02.svg');}
+    &.theme3-1{background-image: url('../images/bg-map-03-01.svg');}
+    &.theme3-2{background-image: url('../images/bg-map-03-02.svg');}
+    &.theme4-1{background-image: url('../images/bg-map-04-01.svg');}
+    &.theme4-2{background-image: url('../images/bg-map-04-02.svg');}
+    &.theme5-1{background-image: url('../images/bg-map-05-01.svg');}
+    &.theme5-2{background-image: url('../images/bg-map-05-02.svg');}
+  }
+}

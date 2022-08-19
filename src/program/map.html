@@ -8,15 +8,27 @@
 <body>
     <div id="wrap">
 
-        @@include('@@webRoot/_include/_header.html', {
-            "title": "프로그램명",
-            "back" : "false"
-        })
         <div id="container">
-            <main id="main">
+            <main id="main" class="p-0">
 
                 <!-- 실컨텐츠 -->
-                <div class="stage-map">
+                <div class="map">
+                  @@for (var i = 1; i < 6; i++) {
+                  <div class="theme-group">
+                    <section class="theme`+i+`-1">
+                      <div class="inner">
+
+                      </div>
+                    </section>
+                    <section class="theme`+i+`-2">
+                      <div class="inner">
+
+                      </div>
+                    </section>
+                  </div>
+                  }
+                </div>
+                <!-- <div class="stage-map">
                     <style>
                         #anim{
                         background-color: #FFCB00;
@@ -34,14 +46,12 @@
                     <div id="anim"></div>
                     <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.5.9/lottie.min.js"></script>
                     <script src="../assets/js/map.js"></script>
-                </div>
+                </div> -->
                 <!-- //실컨텐츠 -->
 
             </main>
         </div>
-        @@include('@@webRoot/_include/_menubar.html')
     </div>
-    @@include('@@webRoot/_include/_modal.html')
 </body>
 
 </html>
