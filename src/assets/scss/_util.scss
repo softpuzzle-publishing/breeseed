@@ -4,7 +4,12 @@
 }
 
 .login-type{
-    .btn{position: relative;}
+    .btn{
+      position: relative;
+      @media (max-width: 320px) {
+        font-size: 15px;padding-left: 3rem;
+      }
+    }
     i[class^=icon]{position: absolute;left: 10px;top: 50%;transform: translateY(-50%);}
     .tip{
         background: #ffee00;font-size: 13px;color: #312227;padding: 5px 15px;border-radius: 10px; position: absolute;left: 5px;top: -43px;

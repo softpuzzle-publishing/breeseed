@@ -31,7 +31,8 @@
 
   &[type="checkbox"] {
     border: 0;
-    background: url('../images/checkbox.svg') no-repeat 50% 50%;
+    background-image: url('../images/checkbox.svg');
+    background-color: transparent;
     @include border-radius($form-check-input-border-radius);
   }
 
@@ -107,6 +108,9 @@
   color: $form-check-label-color;
   cursor: $form-check-label-cursor;
   font-size: .9375rem;
+  @media (max-width: 320px) {
+    font-size: 13px;
+  }
 }
 
 //

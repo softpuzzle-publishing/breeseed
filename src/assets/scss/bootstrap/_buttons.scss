@@ -20,6 +20,10 @@
   @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-border-radius);
   @include transition($btn-transition);
 
+  @media (max-width: 320px) {
+    font-size: 15px;
+  }
+
   /* &:hover {
     color: $body-color;
     text-decoration: if($link-hover-decoration == underline, none, null);

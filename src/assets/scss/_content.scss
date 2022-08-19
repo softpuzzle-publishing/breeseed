@@ -1,6 +1,8 @@
 .agree{
-    display: flex;justify-content: space-between;align-items: center;
-    padding: 10px 15px;border-radius: 15px;
+    display: flex;justify-content: space-between;align-items: center;padding: 10px 15px;border-radius: 15px;
+    @media (max-width: 320px) {
+      padding-left: 10px;padding-right: 10px;
+    }
     &.point{background: #f8f8f8;padding-top: 17px;padding-bottom: 17px;}
 }
 
@@ -47,7 +49,12 @@
     }
 }
 
-.time-count{color: $gray;font-size: 15px;}
+.time-count{
+  color: $gray;font-size: 15px;
+  @media (max-width: 320px) {
+    font-size: 13px;
+  }
+}
 
 .congratulation{
     background: url('../images/icon-join-finish-logo.svg') no-repeat 0 30px;padding-top: 130px;
@@ -55,6 +62,9 @@
 
 .code-swipe{
     margin-top: 80px;display: flex;align-items: center;justify-content: flex-end;margin-right: -30px;transition: transform .2s;overflow: hidden;
+    @media (max-width: 320px) {
+      margin-right: -15px;
+    }
     .text-end{
         background: url('../images/icon-code.svg') no-repeat 100% 0;padding-top: 26px;
         strong{font-weight: 400;font-size: 18px;}
@@ -149,7 +159,12 @@
 
 .review-form{
     .badge{margin-bottom: 10px;}
-    .title{font-size: 20px;line-height: 1.3;letter-spacing: -0.8px;}
+    .title{
+      font-size: 20px;line-height: 1.3;letter-spacing: -0.8px;
+      @media (max-width: 320px) {
+        font-size: 16px;
+      }
+    }
     .desc{font-size: 13px;line-height: 1.54;letter-spacing: -0.78px;color: $gray;margin-top: 6px;margin-bottom: 30px;}
 }
 
@@ -169,6 +184,11 @@
         strong{font-size: 24px;line-height: 1.5;letter-spacing: -0.8px;font-weight: 400;}
         em{font-size: 18px;}
         p{font-size: 15px;letter-spacing: -0.6px;margin-top: 20px;text-align: center;line-height: 1.4;}
+        @media (max-width: 320px) {
+          strong{font-size: 18px;}
+          em{font-size: 16px;}
+          p{font-size: 13px;word-break: keep-all;}
+        }
     }
     .intro-item-1{background-image: url('../images/bg-intro-1.svg');}
     .intro-item-2{background-image: url('../images/bg-intro-2.svg');}
@@ -269,6 +289,10 @@
     &[aria-expanded="true"]::before{transform: rotate(270deg);}
 }
 
+.terms{
+  font-size: 13px;letter-spacing: -0.78px;
+}
+
 $SIDEBAR_WIDTH: 75px;
 .sidebar{
     width: $SIDEBAR_WIDTH;padding-top: 50px;background: $primary;position: fixed;left: -$SIDEBAR_WIDTH;top: 0;bottom: 0;z-index: $Z_INDEX_SIDEBAR;transition: left .5s .28s ease-in-out;padding-bottom: 60px;
@@ -303,11 +327,20 @@ $SIDEBAR_WIDTH: 75px;
 
 .go-stage-map{width: $SIDEBAR_WIDTH; position: absolute;left: 0;top: 0;height: 50px;background: $primary;display: flex;align-items: center;justify-content: center;}
 .btn-stage-map{background: url('../images/icon-map.svg') no-repeat 0 0;width: 30px;height: 30px;}
-.btn-grow-seed{display: inline-block;background: url('../images/icon-flower.svg') no-repeat 0 0;width: 30px;height: 30px;position: fixed;right: 30px;top: 10px;z-index: $Z_INDEX_GROW_SEED;}
+.btn-grow-seed{
+  display: inline-block;background: url('../images/icon-flower.svg') no-repeat 0 0;width: 30px;height: 30px;position: fixed;right: 30px;top: 10px;z-index: $Z_INDEX_GROW_SEED;
+  @media (max-width: 320px) {
+    right: 15px
+  }
+}
 
 .voice-choice{
     position: fixed;background: #fff;height: 47px;top: 49px;left:calc(29px + $SIDEBAR_WIDTH);right: 29px;display: flex;align-items: center;z-index: $Z_INDEX_VOICE_CHOICE;
     .form-check{flex-grow: 1;}
+    @media (max-width: 320px) {
+      left: calc(14px + $SIDEBAR_WIDTH);right: 14px;
+      .form-check-label{font-size: 12px;letter-spacing: -1px;}
+    }
 }
 
 .program{
@@ -327,16 +360,30 @@ $SIDEBAR_WIDTH: 75px;
     .program-desc{margin-top: 2px;}
 }
 .theme-number{font-size: 15px;letter-spacing: -0.8px;margin-bottom: 4px;}
-.theme-title{font-size: 18px;color: $primary;margin-bottom: 30px;}
+.theme-title{
+  font-size: 18px;color: $primary;margin-bottom: 30px;
+  @media (max-width: 320px) {
+    font-size: 16px;
+  }
+}
 
 .theme-day{
-    display: flex;margin-bottom: 20px;scroll-margin-top: 60px;margin-top: 60px;
+    display: flex;margin-bottom: 20px;scroll-margin-top: 40px;margin-top: 60px;
     strong{font-size: 18px;color: $primary;font-weight: 400;flex: 0 0 auto;margin-right: 20px;}
     p{font-size: 15px;color: $gray;letter-spacing: -0.9px;flex-grow: 1;}
     .theme-title + &{margin-top: 0;}
+    @media (max-width: 320px) {
+      strong{font-size: 15px;margin-right: 10px;}
+      p{font-size: 14px;}
+    }
 }
 
-.btn-grow-seed-about{display: inline-block;background: url('../images/icon-question.svg') no-repeat 0 0;width: 30px;height: 30px;position: fixed;right: 30px;top: 10px;z-index: $Z_INDEX_GROW_SEED;}
+.btn-grow-seed-about{
+  display: inline-block;background: url('../images/icon-question.svg') no-repeat 0 0;width: 30px;height: 30px;position: fixed;right: 30px;top: 10px;z-index: $Z_INDEX_GROW_SEED;
+  @media (max-width: 320px) {
+    right: 15px;
+  }
+}
 
 .overall-progress{
   display: flex;align-items: flex-end;margin-top: 45px;margin-bottom: 30px;padding-right: 15px;
@@ -352,6 +399,9 @@ $SIDEBAR_WIDTH: 75px;
 
 .grow-theme-item{
   background-color: $muted;padding: 20px;border-radius: 10px;position: relative;
+  @media (max-width: 320px) {
+    padding: 15px;
+  }
   & + .grow-theme-item{margin-top: 10px;}
   .num{color: #fff;font-size: 13px;margin-bottom: 4px;}
   .title{color: #fff;font-size: 18px;}
@@ -361,7 +411,11 @@ $SIDEBAR_WIDTH: 75px;
   }
   .level-icon{
     position: absolute;right: 20px;top: 50%;transform: translateY(-50%);
-    i{display: block;background-position: 0 0;background-repeat: no-repeat;width: 100px;height: 100px;}
+    i{display: block;background-position: 0 0;background-repeat: no-repeat;background-size: contain;width: 100px;height: 100px;}
+    @media (max-width: 320px) {
+      right: 15px;
+      i{width: 80px;height: 80px;}
+    }
   }
   &:not([data-level="0"]){
     background-color: $primary;
@@ -428,3 +482,13 @@ $SIDEBAR_WIDTH: 75px;
     &[data-level="7"] i{background-image: url('../images/seed-level-5-7.svg');}
   }
 }
+
+.suspension-reason{
+  margin-top: 30px;
+  &::before{content: '';display: block;width: 60px;height: 2px;background: #000;margin-bottom: 20px;}
+  font-size: 15px;letter-spacing: -0.9px;color: $gray;
+  @media (max-width: 320px) {
+    font-size: 14px;
+  }
+}
+
