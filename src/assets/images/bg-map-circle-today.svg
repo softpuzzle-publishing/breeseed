@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60">
+    <g data-name="타원 626" style="stroke:#fff;fill:#fff;stroke-width:4px">
+        <circle cx="30" cy="30" r="30" style="stroke:none"/>
+        <circle cx="30" cy="30" r="28" style="fill:none"/>
+    </g>
+    <g data-name="타원 627" transform="translate(5 5)" style="stroke:#56b36b;fill:#fff;stroke-width:4px">
+        <circle cx="25" cy="25" r="25" style="stroke:none"/>
+        <circle cx="25" cy="25" r="23" style="fill:none"/>
+    </g>
+</svg>
