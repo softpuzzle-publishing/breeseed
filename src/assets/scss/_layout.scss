@@ -3,6 +3,8 @@ $Z_INDEX_SIDEBAR: 11 !default;
 $Z_INDEX_MENUBAR: 12 !default;
 $Z_INDEX_VOICE_CHOICE: $Z_INDEX_HEADER !default;
 $Z_INDEX_GROW_SEED: calc($Z_INDEX_HEADER + 1) !default;
+$Z_INDEX_MAP: 998 !default;
+$Z_INDEX_MAP_CLOSE: 999 !default;
 
 html,
 body{width: 100%;height: 100%;}

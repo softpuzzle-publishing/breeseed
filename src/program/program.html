@@ -16,6 +16,7 @@
             <main id="main">
 
                 <!-- 실컨텐츠 -->
+                @@include('@@webRoot/_include/_map.html')
                 <div class="program">
                     <aside id="aside">
                         <div class="sidebar">
@@ -120,20 +121,49 @@
                     </section>
                 </div>
                 <script>
-                    //로드 후 .show 추가
+                  //첫 진입시 여정맵 show
+                  setTimeout(function(){
+                    //씨앗 .start
+                    document.querySelector('[data-day="0"]').classList.add('start');
+                    //day에는 .filled 추가
+                    document.querySelector('[data-day="1"]').classList.add('filled');
+                    setTimeout(function(){
+                      document.querySelector('.theme-1 .theme-a').scrollIntoView({
+                          behavior: 'smooth'
+                      });
+                    },1500);
+                  },350);
+                  setTimeout(function(){
+                    document.querySelector('.map').classList.remove('show');
                     document.querySelector('.program').classList.add('show');
+                  }, 3000);
 
-                    //사이드바 navi
-                    document.querySelectorAll('.theme-order a').forEach(anchor => {
-                        anchor.addEventListener('click', function (e) {
-                            e.preventDefault();
-                            document.querySelector('.theme-order .active').classList.remove('active');
-                            this.parentElement.classList.add("active");
-                            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                                behavior: 'smooth'
-                            });
-                        });
+                  document.querySelector('.btn-stage-map').addEventListener('click', function(){
+                    document.querySelector('.map').classList.add('show');
+                    //해당 day 섹션으로 스크롤 이동
+                    setTimeout(function(){
+                      document.querySelector('.theme-1 .theme-b').scrollIntoView({
+                        behavior: 'smooth'
+                      });
+                    }, 650)
+                  });
+
+                  document.querySelector('.btn-program-back').addEventListener('click', function(){
+                    //document.querySelector('.program').classList.remove('show');
+                    document.querySelector('.map').classList.remove('show');
+                  });
+
+                  //사이드바 navi
+                  document.querySelectorAll('.theme-order a').forEach(anchor => {
+                    anchor.addEventListener('click', function (e) {
+                      e.preventDefault();
+                      document.querySelector('.theme-order .active').classList.remove('active');
+                      this.parentElement.classList.add("active");
+                      document.querySelector(this.getAttribute('href')).scrollIntoView({
+                          behavior: 'smooth'
+                      });
                     });
+                  });
                 </script>
                 <!-- //실컨텐츠 -->
 
