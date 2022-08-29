@@ -30,7 +30,7 @@
                             <div class="row gx-3 align-items-center">
                                 <div class="col">
                                     <div class="position-relative">
-                                        <input type="text" class="form-control" id="" placeholder="6-12자 이내, 영문/숫자만 입력">
+                                        <input type="text" class="form-control" id="" placeholder="6-12자 이내, 영문/숫자만 입력" inputmode="text" autocapitalize="off">
                                         <button type="button" class="btn-input-x" aria-label="삭제"><i class="icon-x"></i></button>
                                     </div>
                                 </div>
@@ -43,7 +43,7 @@
                         <div class="mb-5">
                             <label for="" class="form-label">비밀번호 입력</label>
                             <div class="position-relative">
-                                <input type="password" class="form-control" id="" placeholder="8-20자 이내, 문자/숫자/기호 2종류 조합">
+                                <input type="password" class="form-control" id="" placeholder="8-20자 이내, 문자/숫자/기호 2종류 조합" minlength="8" maxlength="20">
                                 <button type="button" class="btn-type-toggle" aria-label="입력내용 보기"><i class="icon-eye-off"></i></button>
                                 <button type="button" class="btn-input-x" aria-label="삭제"><i class="icon-x"></i></button>
                             </div>
@@ -52,14 +52,14 @@
                         <div>
                             <label for="" class="form-label">비밀번호 확인</label>
                             <div class="position-relative">
-                                <input type="password" class="form-control" id="" placeholder="8-20자 이내, 문자/숫자/기호 2종류 조합">
+                                <input type="password" class="form-control" id="" placeholder="8-20자 이내, 문자/숫자/기호 2종류 조합" minlength="8" maxlength="20">
                                 <button type="button" class="btn-type-toggle" aria-label="입력내용 보기"><i class="icon-eye-off"></i></button>
                                 <button type="button" class="btn-input-x" aria-label="삭제"><i class="icon-x"></i></button>
                             </div>
                             <p class="invalid-feedback" style="display: block">비밀번호가 일치하지 않습니다.</p>
                         </div>
                     </div>
-                    <div class="bottom">
+                    <div class="bottom-btn-area">
                         <div class="already-join">
                             <p class="me-2">이미 가입하셨나요?</p>
                             <a href="../login/login.html" class="text-primary text-underline">로그인</a>

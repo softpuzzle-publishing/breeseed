@@ -6,6 +6,8 @@ $Z_INDEX_GROW_SEED: calc($Z_INDEX_HEADER + 1) !default;
 $Z_INDEX_MAP: 998 !default;
 $Z_INDEX_MAP_CLOSE: 999 !default;
 
+$SIDEBAR_WIDTH: 75px;
+
 html,
 body{width: 100%;height: 100%;}
 body{overflow-x: hidden;}
@@ -26,10 +28,6 @@ body{overflow-x: hidden;}
   @media (max-width: 320px) {
     padding-left: 15px;padding-right: 15px;
   }
-    &.p-b-30{
-        padding-bottom: calc(constant(safe-area-inset-bottom) + 30px) !important;
-        padding-bottom: calc(env(safe-area-inset-bottom) + 30px) !important;
-    }
 }
 
 .page-title{
@@ -40,11 +38,12 @@ body{overflow-x: hidden;}
 }
 .btn-back{position: absolute;left: 0;top: 50%;transform: translateY(-50%);}
 
-.bottom{
+.bottom-btn-area{
+    $padding-bottom: 15px;
     padding-top: 30px;
-    padding-bottom: 15px;
-    padding-bottom: calc(constant(safe-area-inset-bottom) + 15px);
-    padding-bottom: calc(env(safe-area-inset-bottom) + 15px);
+    padding-bottom: $padding-bottom;
+    padding-bottom: calc(constant(safe-area-inset-bottom) + $padding-bottom);
+    padding-bottom: calc(env(safe-area-inset-bottom) + $padding-bottom);
 }
 
 .container,
@@ -61,8 +60,9 @@ body{overflow-x: hidden;}
     a{
         flex: 1 1 auto;line-height: 1;color: #aaa;font-size: 11px;letter-spacing: -0.44px;
         padding: 10px 0;
-        padding-bottom: calc(constant(safe-area-inset-bottom) + 10px);
-        padding-bottom: calc(env(safe-area-inset-bottom) + 10px);
+        $padding-bottom: 10px;
+        padding-bottom: calc(constant(safe-area-inset-bottom) + $padding-bottom);
+        padding-bottom: calc(env(safe-area-inset-bottom) + $padding-bottom);
         &.active{color: $primary;}
         span{
             text-align: center;vertical-align: top;

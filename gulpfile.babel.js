@@ -34,9 +34,9 @@ function html() {
             prefix: '@@', //사용할땐 앞에@@ 를 붙이면됨
             basepath: '@file',
         }))
-        .pipe(htmlbeautify({indentSize: 4}))
+    .pipe(htmlbeautify({indentSize: 2}))
 		.pipe(gulp.dest(dist))
-        .pipe(connect.reload());
+    .pipe(connect.reload());
 }
 
 function js() {

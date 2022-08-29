@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  @@include('@@webRoot/_include/_head.html')
+</head>
+
+<body>
+  <div id="wrap">
+
+    @@include('@@webRoot/_include/_header.html', {
+      "title": "버전정보",
+    })
+    <div id="container">
+      <main id="main">
+
+        <!-- 실컨텐츠 -->
+        <div class="d-flex flex-column h-100">
+          <div class="flex-grow-1">
+            <div class="version-info">
+              <div class="favicon">
+                <img src="../assets/images/icon-favicon.svg" alt="앱 아이콘">
+              </div>
+              <div class="ing-ver">현재 버전 <span>1.0.0</span></div>
+              <div class="latest-ver">최신 버전 <span>1.2.0</span></div>
+            </div>
+          </div>
+          <div class="bottom-btn-area">
+            <div class="d-grid gap-2">
+              <button class="btn btn-primary" type="button">업데이트</button>
+            </div>
+          </div>
+        </div>
+        <!-- //실컨텐츠 -->
+
+      </main>
+    </div>
+
+  </div>
+  @@include('@@webRoot/_include/_modal.html')
+</body>
+
+</html>

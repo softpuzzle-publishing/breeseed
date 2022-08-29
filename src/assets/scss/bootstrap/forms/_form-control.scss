@@ -23,6 +23,15 @@
   @include box-shadow($input-box-shadow);
   @include transition($input-transition);
 
+  &:not(:disabled),
+  &:not([readonly]) {
+    padding-right: 35px;
+  }
+
+  &[type="password"]{
+    padding-right: 75px;
+  }
+
   @media (max-width: 320px) {
     font-size: 13px;
   }
@@ -193,7 +202,7 @@
 textarea {
   &.form-control {
     min-height: $input-height;
-    background: #f5f5f5;border-radius: 10px;border: 0;padding: 20px;font-size: 15px;color: $primary;
+    background: #f5f5f5;border-radius: 10px;border: 0;padding: 20px !important;font-size: 15px;color: $primary;
     letter-spacing: -0.9px;
     &:focus{background: #f5f5f5;color: $primary;}
     &.auto-growing{
@@ -202,7 +211,7 @@ textarea {
         }
     }
     @media (max-width: 320px) {
-      padding: 15px;
+      padding: 15px !important;
     }
   }
 

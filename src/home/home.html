@@ -24,7 +24,7 @@
                         <!-- 추천 컨텐츠 -->
                         <section>
                             <h2 class="text-heading">
-                                <div class="text-primary">닉네임닉네임</div>을 위한 추천 컨텐츠
+                                <span class="text-primary d-block">닉네임닉네임</span>님을 위한 추천 컨텐츠
                             </h2>
                             <p class="text-desc">바쁜 삶에 지친 마음의 근육을 단단하게 만드는 명상입니다. 저와함께 행복의 씨앗을 심으러 가실까요?</p>
                             <div class="program-item">
@@ -56,34 +56,39 @@
                                 <a href="" class="more">더보기 <i class="icon-arrow-right"></i></a>
                             </div>
                             <p class="text-desc">명상이 어렵게만 느껴지시나요? <br>처음 시작하는 분들을 위한 5Days 명상을 준비했어요!</p>
-                            <div class="gallery-slider">
-                                <div class="slide">
+                            <div class="gallery-slider" id="topick-swiper">
+                              <div class="swiper-container">
+                                <div class="swiper-wrapper">
+                                  <div class="swiper-slide">
                                     <div class="program-item">
-                                        <a href="#none" class="program-thumb">
-                                            <img src="../assets/images/@thumbnail.png" alt="">
-                                        </a>
-                                        <div class="program-title">토픽명상타이틀토픽명 두줄까지 노출돼요 두줄까지만 노출돼요!!</div>
-                                        <div class="program-type">10분</div>
-                                        <div class="program-desc">토픽명상간략설명토픽명상간략설명토픽명상간략설명</div>
+                                      <a href="#none" class="program-thumb">
+                                        <img src="../assets/images/@thumbnail.png" alt="">
+                                      </a>
+                                      <div class="program-title">토픽명상타이틀토픽명 두줄까지 노출돼요 두줄까지만 노출돼요!!</div>
+                                      <div class="program-type">10분</div>
+                                      <div class="program-desc">토픽명상간략설명토픽명상간략설명토픽명상간략설명</div>
                                     </div>
-                                </div>
-                                @@for (var i = 4; i > 0; i--) {
-                                <div class="slide">
+                                  </div>
+                                  @@for (var i = 4; i > 0; i--) {
+                                  <div class="swiper-slide">
                                     <div class="program-item">
-                                        <a href="#none" class="program-thumb">
-                                            <img src="../assets/images/@thumbnail.png" alt="">
-                                        </a>
-                                        <div class="program-title">토픽명상타이틀토픽명</div>
-                                        <div class="program-type">10분</div>
-                                        <div class="program-desc">토픽명상간략설명토픽명상간략설명토픽명상간략설명</div>
+                                      <a href="#none" class="program-thumb">
+                                        <img src="../assets/images/@thumbnail.png" alt="">
+                                      </a>
+                                      <div class="program-title">토픽명상타이틀토픽명</div>
+                                      <div class="program-type">10분</div>
+                                      <div class="program-desc">토픽명상간략설명토픽명상간략설명토픽명상간략설명</div>
                                     </div>
+                                  </div>
+                                  }
                                 </div>
-                                }
+                              </div>
                             </div>
                         </section>
                     </div>
                 </div>
                 <script>
+                    /* 스크롤 내릴때 상단 effect */
                     const $background = document.querySelector(".back-area");
                     let opacity;
 
@@ -99,6 +104,18 @@
                     };
 
                     document.addEventListener("scroll", interaction, false);
+
+                    /* 토믹명상 swiper */
+                    const topickSwiper = new Swiper('#topick-swiper .swiper-container', {
+                      slidesPerView: 'auto',
+                      spaceBetween: 20,
+                      breakpoints: {
+                        320: {
+                          spaceBetween: 10
+                        },
+                      },
+                      freeMode: true,
+                    });
                 </script>
                 <!-- //실컨텐츠 -->
 
