@@ -184,10 +184,13 @@
         strong{font-size: 24px;line-height: 1.5;letter-spacing: -0.8px;font-weight: 400;}
         em{font-size: 18px;}
         p{font-size: 15px;letter-spacing: -0.6px;margin-top: 20px;text-align: center;line-height: 1.4;}
-        @media (max-width: 320px) {
+        @media (max-width: 359px) {
           strong{font-size: 18px;}
           em{font-size: 16px;}
           p{font-size: 13px;word-break: keep-all;}
+        }
+        @media (max-height: 540px) {
+          padding-top: 50px;
         }
     }
     .intro-item-1{background-image: url('../images/bg-intro-1.svg');}
@@ -306,9 +309,7 @@
 
 .version-info{
   text-align: center;font-size: 15px;
-  .favicon{margin-bottom: 20px;
-    img{}
-  }
+  .favicon{margin-bottom: 20px;}
   .ing-ver{color: #aaa;display: flex;align-items: center;justify-content: center;}
   .latest-ver{color: $primary;display: flex;align-items: center;justify-content: center;margin-top: 4px;}
   span{font-size: 18px;margin-left: 4px;}

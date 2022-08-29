@@ -121,8 +121,9 @@
                     </section>
                 </div>
                 <script>
-                  //첫 진입시 여정맵 show
+                  /* 첫 진입시 여정맵 show */
                   setTimeout(function(){
+                    disableScroll();
                     //씨앗 .start
                     document.querySelector('[data-day="0"]').classList.add('start');
                     //day에는 .filled 추가
@@ -136,9 +137,12 @@
                   setTimeout(function(){
                     document.querySelector('.map').classList.remove('show');
                     document.querySelector('.program').classList.add('show');
+                    enableScroll();
                   }, 3000);
 
+                  /* 씨앗 여정맵 보기 버튼 */
                   document.querySelector('.btn-stage-map').addEventListener('click', function(){
+                    disableScroll();
                     document.querySelector('.map').classList.add('show');
                     //해당 day 섹션으로 스크롤 이동
                     setTimeout(function(){
@@ -146,14 +150,18 @@
                         behavior: 'smooth'
                       });
                     }, 650)
+                    setTimeout(function(){
+                      enableScroll();
+                    }, 2000);
                   });
 
+                  /* 명상 홈 이동 버튼 */
                   document.querySelector('.btn-program-back').addEventListener('click', function(){
                     //document.querySelector('.program').classList.remove('show');
                     document.querySelector('.map').classList.remove('show');
                   });
 
-                  //사이드바 navi
+                  /* 사이드바 인덱스 navi 클릭 */
                   document.querySelectorAll('.theme-order a').forEach(anchor => {
                     anchor.addEventListener('click', function (e) {
                       e.preventDefault();
@@ -164,6 +172,49 @@
                       });
                     });
                   });
+
+                  /* 스크롤 이벤트 제어 */
+                  // left: 37, up: 38, right: 39, down: 40,
+                  // spacebar: 32, pageup: 33, pagedown: 34, end: 35, home: 36
+                  var keys = {37: 1, 38: 1, 39: 1, 40: 1};
+
+                  function preventDefault(e) {
+                    e.preventDefault();
+                  }
+
+                  function preventDefaultForScrollKeys(e) {
+                      if (keys[e.keyCode]) {
+                          preventDefault(e);
+                          return false;
+                      }
+                  }
+
+                  // modern Chrome requires { passive: false } when adding event
+                  var supportsPassive = false;
+                  try {
+                    window.addEventListener("test", null, Object.defineProperty({}, 'passive', {
+                      get: function () { supportsPassive = true; }
+                    }));
+                  } catch(e) {}
+
+                  var wheelOpt = supportsPassive ? { passive: false } : false;
+                  var wheelEvent = 'onwheel' in document.createElement('div') ? 'wheel' : 'mousewheel';
+
+                  // call this to Disable
+                  function disableScroll() {
+                    window.addEventListener('DOMMouseScroll', preventDefault, false); // older FF
+                    window.addEventListener(wheelEvent, preventDefault, wheelOpt); // modern desktop
+                    window.addEventListener('touchmove', preventDefault, wheelOpt); // mobile
+                    window.addEventListener('keydown', preventDefaultForScrollKeys, false);
+                  }
+
+                  // call this to Enable
+                  function enableScroll() {
+                    window.removeEventListener('DOMMouseScroll', preventDefault, false);
+                    window.removeEventListener(wheelEvent, preventDefault, wheelOpt);
+                    window.removeEventListener('touchmove', preventDefault, wheelOpt);
+                    window.removeEventListener('keydown', preventDefaultForScrollKeys, false);
+                  }
                 </script>
                 <!-- //실컨텐츠 -->
 
