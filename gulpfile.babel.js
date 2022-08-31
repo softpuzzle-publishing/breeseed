@@ -6,6 +6,9 @@ const babel = require('gulp-babel');
 const sourcemaps = require('gulp-sourcemaps');
 const fileinclude = require('gulp-file-include');
 const htmlbeautify = require('gulp-html-beautify');
+const htmllint = require('gulp-htmllint');
+const fancyLog = require('fancy-log');
+const colors = require('ansi-colors');
 
 
 const src = 'src';
@@ -26,14 +29,30 @@ function done(cb) {
     cb();
 }
 
-export const clean = () => del([ 'dist' ]);
+export const clean = () => del(['dist']);
+
+function htmllintReporter(filepath, issues) {
+  if (issues.length > 0) {
+      issues.forEach(function (issue) {
+        fancyLog(
+          colors.cyan('[gulp-htmllint] ')
+          + colors.white(filepath + ' [' + issue.line + ',' + issue.column + ']: ')
+          + colors.red('(' + issue.code + ') '
+          + issue.msg
+          + colors.blue('(' + issue.rule + ') ')));
+      });
+
+      process.exitCode = 1;
+  }
+}
 
 function html() {
     return gulp.src([paths.html])
+    .pipe(htmllint({}, htmllintReporter))
  		.pipe(fileinclude({
             prefix: '@@', //사용할땐 앞에@@ 를 붙이면됨
             basepath: '@file',
-        }))
+      }))
     .pipe(htmlbeautify({indentSize: 2}))
 		.pipe(gulp.dest(dist))
     .pipe(connect.reload());

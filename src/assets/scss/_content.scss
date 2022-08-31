@@ -511,6 +511,50 @@
   }
 }
 
+.seed-about{
+  dt{
+    font-size: 24px;font-weight: 400;color: $primary;margin-bottom: 10px;
+    @media (max-width: 320px) {
+      font-size: 20px;
+    }
+  }
+  dd{
+    font-size: 15px;letter-spacing: -0.9px;
+    @media (max-width: 320px) {
+      font-size: 13px;
+    }
+  }
+  dd + dt{margin-top: 30px;}
+}
+.seed-elements{
+  margin-top: 30px;
+  &::before{content: '';display: block;width: 100px;height: 2px;background: #000;margin-bottom: 20px;}
+  strong{
+    display: block;color: $primary;font-size: 24px;letter-spacing: -1.44px;font-weight: 400;
+    @media (max-width: 320px) {
+      font-size: 20px;
+    }
+  }
+  li{
+    margin-top: 40px;position: relative;padding-left: 100px;
+    &::before{content: '';display: block;width: 80px;height: 80px;background-repeat: no-repeat;background-position: 0 0;background-size: contain;position: absolute;left: 0;top: 0;}
+    @media (max-width: 320px) {
+      padding-left: 70px;margin-top: 30px;
+      &::before{width: 60px;height: 60px;}
+    }
+    &:nth-child(1)::before{background-image: url('../images/bg-grow-seed-component-1.svg');}
+    &:nth-child(2)::before{background-image: url('../images/bg-grow-seed-component-2.svg');}
+    &:nth-child(3)::before{background-image: url('../images/bg-grow-seed-component-3.svg');}
+    &:nth-child(4)::before{background-image: url('../images/bg-grow-seed-component-4.svg');}
+  }
+  .element{font-size: 18px;color: $primary;}
+  .desc{font-size: 15px;margin-top: 6px;letter-spacing: -0.9px;word-break: keep-all;}
+  @media (max-width: 320px) {
+    .element{font-size: 16px;}
+    .desc{font-size: 13px;}
+  }
+}
+
 .suspension-reason{
   margin-top: 30px;
   &::before{content: '';display: block;width: 60px;height: 2px;background: #000;margin-bottom: 20px;}
