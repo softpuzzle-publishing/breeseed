@@ -7,10 +7,20 @@ article.contents{
     position: relative;padding-bottom: 60px;margin-top: 60px;
     &::after{content: '';display: block;width: 78vw;height: 1px;background: #000;position: absolute;bottom: 0;}
     &:nth-of-type(odd){
-      &::after{left: -30px;}
+      &::after{
+        left: -30px;
+        @media (max-width: 320px) {
+          left: -15px;
+        }
+      }
     }
     &:nth-of-type(even){
-      &::after{right: -30px;}
+      &::after{
+        right: -30px;
+        @media (max-width: 320px) {
+          right: -15px;
+        }
+      }
     }
     &:last-of-type{
       &::after{display: none;}
@@ -20,16 +30,33 @@ article.contents{
     }
   }
   .badge{margin-bottom: 10px;}
-  .title{font-size: 20px;font-weight: 400;line-height: 1.4;letter-spacing: -0.8px;margin-bottom: 0;}
+  .title{
+    font-size: 20px;font-weight: 400;line-height: 1.4;letter-spacing: -0.8px;margin-bottom: 0;
+    @media (max-width: 320px) {
+      font-size: 18px;
+    }
+  }
   .title-number{
     font-size: 20px;font-weight: 400;margin-top: 30px;display: flex;word-break: keep-all;
     em{font-weight: 400;flex: 0 0 auto;margin-right: 14px;}
+    @media (max-width: 320px) {
+      font-size: 18px;
+    }
   }
   .paragraph{
     line-height: 1.63;letter-spacing: -0.64px;font-size: 16px;margin-top: 30px;display: flex;
     em{font-size: 20px;font-weight: 400;flex: 0 0 auto;margin-right: 14px;}
+    @media (max-width: 320px) {
+      font-size: 13px;
+      em{font-size: 18px;}
+    }
   }
-  .keyword{color: $PRIMARY_COLOR;font-size: 20px;font-weight: 400;line-height: 1.4;letter-spacing: -0.8px;display: block;margin-top: 30px;}
+  .keyword{
+    color: $PRIMARY_COLOR;font-size: 20px;font-weight: 400;line-height: 1.4;letter-spacing: -0.8px;display: block;margin-top: 30px;
+    @media (max-width: 320px) {
+      font-size: 18px;
+    }
+  }
   .keyword-desc{font-size: 13px;line-height: 1.54;letter-spacing: -.52px;margin-top: 4px;}
   .image{
     margin-top: 30px;
@@ -40,9 +67,12 @@ article.contents{
     figcaption{font-size: 13px;line-height: 1.54;letter-spacing: -0.52px;text-align: center;margin-top: 15px;}
   }
   .title-paint{
-    position: relative;display: flex;align-items: flex-end;font-weight: 400;padding-bottom: 10px;margin-bottom: 20px;margin-top: 60px;
+    font-size: 20px;position: relative;display: flex;align-items: flex-end;font-weight: 400;padding-bottom: 10px;margin-bottom: 20px;margin-top: 60px;
     i{margin-right: 10px;flex: 0 0 auto;}
     &::before{content: '';width: 100%;height: 20px;background: #a6f0b7;position: absolute;left: 0;bottom: 0;z-index: -1;}
+    @media (max-width: 320px) {
+      font-size: 18px;
+    }
   }
 }
 

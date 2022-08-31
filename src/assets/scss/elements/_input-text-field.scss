@@ -1,0 +1,54 @@
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 12.56px 0;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: $LINE_HEIGHT;
+  color: $TEXT_COLOR;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 0;
+  border-bottom: 1px solid #e5e5e5;
+  appearance: none;
+  border-radius: 0;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+  &:not(:disabled),
+  &:not([readonly]) {
+    padding-right: 35px;
+  }
+
+  &[type="password"]{
+    padding-right: 75px;
+  }
+
+  @media (max-width: 320px) {
+    font-size: 13px;
+  }
+
+  &[type="file"] {
+    overflow: hidden;
+
+    &:not(:disabled):not([readonly]) {
+      cursor: pointer;
+    }
+  }
+
+  &:focus {
+    background-color: #fff;
+    border-color: $PRIMARY_COLOR;
+    outline: 0;
+  }
+
+  &::placeholder {
+    color: $MUTED_COLOR;
+    font-size: 13px;
+  }
+
+  &:disabled,
+  &[readonly] {
+    background-color: #fff;
+    color: #aaa;
+  }
+}

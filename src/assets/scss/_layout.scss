@@ -28,14 +28,6 @@ body{overflow-x: hidden;}
 }
 .btn-back{position: absolute;left: 0;top: 50%;transform: translateY(-50%);}
 
-.bottom-btn-area{
-    $padding-bottom: 15px;
-    padding-top: 30px;
-    padding-bottom: $padding-bottom;
-    padding-bottom: calc(constant(safe-area-inset-bottom) + $padding-bottom);
-    padding-bottom: calc(env(safe-area-inset-bottom) + $padding-bottom);
-}
-
 .container,
 .container-fluid{
   padding-left: 1.875rem;padding-right: 1.875rem;
@@ -94,3 +86,10 @@ body{overflow-x: hidden;}
 
 #aside{flex: 0 0 75px}
 
+
+.page-bottom-padding{
+  $padding-bottom: 30px;
+  padding-bottom: $padding-bottom;
+  padding-bottom: calc(constant(safe-area-inset-bottom) + $padding-bottom);
+  padding-bottom: calc(env(safe-area-inset-bottom) + $padding-bottom);
+}

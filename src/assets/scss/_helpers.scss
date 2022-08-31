@@ -1,15 +1,27 @@
+.font-size-13{font-size: 13px !important;}
+
 .text-start { text-align: left !important; }
 .text-end { text-align: right !important; }
 .text-center { text-align: center !important; }
+
+.text-underline{text-decoration: underline !important;}
 
 .position-static { position: static !important; }
 .position-relative { position: relative !important; }
 .position-absolute { position: absolute !important; }
 
+.overflow-visible{overflow: visible !important;}
+
+.gap-10{gap: 10px !important;}
+
 .w-auto { width: auto !important; }
 .w-100 { width: 100% !important; }
 .h-auto { height: auto !important; }
 .h-100 { height: 100% !important; }
+
+.border{border: 1px solid $BORDER_COLOR;}
+.border-0{border: 0 !important;}
+.border-2{border-width: 2px !important;}
 
 .m-t-4 { margin-top: 4px !important; }
 .m-t-5 { margin-top: 5px !important; }

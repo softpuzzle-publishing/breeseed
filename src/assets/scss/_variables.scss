@@ -1,16 +1,28 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+// file path
+$BASE_PATH: '~@/assets' !default;
+$IMG_PATH: '#{$BASE_PATH}/images' !default;
+$FONT_PATH: '#{$BASE_PATH}/fonts' !default;
+
 //color
 $PRIMARY_COLOR: #56b36b;
 $SECONDARY_COLOR: #1f5a2c;
 $DANGER_COLOR: #ff6c00 !default;
 $DARK_COLOR: #000 !default;
+$LIGHT_COLOR: #fff !default;
 $GRAY_COLOR: #666 !default;
 
-$BUTTON_COLORS: (
+$THEME_COLORS: (
   "primary":    $PRIMARY_COLOR,
   "secondary":  $SECONDARY_COLOR,
+  "danger":  $DANGER_COLOR,
   "dark":       $DARK_COLOR,
+  "light":       $LIGHT_COLOR,
   "gray":       $GRAY_COLOR
-  ) !default;
+) !default;
 
 $GOOD_COLOR: $PRIMARY_COLOR !default;
 $MUTED_COLOR: #ccc !default;
@@ -26,10 +38,12 @@ $Z_INDEX_MAP: 998 !default;
 $Z_INDEX_MAP_CLOSE: 999 !default;
 $Z_INDEX_MODAL: 1055 !default;
 
-$SIDEBAR_WIDTH: 75px;
-
 //font
 $TEXT_FONT_STACK: "Noto Sans KR", system-ui, -apple-system, Roboto, sans-serif !default;
 $TEXT_SIZE: 16px;
 $TEXT_COLOR: #000;
+$LINK_COLOR: $TEXT_COLOR;
 $LINE_HEIGHT: 1.44 !default;
+
+//sidebar
+$SIDEBAR_WIDTH: 75px;

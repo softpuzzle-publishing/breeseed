@@ -1,0 +1,7 @@
+.fake-textarea{
+  padding: 20px;font-size: 15px;letter-spacing: -0.9px;background: #f5f5f5;border-radius: 10px;color: $PRIMARY_COLOR;min-height: 84px;
+  @media (max-width: 320px) {
+    font-size: 13px;padding: 15px;
+  }
+  &:focus-visible {outline: 0;}
+}

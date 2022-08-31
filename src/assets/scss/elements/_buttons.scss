@@ -1,6 +1,20 @@
 /* button */
 .btn {
-  display: inline-block;font-weight: 400;font-size: $TEXT_SIZE;line-height: $LINE_HEIGHT;color: $TEXT_COLOR;text-align: center;letter-spacing: -0.72px;white-space: nowrap;vertical-align: middle;cursor: pointer;user-select: none;background-color: transparent;border: 1px solid transparent;padding: 1rem 2rem;border-radius: 50rem;
+  display: inline-block;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: $LINE_HEIGHT;
+  color: $TEXT_COLOR;
+  text-align: center;
+  letter-spacing: -0.72px;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 1rem 2rem;
+  border-radius: 50rem;
   @media (max-width: 320px) {
     font-size: 15px;
   }
@@ -19,17 +33,27 @@
   color: $color;
   border-color: $color;
 }
-@each $color, $value in $BUTTON_COLORS {
+@each $color, $value in $THEME_COLORS {
   .btn-#{$color} {
     @include button-variant($value);
   }
-}
-@each $color, $value in $BUTTON_COLORS {
   .btn-outline-#{$color} {
     @include button-outline-variant($value);
   }
 }
+.btn-light{
+  color: #000;
+}
 
+/* button size */
+.btn-lg {
+  padding: 8px 16px;
+  font-size: 20px;
+}
+.btn-sm {
+  padding: 10px 20px;
+  font-size: 13px;
+}
 
 /* button style */
 .btn-link {
@@ -38,18 +62,3 @@
 .btn-flat{
   border-radius: 10px;
 }
-
-
-/* button size */
-.btn-lg {
-  padding: 8px 16px;
-  font-size: 20px;
-  border-radius: 50rem;
-}
-.btn-sm {
-  padding: 10px 20px;
-  font-size: 13px;
-  border-radius: 50rem;
-}
-
-
