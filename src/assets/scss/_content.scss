@@ -13,15 +13,15 @@
 .join-step{
     margin-bottom: 30px;padding-top: 36px;margin-top: -30px;
     .dot{
-        display: inline-block;width: 7px;height: 7px;border-radius: 50%;background-color: $primary;position: relative;margin: 0 17px;position: absolute;top: 50%;right: 44px;margin-top: -3.5px;
+        display: inline-block;width: 7px;height: 7px;border-radius: 50%;background-color: $PRIMARY_COLOR;position: relative;margin: 0 17px;position: absolute;top: 50%;right: 44px;margin-top: -3.5px;
         &::before,
-        &::after{content: '';display: inline-block;width: 7px;height: 7px;border-radius: 50%;background-color: $primary;position: absolute;}
+        &::after{content: '';display: inline-block;width: 7px;height: 7px;border-radius: 50%;background-color: $PRIMARY_COLOR;position: absolute;}
         &::before{left: -17px;}
         &::after{right: -17px;}
     }
     ol{display: flex;justify-content: center;}
     li{
-        display: flex;justify-content: center;align-items: center;border: 2px solid $primary;background: $primary;color: #fff;width: 36px;height: 36px;border-radius: 50%;text-align: center;position: relative;margin-left: 60px;
+        display: flex;justify-content: center;align-items: center;border: 2px solid $PRIMARY_COLOR;background: $PRIMARY_COLOR;color: #fff;width: 36px;height: 36px;border-radius: 50%;text-align: center;position: relative;margin-left: 60px;
         &::before{content: '';display: inline-block;width: 36px;height: 36px;position: absolute;left: 50%;top: -36px;transform: translateX(-50%);background-position: 0 0;background-repeat: no-repeat;}
         &:nth-child(1){
             &::before{background-image: url('../images/icon-join-step1.svg');}
@@ -38,10 +38,10 @@
         }
         &.active{
             & ~ li{
-                border-color: $muted;background: #fff;color: $muted;
+                border-color: $MUTED_COLOR;background: #fff;color: $MUTED_COLOR;
                 .dot,
                 .dot::before,
-                .dot::after{background: $muted;}
+                .dot::after{background: $MUTED_COLOR;}
                 &::before{display: none;}
             }
 
@@ -50,7 +50,7 @@
 }
 
 .time-count{
-  color: $gray;font-size: 15px;
+  color: $GRAY_COLOR;font-size: 15px;
   @media (max-width: 320px) {
     font-size: 13px;
   }
@@ -68,7 +68,7 @@
     .text-end{
         background: url('../images/icon-code.svg') no-repeat 100% 0;padding-top: 26px;
         strong{font-weight: 400;font-size: 18px;}
-        p{color: $gray;font-size: 13px;letter-spacing: -0.52px;}
+        p{color: $GRAY_COLOR;font-size: 13px;letter-spacing: -0.52px;}
     }
     .swipe-area{
         position: relative;width: 60px;height: 118px;margin-left: 20px;
@@ -100,7 +100,7 @@
 
 .privacy-agree{
     margin-top: 40px;
-    strong{font-size: 15px;font-weight: 400;color: $primary;display: block;margin-bottom: 10px;}
+    strong{font-size: 15px;font-weight: 400;color: $PRIMARY_COLOR;display: block;margin-bottom: 10px;}
 }
 
 .login-menu{
@@ -165,7 +165,7 @@
         font-size: 16px;
       }
     }
-    .desc{font-size: 13px;line-height: 1.54;letter-spacing: -0.78px;color: $gray;margin-top: 6px;margin-bottom: 30px;}
+    .desc{font-size: 13px;line-height: 1.54;letter-spacing: -0.78px;color: $GRAY_COLOR;margin-top: 6px;margin-bottom: 30px;}
 }
 
 .intro{
@@ -227,11 +227,11 @@
 
 .back-area{
     position: absolute;left: 0;right: 0;top: 0;z-index: -1;padding: 50px 30px 0;height: 300px;
-    .bg{background: $primary url('../images/bg-around.svg') no-repeat 50% 0;background-size: 100% auto;position: fixed;left: 0;right: 0;top: 0;height: 300px;}
+    .bg{background: $PRIMARY_COLOR url('../images/bg-around.svg') no-repeat 50% 0;background-size: 100% auto;position: fixed;left: 0;right: 0;top: 0;height: 300px;}
     .group{position: absolute;bottom: 126px;left: 30px;right: 30px;}
     .logo{color: #fff;font-size: 32px;font-weight: 400;margin-bottom: 20px;}
     .special{
-        background: $secondary;color: #56b36b;border-radius: 15px;padding: 1rem;text-align: center;font-size: 18px;letter-spacing: -0.72px;
+        background: $SECONDARY_COLOR;color: #56b36b;border-radius: 15px;padding: 1rem;text-align: center;font-size: 18px;letter-spacing: -0.72px;
     }
 }
 
@@ -246,7 +246,7 @@
 }
 
 .my-nick{
-    background: $primary;font-size: 18px;color: #fff;letter-spacing: -0.72px;border-radius: 10px;padding: 17px 20px;margin-bottom: 30px;
+    background: $PRIMARY_COLOR;font-size: 18px;color: #fff;letter-spacing: -0.72px;border-radius: 10px;padding: 17px 20px;margin-bottom: 30px;
 }
 
 .leave-top-text{font-size: 15px;margin-bottom: 10px;letter-spacing: -0.9px;
@@ -263,7 +263,7 @@
 }
 
 .program-recommand{
-    color: #fff;background: $primary;margin: 0 -30px;
+    color: #fff;background: $PRIMARY_COLOR;margin: 0 -30px;
     $padding-bottom: 30px;
     padding: 40px 30px $padding-bottom;
     padding-bottom: calc(constant(safe-area-inset-bottom) + $padding-bottom);
@@ -280,7 +280,7 @@
     margin-top: -10px;font-size: 15px;
     h2{font-size: 15px;letter-spacing: -0.9px;margin-bottom: 0;}
     dl{
-        font-size: 13px;color: $gray;border-bottom: 1px solid $border-color;margin-bottom: 10px;padding-bottom: 10px;
+        font-size: 13px;color: $GRAY_COLOR;border-bottom: 1px solid $BORDER_COLOR;margin-bottom: 10px;padding-bottom: 10px;
         dt{clear: left;float: left;}
         dd{text-align: right;}
         &:last-of-type{border-bottom: 0;padding-bottom: 0;margin-bottom: 0;}
@@ -311,13 +311,13 @@
   text-align: center;font-size: 15px;
   .favicon{margin-bottom: 20px;}
   .ing-ver{color: #aaa;display: flex;align-items: center;justify-content: center;}
-  .latest-ver{color: $primary;display: flex;align-items: center;justify-content: center;margin-top: 4px;}
+  .latest-ver{color: $PRIMARY_COLOR;display: flex;align-items: center;justify-content: center;margin-top: 4px;}
   span{font-size: 18px;margin-left: 4px;}
 }
 
 .sidebar{
     $padding-bottom: 60px;
-    width: $SIDEBAR_WIDTH;padding-top: 50px;background: $primary;position: fixed;left: -$SIDEBAR_WIDTH;top: 0;bottom: 0;z-index: $Z_INDEX_SIDEBAR;transition: left .5s .95s ease-in-out;padding-bottom: $padding-bottom;
+    width: $SIDEBAR_WIDTH;padding-top: 50px;background: $PRIMARY_COLOR;position: fixed;left: -$SIDEBAR_WIDTH;top: 0;bottom: 0;z-index: $Z_INDEX_SIDEBAR;transition: left .5s .95s ease-in-out;padding-bottom: $padding-bottom;
     padding-bottom: calc(constant(safe-area-inset-bottom) + $padding-bottom);
     padding-bottom: calc(env(safe-area-inset-bottom) + $padding-bottom);
     .scroll-area{
@@ -338,19 +338,19 @@
         position: relative;
         & + li{margin-top: 20px;}
     }
-    a{display: flex;align-items: center;justify-content: center;width: 40px;height: 40px;background: #fff;border-radius: 50%;color: $muted;font-size: 18px;margin: 0 auto;}
+    a{display: flex;align-items: center;justify-content: center;width: 40px;height: 40px;background: #fff;border-radius: 50%;color: $MUTED_COLOR;font-size: 18px;margin: 0 auto;}
     .active{
         &::before{content: '';width: 62px;height: 50px;border-radius: 50rem 0 0 50rem;background: #fff;position: absolute;left: 9px;top: 50%;transform: translateY(-50%);z-index: -1;}
-        a{background: $primary;color: #fff;}
+        a{background: $PRIMARY_COLOR;color: #fff;}
     }
     .ing{
         &::after{
-            content: '';width: 8px;height: 8px;background: $danger;border-radius: 50%;position: absolute;right: 4px;top: 50%;z-index: 1;transform: translateY(-50%);
+            content: '';width: 8px;height: 8px;background: $DANGER_COLOR;border-radius: 50%;position: absolute;right: 4px;top: 50%;z-index: 1;transform: translateY(-50%);
         }
     }
 }
 
-.go-stage-map{width: $SIDEBAR_WIDTH; position: absolute;left: 0;top: 0;height: 50px;background: $primary;display: flex;align-items: center;justify-content: center;}
+.go-stage-map{width: $SIDEBAR_WIDTH; position: absolute;left: 0;top: 0;height: 50px;background: $PRIMARY_COLOR;display: flex;align-items: center;justify-content: center;}
 .btn-stage-map{background: url('../images/icon-map.svg') no-repeat 0 0;width: 30px;height: 30px;}
 .btn-grow-seed{
   display: inline-block;background: url('../images/icon-flower.svg') no-repeat 0 0;width: 30px;height: 30px;position: fixed;right: 30px;top: 10px;z-index: $Z_INDEX_GROW_SEED;
@@ -389,7 +389,7 @@
 }
 .theme-number{font-size: 15px;letter-spacing: -0.8px;margin-bottom: 4px;}
 .theme-title{
-  font-size: 18px;color: $primary;margin-bottom: 30px;
+  font-size: 18px;color: $PRIMARY_COLOR;margin-bottom: 30px;
   @media (max-width: 320px) {
     font-size: 16px;
   }
@@ -397,8 +397,8 @@
 
 .theme-day{
     display: flex;margin-bottom: 20px;scroll-margin-top: 40px;margin-top: 60px;
-    strong{font-size: 18px;color: $primary;font-weight: 400;flex: 0 0 auto;margin-right: 20px;}
-    p{font-size: 15px;color: $gray;letter-spacing: -0.9px;flex-grow: 1;}
+    strong{font-size: 18px;color: $PRIMARY_COLOR;font-weight: 400;flex: 0 0 auto;margin-right: 20px;}
+    p{font-size: 15px;color: $GRAY_COLOR;letter-spacing: -0.9px;flex-grow: 1;}
     .theme-title + &{margin-top: 0;}
     @media (max-width: 320px) {
       strong{font-size: 15px;margin-right: 10px;}
@@ -418,15 +418,15 @@
   &::before{content: '';display: block;width: 60px;height: 60px;background: url('../images/icon-seed-card.svg') no-repeat 0 0;margin-right: 10px;}
   .info{
     padding-bottom: 5px;margin-right: 35px;
-    .all{font-size: 13px;color: $gray;}
-    .percent{font-size: 25px;color: $primary;line-height: 1.2;}
+    .all{font-size: 13px;color: $GRAY_COLOR;}
+    .percent{font-size: 25px;color: $PRIMARY_COLOR;line-height: 1.2;}
   }
   .progress-area{flex-grow: 1;padding-bottom: 5px;}
   .marker{display: inline-block;width: 30px;height: 30px; background: url('../images/icon-marker.svg') no-repeat 0 0;position: absolute;right: -15px;top: -30px;}
 }
 
 .grow-theme-item{
-  background-color: $muted;padding: 20px;border-radius: 10px;position: relative;
+  background-color: $MUTED_COLOR;padding: 20px;border-radius: 10px;position: relative;
   @media (max-width: 320px) {
     padding: 15px;
   }
@@ -446,13 +446,13 @@
     }
   }
   &:not([data-level="0"]){
-    background-color: $primary;
+    background-color: $PRIMARY_COLOR;
     .state{
       span{
         background-color: #339349;border-color:#339349;background-repeat: no-repeat;background-position: 0 0;background-size: contain;
         &[data-required="Y"]{
-          background-color: $primary;border-color: #fff;
-          &[data-bonus="Y"]{background-color: $primary;border-color: #fff;
+          background-color: $PRIMARY_COLOR;border-color: #fff;
+          &[data-bonus="Y"]{background-color: $PRIMARY_COLOR;border-color: #fff;
             &::before{content: '';display: block; width: 10px;height: 10px;border: 1px solid #fff;border-radius: 50%;}
           }
         }
@@ -513,7 +513,7 @@
 
 .seed-about{
   dt{
-    font-size: 24px;font-weight: 400;color: $primary;margin-bottom: 10px;
+    font-size: 24px;font-weight: 400;color: $PRIMARY_COLOR;margin-bottom: 10px;
     @media (max-width: 320px) {
       font-size: 20px;
     }
@@ -530,7 +530,7 @@
   margin-top: 30px;
   &::before{content: '';display: block;width: 100px;height: 2px;background: #000;margin-bottom: 20px;}
   strong{
-    display: block;color: $primary;font-size: 24px;letter-spacing: -1.44px;font-weight: 400;
+    display: block;color: $PRIMARY_COLOR;font-size: 24px;letter-spacing: -1.44px;font-weight: 400;
     @media (max-width: 320px) {
       font-size: 20px;
     }
@@ -547,7 +547,7 @@
     &:nth-child(3)::before{background-image: url('../images/bg-grow-seed-component-3.svg');}
     &:nth-child(4)::before{background-image: url('../images/bg-grow-seed-component-4.svg');}
   }
-  .element{font-size: 18px;color: $primary;}
+  .element{font-size: 18px;color: $PRIMARY_COLOR;}
   .desc{font-size: 15px;margin-top: 6px;letter-spacing: -0.9px;word-break: keep-all;}
   @media (max-width: 320px) {
     .element{font-size: 16px;}
@@ -558,7 +558,7 @@
 .suspension-reason{
   margin-top: 30px;
   &::before{content: '';display: block;width: 60px;height: 2px;background: #000;margin-bottom: 20px;}
-  font-size: 15px;letter-spacing: -0.9px;color: $gray;
+  font-size: 15px;letter-spacing: -0.9px;color: $GRAY_COLOR;
   @media (max-width: 320px) {
     font-size: 14px;
   }
@@ -590,7 +590,7 @@
   &.show{transform: translateX(0);}
   svg{max-width: none;}
   .line {
-    stroke: $primary;fill: transparent;stroke-dasharray: 210;stroke-dashoffset: 54;z-index: 2;opacity: 0;
+    stroke: $PRIMARY_COLOR;fill: transparent;stroke-dasharray: 210;stroke-dashoffset: 54;z-index: 2;opacity: 0;
   }
   .start .line{
     stroke-dasharray: -210;
@@ -627,7 +627,7 @@
 
 .map-theme-start{
   height: 100vh;padding: 0 30px;display: flex;flex-direction: column; align-items: center;justify-content: flex-end;overflow: hidden;
-  background: $primary url('../images/bg-map-00.svg') no-repeat 0 0;background-size: cover;
+  background: $PRIMARY_COLOR url('../images/bg-map-00.svg') no-repeat 0 0;background-size: cover;
   .title{font-size: 24px;letter-spacing: -1.44px;color: #fff;margin-bottom: 70px;text-align: center;}
   .seed-wrap{text-align: center;}
   .seed{
@@ -645,7 +645,7 @@
 
 .map-theme-group{
   overflow: hidden;
-  > div{height: 100vh;background-color: $primary;background-repeat: no-repeat;background-position: 0 0;background-size: 100% auto;position: relative;}
+  > div{height: 100vh;background-color: $PRIMARY_COLOR;background-repeat: no-repeat;background-position: 0 0;background-size: 100% auto;position: relative;}
   &.theme-1 .theme-a{background-image: url('../images/bg-map-01-01.svg');}
   &.theme-1 .theme-b{background-image: url('../images/bg-map-01-02.svg');}
   &.theme-2 .theme-a{background-image: url('../images/bg-map-02-01.svg');}

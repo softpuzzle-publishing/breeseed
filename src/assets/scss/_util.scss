@@ -1,9 +1,9 @@
 #main.first{
-  padding: 0;height: 100%;background: $primary;
+  padding: 0;height: 100%;background: $PRIMARY_COLOR;
 }
 
 .login-wrap{
-    background: $primary;min-height: 100%;padding:0 35px 55px;position: relative;display: flex;flex-direction: column;justify-content: center;
+    background: $PRIMARY_COLOR;min-height: 100%;padding:0 35px 55px;position: relative;display: flex;flex-direction: column;justify-content: center;
     @media (max-width: 320px) {
       padding:0 20px 55px;
     }
