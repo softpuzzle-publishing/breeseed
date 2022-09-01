@@ -142,8 +142,7 @@
     }
     .program-code{font-size: 13px;color: $GRAY_COLOR;margin-top: 5px;}
     .program-price{font-size: 15px;margin-top: 4px;}
-    .valid-feedback,
-    .invalid-feedback{margin-top: 10px;}
+    .feedback{margin-top: 10px;}
 }
 
 .gallery-slider{
@@ -225,4 +224,62 @@
   padding-bottom: $padding-bottom;
   padding-bottom: calc(constant(safe-area-inset-bottom) + $padding-bottom);
   padding-bottom: calc(env(safe-area-inset-bottom) + $padding-bottom);
+}
+
+.agree{
+  display: flex;justify-content: space-between;align-items: center;padding: 10px 15px;border-radius: 15px;
+  @media (max-width: 320px) {
+    padding-left: 10px;padding-right: 10px;
+  }
+  &.point{background: #f8f8f8;padding-top: 17px;padding-bottom: 17px;}
+}
+
+.already-join{
+  font-size: 15px;display: flex;justify-content: center;margin-bottom: 20px;
+}
+
+.join-step{
+  margin-bottom: 30px;padding-top: 36px;margin-top: -30px;
+  .dot{
+      display: inline-block;width: 7px;height: 7px;border-radius: 50%;background-color: $PRIMARY_COLOR;position: relative;margin: 0 17px;position: absolute;top: 50%;right: 44px;margin-top: -3.5px;
+      &::before,
+      &::after{content: '';display: inline-block;width: 7px;height: 7px;border-radius: 50%;background-color: $PRIMARY_COLOR;position: absolute;}
+      &::before{left: -17px;}
+      &::after{right: -17px;}
+  }
+  ol{display: flex;justify-content: center;}
+  li{
+      display: flex;justify-content: center;align-items: center;border: 2px solid $PRIMARY_COLOR;background: $PRIMARY_COLOR;color: #fff;width: 36px;height: 36px;border-radius: 50%;text-align: center;position: relative;margin-left: 60px;
+      &::before{content: '';display: inline-block;width: 36px;height: 36px;position: absolute;left: 50%;top: -36px;transform: translateX(-50%);background-position: 0 0;background-repeat: no-repeat;}
+      &:nth-child(1){
+          &::before{background-image: url('../images/icon-join-step1.svg');}
+      }
+      &:nth-child(2){
+          &::before{background-image: url('../images/icon-join-step2.svg');}
+      }
+      &:nth-child(3){
+          &::before{background-image: url('../images/icon-join-step3.svg');}
+      }
+      &:first-of-type{
+          margin-left: 0;
+          .dot{display: none;}
+      }
+      &.active{
+          & ~ li{
+              border-color: $MUTED_COLOR;background: #fff;color: $MUTED_COLOR;
+              .dot,
+              .dot::before,
+              .dot::after{background: $MUTED_COLOR;}
+              &::before{display: none;}
+          }
+
+      }
+  }
+}
+
+.time-count{
+color: $GRAY_COLOR;font-size: 15px;
+@media (max-width: 320px) {
+  font-size: 13px;
+}
 }
