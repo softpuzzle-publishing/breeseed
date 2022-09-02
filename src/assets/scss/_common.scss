@@ -278,8 +278,13 @@
 }
 
 .time-count{
-color: $GRAY_COLOR;font-size: 15px;
-@media (max-width: 320px) {
-  font-size: 13px;
+  color: $GRAY_COLOR;font-size: 15px;
+  @media (max-width: 320px) {
+    font-size: 13px;
+  }
 }
+
+.privacy-agree{
+  margin-top: 40px;
+  strong{font-size: 15px;font-weight: 400;color: $PRIMARY_COLOR;display: block;margin-bottom: 10px;}
 }
