@@ -1,51 +1,74 @@
 let Common = {
-    init: function () {
-        this.event();
-        this.input();
-    },
-    event: function () {
+  init: function () {
+    this.input();
+    this.modal();
+  },
+  input: function () {
+    //input focused
+    let inputAll = document.querySelectorAll(".form-control");
+    inputAll.forEach(function (input) {
+      input.addEventListener("focus", function () {
+        this.classList.add("filled");
+      });
+      input.addEventListener("focusout", function () {
+        setTimeout(function () {
+          input.classList.remove("filled");
+        }, 100);
+      });
+    });
 
-    },
-    input: function () {
-        //input focused
-        let inputAll = document.querySelectorAll(".form-control");
-        inputAll.forEach(function (input) {
-            input.addEventListener("focus", function () {
-                this.classList.add("filled");
-            });
-            input.addEventListener("focusout", function () {
-                setTimeout(function () {
-                    input.classList.remove("filled");
-                }, 100);
-            });
-        });
+    //input value clear
+    let btnClear = document.querySelectorAll(".btn-input-x");
+    btnClear.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        btn.previousElementSibling.value = "";
+        btn.previousElementSibling.classList.remove("filled");
+        btn.previousElementSibling.previousElementSibling.value = "";
+        btn.previousElementSibling.previousElementSibling.classList.remove("filled");
+      });
+    });
 
-        //input value clear
-        let btnClear = document.querySelectorAll(".btn-input-x");
-        btnClear.forEach(function (btn) {
-            btn.addEventListener("click", function () {
-                btn.previousElementSibling.value = "";
-                btn.previousElementSibling.classList.remove("filled");
-                btn.previousElementSibling.previousElementSibling.value = "";
-                btn.previousElementSibling.previousElementSibling.classList.remove(
-                    "filled"
-                );
-            });
-        });
+    //input type(password) toggle
+    let btnTypeToggle = document.querySelectorAll(".btn-type-toggle");
+    btnTypeToggle.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        if (btn.previousElementSibling.getAttribute("type") === "password") {
+          btn.previousElementSibling.setAttribute("type", "text");
+        } else {
+          btn.previousElementSibling.setAttribute("type", "password");
+        }
+      });
+    });
+  },
+  modal: function () {
+    let btnModal = document.querySelectorAll("[data-component='modal']");
+    btnModal.forEach(function (btn) {
+      btn.addEventListener("click", function (e) {
+        e.preventDefault();
+        let target;
+        if (this.hasAttribute("data-component-target")) {
+          target = this.getAttribute("data-component-target");
+        } else {
+          target = this.getAttribute("href");
+        }
+        modalShow(target);
+      });
+    });
 
-        //input type(password) toggle
-        let btnTypeToggle = document.querySelectorAll(".btn-type-toggle");
-        btnTypeToggle.forEach(function (btn) {
-            btn.addEventListener("click", function () {
-                if (btn.previousElementSibling.getAttribute("type") === "password") {
-                    btn.previousElementSibling.setAttribute("type", "text");
-                } else {
-                    btn.previousElementSibling.setAttribute("type", "password");
-                }
-            });
-        });
+    let btnModalClose = document.querySelectorAll("[data-component-close]");
+    btnModalClose.forEach(function (btn) {
+      btn.addEventListener("click", function (e) {
+        e.preventDefault();
+        this.closest(".modal").classList.remove("show");
+      });
+    });
+
+    function modalShow(target) {
+      document.querySelector(target).classList.add("show");
     }
-}
+  },
+};
 
-
-Common.init();
+setTimeout(function () {
+  Common.init();
+}, 50);

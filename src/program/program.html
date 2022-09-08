@@ -1,232 +1,230 @@
 <!DOCTYPE html>
 <html lang="ko">
-
-<head>
+  <head>
     @@include('@@webRoot/_include/_head.html')
-</head>
+  </head>
 
-<body>
+  <body>
     <div id="wrap">
-
-        @@include('@@webRoot/_include/_header.html', {
-            "title": "프로그램명",
-            "back" : "false"
-        })
-        <div id="container">
-            <main id="main">
-
-                <!-- 실컨텐츠 -->
-                @@include('@@webRoot/_include/_map.html')
-                <div class="program">
-                    <aside id="aside">
-                        <div class="sidebar">
-                            <div class="go-stage-map">
-                                <button type="button" class="btn-stage-map" aria-label="씨앗 여정맵 보기"></button>
-                            </div>
-                            <div class="scroll-area">
-                                <h2><span>테마<i class="num">01</i></span></h2>
-                                <ol class="theme-order">
-                                    <li class="active ing"><a href="#contents1">1</a></li>
-                                    @@for (var j = 2; j < 8; j++) {
-                                    <li><a href="#contents`+ j +`">`+ j +`</a></li>
-                                    }
-                                </ol>
-                                <h2><span>테마<i class="num">02</i></span></h2>
-                                <ol class="theme-order">
-                                    @@for (var j = 8; j < 15; j++) {
-                                    <li><a href="#contents`+ j +`">`+ j +`</a></li>
-                                    }
-                                </ol>
-                                <h2><span>테마<i class="num">03</i></span></h2>
-                                <ol class="theme-order">
-                                    @@for (var j = 8; j < 15; j++) {
-                                    <li><a href="#contents`+ j +`">`+ j +`</a></li>
-                                    }
-                                </ol>
-                                <h2><span>테마<i class="num">04</i></span></h2>
-                                <ol class="theme-order">
-                                    @@for (var j = 8; j < 15; j++) {
-                                    <li><a href="#contents`+ j +`">`+ j +`</a></li>
-                                    }
-                                </ol>
-                                <h2><span>테마<i class="num">05</i></span></h2>
-                                <ol class="theme-order">
-                                    @@for (var j = 8; j < 15; j++) {
-                                    <li><a href="#contents`+ j +`">`+ j +`</a></li>
-                                    }
-                                </ol>
-                            </div>
-                        </div>
-                    </aside>
-                    <a href="../program/grow_seed.html" class="btn-grow-seed" aria-label="씨앗 키우기"></a>
-                    <div class="voice-choice">
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="voice" id="voiceMail" checked>
-                            <label class="form-check-label" for="voiceMail">
-                                남자 보이스
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="voice" id="voiceFeail">
-                            <label class="form-check-label" for="voiceFeail">
-                                여자 보이스
-                            </label>
-                        </div>
-                    </div>
-                    <section class="theme">
-                        <div class="theme-number">테마01</div>
-                        <div class="theme-title">테마타이틀테마타이틀테마타이틀 테마타이틀테마타이틀테마타이틀</div>
-                        @@for (var i = 1; i < 8; i++) {
-                        <div class="theme-day" id="contents`+ i +`">
-                            <strong>Day `+ i +`</strong>
-                            <p>데이교육설명문구데이교육설명문구데이교육설명문구</p>
-                        </div>
-                        <div class="program-item">
-                            <a href="#none" class="program-thumb watched"> <!-- 청취 완료 .watched 추가 -->
-                                <img src="../assets/images/@thumbnail.png" alt="">
-                                <span class="badge bg-primary">필수</span>
-                            </a>
-                            <div class="program-title">프로그램제목프로그램제목프로그램멕스스물두자</div>
-                            <div class="program-type">오디오 ㅣ 10분</div>
-                            <div class="program-desc">데이원컨텐츠간략설명데이원컨텐츠간략설명</div>
-                        </div>
-                        <div class="program-item">
-                            <a href="#none" class="program-thumb">
-                                <img src="../assets/images/@thumbnail.png" alt="">
-                                <span class="badge border-primary bg-dark border border-2">보너스</span>
-                            </a>
-                            <div class="program-title">프로그램제목프로그램제목프로그램멕스스물두자</div>
-                            <div class="program-type">오디오 ㅣ 10분</div>
-                            <div class="program-desc">데이원컨텐츠간략설명데이원컨텐츠간략설명</div>
-                        </div>
-                        <div class="program-item">
-                            <a href="#none" class="program-thumb lock"> <!-- 구독전 .lock 추가 -->
-                                <img src="../assets/images/@thumbnail.png" alt="">
-                                <span class="badge bg-primary">필수</span>
-                            </a>
-                            <div class="program-title">오늘 당신의 하루는 어땠나요.
-                                지금 기록해 볼까요?</div>
-                            <div class="program-type">과제</div>
-                        </div>
-                        <div class="program-item">
-                            <a href="#none" class="program-thumb">
-                                <img src="../assets/images/@thumbnail.png" alt="">
-                                <span class="badge border-primary bg-dark border border-2">보너스</span>
-                            </a>
-                            <div class="program-title">데이원체화하기타이틀데이원체화하기타</div>
-                            <div class="program-type">체화하기</div>
-                            <div class="program-desc">데이원컨텐츠간략설명데이원컨텐츠간략설명</div>
-                        </div>
-                        }
-                    </section>
+      @@include('@@webRoot/_include/_header.html', { "title": "프로그램명", "back" : "false" })
+      <div id="container">
+        <main id="main">
+          <!-- 실컨텐츠 -->
+          @@include('@@webRoot/_include/_map.html')
+          <div class="program">
+            <aside id="aside">
+              <div class="sidebar">
+                <div class="go-stage-map">
+                  <button type="button" class="btn-stage-map" aria-label="씨앗 여정맵 보기"></button>
                 </div>
-                <script>
-                  /* 첫 진입시 여정맵 show */
-                  setTimeout(function(){
-                    disableScroll();
-                    //씨앗 .start
-                    document.querySelector('[data-day="0"]').classList.add('start');
-                    //day에는 .filled 추가
-                    document.querySelector('[data-day="1"]').classList.add('filled');
-                    setTimeout(function(){
-                      document.querySelector('.theme-1 .theme-a').scrollIntoView({
-                          behavior: 'smooth'
-                      });
-                    },1500);
-                  },350);
-                  setTimeout(function(){
-                    document.querySelector('.map').classList.remove('show');
-                    document.querySelector('.program').classList.add('show');
-                    enableScroll();
-                  }, 3000);
-
-                  /* 씨앗 여정맵 보기 버튼 */
-                  document.querySelector('.btn-stage-map').addEventListener('click', function(){
-                    disableScroll();
-                    document.querySelector('.map').classList.add('show');
-                    //해당 day 섹션으로 스크롤 이동
-                    setTimeout(function(){
-                      document.querySelector('.theme-1 .theme-b').scrollIntoView({
-                        behavior: 'smooth'
-                      });
-                    }, 650)
-                    setTimeout(function(){
-                      enableScroll();
-                    }, 2000);
-                  });
-
-                  /* 명상 홈 이동 버튼 */
-                  document.querySelector('.btn-program-back').addEventListener('click', function(){
-                    //document.querySelector('.program').classList.remove('show');
-                    document.querySelector('.map').classList.remove('show');
-                  });
-
-                  /* 사이드바 인덱스 navi 클릭 */
-                  document.querySelectorAll('.theme-order a').forEach(anchor => {
-                    anchor.addEventListener('click', function (e) {
-                      e.preventDefault();
-                      document.querySelector('.theme-order .active').classList.remove('active');
-                      this.parentElement.classList.add("active");
-                      document.querySelector(this.getAttribute('href')).scrollIntoView({
-                          behavior: 'smooth'
-                      });
-                    });
-                  });
-
-                  /* 스크롤 이벤트 제어 */
-                    // left: 37, up: 38, right: 39, down: 40,
-                    // spacebar: 32, pageup: 33, pagedown: 34, end: 35, home: 36
-                    var keys = { 37: 1, 38: 1, 39: 1, 40: 1 };
-                    function preventDefault(e) {
-                      e.preventDefault();
+                <div class="scroll-area">
+                  <h2>
+                    <span>테마<i class="num">01</i></span>
+                  </h2>
+                  <ol class="theme-order">
+                    <li class="active ing"><a href="#contents1">1</a></li>
+                    @@for (var j = 2; j < 8; j++) {
+                    <li><a href="#contents`+ j +`">`+ j +`</a></li>
                     }
-                    function preventDefaultForScrollKeys(e) {
-                      if (keys[e.keyCode]) {
-                        preventDefault(e);
-                        return false;
-                      }
+                  </ol>
+                  <h2>
+                    <span>테마<i class="num">02</i></span>
+                  </h2>
+                  <ol class="theme-order">
+                    @@for (var j = 8; j < 15; j++) {
+                    <li><a href="#contents`+ j +`">`+ j +`</a></li>
                     }
-                    // modern Chrome requires { passive: false } when adding event
-                    var supportsPassive = false;
-                    try {
-                      window.addEventListener(
-                        "test",
-                        null,
-                        Object.defineProperty({}, "passive", {
-                          get: function () {
-                            supportsPassive = true;
-                            return false;
-                          }
-                        })
-                      );
-                    } catch (e) {
-                      //empty
+                  </ol>
+                  <h2>
+                    <span>테마<i class="num">03</i></span>
+                  </h2>
+                  <ol class="theme-order">
+                    @@for (var j = 8; j < 15; j++) {
+                    <li><a href="#contents`+ j +`">`+ j +`</a></li>
                     }
-                    var wheelOpt = supportsPassive ? { passive: false } : false;
-                    var wheelEvent =
-                      "onwheel" in document.createElement("div") ? "wheel" : "mousewheel";
-                    // call this to Disable
-                    function disableScroll() {
-                      window.addEventListener("DOMMouseScroll", preventDefault, false); // older FF
-                      window.addEventListener(wheelEvent, preventDefault, wheelOpt); // modern desktop
-                      window.addEventListener("touchmove", preventDefault, wheelOpt); // mobile
-                      window.addEventListener("keydown", preventDefaultForScrollKeys, false);
+                  </ol>
+                  <h2>
+                    <span>테마<i class="num">04</i></span>
+                  </h2>
+                  <ol class="theme-order">
+                    @@for (var j = 8; j < 15; j++) {
+                    <li><a href="#contents`+ j +`">`+ j +`</a></li>
                     }
-                    // call this to Enable
-                    function enableScroll() {
-                      window.removeEventListener("DOMMouseScroll", preventDefault, false);
-                      window.removeEventListener(wheelEvent, preventDefault, wheelOpt);
-                      window.removeEventListener("touchmove", preventDefault, wheelOpt);
-                      window.removeEventListener("keydown", preventDefaultForScrollKeys, false);
+                  </ol>
+                  <h2>
+                    <span>테마<i class="num">05</i></span>
+                  </h2>
+                  <ol class="theme-order">
+                    @@for (var j = 8; j < 15; j++) {
+                    <li><a href="#contents`+ j +`">`+ j +`</a></li>
                     }
-                </script>
-                <!-- //실컨텐츠 -->
+                  </ol>
+                </div>
+              </div>
+            </aside>
+            <a href="../program/grow_seed.html" class="btn-grow-seed" aria-label="씨앗 키우기"></a>
+            <div class="voice-choice">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="voice" id="voiceMail" checked />
+                <label class="form-check-label" for="voiceMail"> 남자 보이스 </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="voice" id="voiceFeail" />
+                <label class="form-check-label" for="voiceFeail"> 여자 보이스 </label>
+              </div>
+            </div>
+            <section class="theme">
+              <div class="theme-number">테마01</div>
+              <div class="theme-title">테마타이틀테마타이틀테마타이틀 테마타이틀테마타이틀테마타이틀</div>
+              @@for (var i = 1; i < 8; i++) {
+              <div class="theme-day" id="contents`+ i +`">
+                <strong>Day `+ i +`</strong>
+                <p>데이교육설명문구데이교육설명문구데이교육설명문구</p>
+              </div>
+              <div class="program-item">
+                <a href="#none" class="program-thumb watched">
+                  <!-- 청취 완료 .watched 추가 -->
+                  <img src="../assets/images/@thumbnail.png" alt="" />
+                  <span class="badge bg-primary">필수</span>
+                </a>
+                <div class="program-title">프로그램제목프로그램제목프로그램멕스스물두자</div>
+                <div class="program-type">오디오 ㅣ 10분</div>
+                <div class="program-desc">데이원컨텐츠간략설명데이원컨텐츠간략설명</div>
+              </div>
+              <div class="program-item">
+                <a href="#none" class="program-thumb">
+                  <img src="../assets/images/@thumbnail.png" alt="" />
+                  <span class="badge border-primary bg-dark border border-2">보너스</span>
+                </a>
+                <div class="program-title">프로그램제목프로그램제목프로그램멕스스물두자</div>
+                <div class="program-type">오디오 ㅣ 10분</div>
+                <div class="program-desc">데이원컨텐츠간략설명데이원컨텐츠간략설명</div>
+              </div>
+              <div class="program-item">
+                <a href="#none" class="program-thumb lock">
+                  <!-- 구독전 .lock 추가 -->
+                  <img src="../assets/images/@thumbnail.png" alt="" />
+                  <span class="badge bg-primary">필수</span>
+                </a>
+                <div class="program-title">오늘 당신의 하루는 어땠나요. 지금 기록해 볼까요?</div>
+                <div class="program-type">과제</div>
+              </div>
+              <div class="program-item">
+                <a href="#none" class="program-thumb">
+                  <img src="../assets/images/@thumbnail.png" alt="" />
+                  <span class="badge border-primary bg-dark border border-2">보너스</span>
+                </a>
+                <div class="program-title">데이원체화하기타이틀데이원체화하기타</div>
+                <div class="program-type">체화하기</div>
+                <div class="program-desc">데이원컨텐츠간략설명데이원컨텐츠간략설명</div>
+              </div>
+              }
+            </section>
+          </div>
+          <script>
+            /* 첫 진입시 여정맵 show */
+            setTimeout(function () {
+              disableScroll();
+              //씨앗 .start
+              document.querySelector('[data-day="0"]').classList.add("start");
+              //day에는 .filled 추가
+              document.querySelector('[data-day="1"]').classList.add("filled");
+              setTimeout(function () {
+                document.querySelector(".theme-1 .theme-a").scrollIntoView({
+                  behavior: "smooth",
+                });
+              }, 1500);
+            }, 350);
+            setTimeout(function () {
+              document.querySelector(".map").classList.remove("show");
+              document.querySelector(".program").classList.add("show");
+              enableScroll();
+            }, 3000);
 
-            </main></div>
-        </div>
-        @@include('@@webRoot/_include/_menubar.html')
+            /* 씨앗 여정맵 보기 버튼 */
+            document.querySelector(".btn-stage-map").addEventListener("click", function () {
+              disableScroll();
+              document.querySelector(".map").classList.add("show");
+              //해당 day 섹션으로 스크롤 이동
+              setTimeout(function () {
+                document.querySelector(".theme-1 .theme-b").scrollIntoView({
+                  behavior: "smooth",
+                });
+              }, 650);
+              setTimeout(function () {
+                enableScroll();
+              }, 2000);
+            });
+
+            /* 명상 홈 이동 버튼 */
+            document.querySelector(".btn-program-back").addEventListener("click", function () {
+              //document.querySelector('.program').classList.remove('show');
+              document.querySelector(".map").classList.remove("show");
+            });
+
+            /* 사이드바 인덱스 navi 클릭 */
+            document.querySelectorAll(".theme-order a").forEach((anchor) => {
+              anchor.addEventListener("click", function (e) {
+                e.preventDefault();
+                document.querySelector(".theme-order .active").classList.remove("active");
+                this.parentElement.classList.add("active");
+                document.querySelector(this.getAttribute("href")).scrollIntoView({
+                  behavior: "smooth",
+                });
+              });
+            });
+
+            /* 스크롤 이벤트 제어 */
+            // left: 37, up: 38, right: 39, down: 40,
+            // spacebar: 32, pageup: 33, pagedown: 34, end: 35, home: 36
+            var keys = { 37: 1, 38: 1, 39: 1, 40: 1 };
+            function preventDefault(e) {
+              e.preventDefault();
+            }
+            function preventDefaultForScrollKeys(e) {
+              if (keys[e.keyCode]) {
+                preventDefault(e);
+                return false;
+              }
+            }
+            // modern Chrome requires { passive: false } when adding event
+            var supportsPassive = false;
+            try {
+              window.addEventListener(
+                "test",
+                null,
+                Object.defineProperty({}, "passive", {
+                  get: function () {
+                    supportsPassive = true;
+                    return false;
+                  },
+                })
+              );
+            } catch (e) {
+              //empty
+            }
+            var wheelOpt = supportsPassive ? { passive: false } : false;
+            var wheelEvent = "onwheel" in document.createElement("div") ? "wheel" : "mousewheel";
+            // call this to Disable
+            function disableScroll() {
+              window.addEventListener("DOMMouseScroll", preventDefault, false); // older FF
+              window.addEventListener(wheelEvent, preventDefault, wheelOpt); // modern desktop
+              window.addEventListener("touchmove", preventDefault, wheelOpt); // mobile
+              window.addEventListener("keydown", preventDefaultForScrollKeys, false);
+            }
+            // call this to Enable
+            function enableScroll() {
+              window.removeEventListener("DOMMouseScroll", preventDefault, false);
+              window.removeEventListener(wheelEvent, preventDefault, wheelOpt);
+              window.removeEventListener("touchmove", preventDefault, wheelOpt);
+              window.removeEventListener("keydown", preventDefaultForScrollKeys, false);
+            }
+          </script>
+          <!-- //실컨텐츠 -->
+        </main>
+      </div>
+      @@include('@@webRoot/_include/_menubar.html')
     </div>
     @@include('@@webRoot/_include/_modal.html')
-</body>
-
+  </body>
 </html>

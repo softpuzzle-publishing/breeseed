@@ -1,32 +1,20 @@
 <!DOCTYPE html>
 <html lang="ko">
-
-<head>
+  <head>
     @@include('@@webRoot/_include/_head.html')
-</head>
+  </head>
 
-<body>
+  <body>
     <div id="wrap">
-
-        @@include('@@webRoot/_include/_header.html', {
-            "title": "Day 3 과제",
-        })
-        <div id="container">
-            <main id="main">
-
-                <!-- 실컨텐츠 -->
-                <button type="button" data-bs-toggle="modal" data-bs-target="#modal-uncomfortable-reason" id="btn">어떤 점이 불편하셨나요?</button>
-                <script>
-                    setTimeout(function(){
-                        document.querySelector('#btn').click();
-                    },20)
-                </script>
-                <!-- //실컨텐츠 -->
-
-            </main>
-        </div>
+      @@include('@@webRoot/_include/_header.html', { "title": "Day 3 과제", })
+      <div id="container">
+        <main id="main">
+          <!-- 실컨텐츠 -->
+          <button type="button" data-component="modal" data-component-target="#modal-uncomfortable-reason" id="btn">어떤 점이 불편하셨나요?</button>
+          <!-- //실컨텐츠 -->
+        </main>
+      </div>
     </div>
     @@include('@@webRoot/_include/_modal.html')
-</body>
-
+  </body>
 </html>

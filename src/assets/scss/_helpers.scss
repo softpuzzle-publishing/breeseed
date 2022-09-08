@@ -1,3 +1,7 @@
+.visually-hidden{
+  position: absolute!important; width: 1px!important; height: 1px!important; padding: 0!important; margin: -1px!important; overflow: hidden!important; clip: rect(0,0,0,0)!important; white-space: nowrap!important; border: 0!important;
+}
+
 .font-size-13{font-size: 13px !important;}
 
 .text-start { text-align: left !important; }
@@ -9,6 +13,8 @@
 .position-static { position: static !important; }
 .position-relative { position: relative !important; }
 .position-absolute { position: absolute !important; }
+
+.opacity-0{opacity: 0 !important;}
 
 .overflow-visible{overflow: visible !important;}
 

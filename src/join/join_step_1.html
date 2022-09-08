@@ -1,98 +1,79 @@
 <!DOCTYPE html>
 <html lang="ko">
-
-<head>
+  <head>
     @@include('@@webRoot/_include/_head.html')
-</head>
+  </head>
 
-<body>
+  <body>
     <div id="wrap">
-
-        @@include('@@webRoot/_include/_header.html', {
-            "title": "아이디로 가입하기",
-        })
-        <div id="container">
-            <main id="main">
-
-                <!-- 실컨텐츠 -->
-                <div class="has-bottom-button">
-                    <div class="flex-grow-1">
-                        <div class="join-step">
-                            <ol>
-                                <li class="active" aria-current="true">1<span class="dot"></span></li>
-                                <li>2<span class="dot"></span></li>
-                                <li>3<span class="dot"></span></li>
-                            </ol>
-                        </div>
-                        <div class="agree point m-b-15">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="agreeAll">
-                                <label class="form-check-label" for="agreeAll">
-                                    전체 동의하기
-                                </label>
-                            </div>
-                        </div>
-                        <div class="agree">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="agree1">
-                                <label class="form-check-label" for="agree1">
-                                    이용약관 동의 <span class="text-primary">(필수)</span>
-                                </label>
-                            </div>
-                            <button type="button" aria-label="내용보기"><i class="icon-arrow-right"></i></button>
-                        </div>
-                        <div class="agree">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="agree2">
-                                <label class="form-check-label" for="agree2">
-                                    개인정보처리방침 동의 <span class="text-primary">(필수)</span>
-                                </label>
-                            </div>
-                            <button type="button" aria-label="내용보기"><i class="icon-arrow-right"></i></button>
-                        </div>
-                        <div class="agree">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="agree3">
-                                <label class="form-check-label" for="agree3">
-                                    개인정보 수집 및 이용 동의 <span class="text-primary">(필수)</span>
-                                </label>
-                            </div>
-                            <button type="button" aria-label="내용보기" data-bs-toggle="modal" data-bs-target="#modal-terms-privacy-use"><i class="icon-arrow-right"></i></button>
-                        </div>
-                        <div class="agree">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="agree4">
-                                <label class="form-check-label" for="agree4">
-                                    마케팅 수신 동의 <span class="text-primary">(필수)</span>
-                                </label>
-                            </div>
-                            <button type="button" aria-label="내용보기"><i class="icon-arrow-right"></i></button>
-                        </div>
-                        <div class="agree point m-t-15">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="agree5">
-                                <label class="form-check-label" for="agree5">
-                                    만 14세 이상입니다. <span class="text-primary">(필수)</span>
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bottom-btn-area">
-                        <div class="already-join">
-                            <p class="me-2">이미 가입하셨나요?</p>
-                            <a href="../login/login.html" class="text-primary text-underline">로그인</a>
-                        </div>
-                        <div class="d-grid gap-10">
-                            <button class="btn btn-primary" type="button" onclick="document.location.href='../join/join_step_2.html'">다음</button>
-                        </div>
-                    </div>
+      @@include('@@webRoot/_include/_header.html', { "title": "아이디로 가입하기", })
+      <div id="container">
+        <main id="main">
+          <!-- 실컨텐츠 -->
+          <div class="has-bottom-button">
+            <div class="flex-grow-1">
+              <div class="join-step">
+                <ol>
+                  <li class="active" aria-current="true">1<span class="dot"></span></li>
+                  <li>2<span class="dot"></span></li>
+                  <li>3<span class="dot"></span></li>
+                </ol>
+              </div>
+              <div class="agree point m-b-15">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="agreeAll" />
+                  <label class="form-check-label" for="agreeAll"> 전체 동의하기 </label>
                 </div>
-                <!-- //실컨텐츠 -->
-
-            </main>
-        </div>
+              </div>
+              <div class="agree">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="agree1" />
+                  <label class="form-check-label" for="agree1"> 이용약관 동의 <span class="text-primary">(필수)</span> </label>
+                </div>
+                <button type="button" aria-label="내용보기"><i class="icon-arrow-right"></i></button>
+              </div>
+              <div class="agree">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="agree2" />
+                  <label class="form-check-label" for="agree2"> 개인정보처리방침 동의 <span class="text-primary">(필수)</span> </label>
+                </div>
+                <button type="button" aria-label="내용보기"><i class="icon-arrow-right"></i></button>
+              </div>
+              <div class="agree">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="agree3" />
+                  <label class="form-check-label" for="agree3"> 개인정보 수집 및 이용 동의 <span class="text-primary">(필수)</span> </label>
+                </div>
+                <button type="button" aria-label="내용보기" data-component="modal" data-component-target="#modal-terms-privacy-use"><i class="icon-arrow-right"></i></button>
+              </div>
+              <div class="agree">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="agree4" />
+                  <label class="form-check-label" for="agree4"> 마케팅 수신 동의 <span class="text-primary">(필수)</span> </label>
+                </div>
+                <button type="button" aria-label="내용보기"><i class="icon-arrow-right"></i></button>
+              </div>
+              <div class="agree point m-t-15">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="agree5" />
+                  <label class="form-check-label" for="agree5"> 만 14세 이상입니다. <span class="text-primary">(필수)</span> </label>
+                </div>
+              </div>
+            </div>
+            <div class="bottom-btn-area">
+              <div class="already-join">
+                <p class="me-2">이미 가입하셨나요?</p>
+                <a href="../login/login.html" class="text-primary text-underline">로그인</a>
+              </div>
+              <div class="d-grid gap-10">
+                <button class="btn btn-primary" type="button" onclick="document.location.href='../join/join_step_2.html'">다음</button>
+              </div>
+            </div>
+          </div>
+          <!-- //실컨텐츠 -->
+        </main>
+      </div>
     </div>
     @@include('@@webRoot/_include/_modal.html')
-</body>
-
+  </body>
 </html>
