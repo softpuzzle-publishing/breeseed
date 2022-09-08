@@ -258,6 +258,10 @@
 }
 
 .program-intro{
+  $padding-bottom: 76px;
+  padding-bottom: $padding-bottom;
+  padding-bottom: calc(constant(safe-area-inset-bottom) + $padding-bottom);
+  padding-bottom: calc(env(safe-area-inset-bottom) + $padding-bottom);
   .section + .section{margin-top: 60px;}
   .image{text-align: center;}
   .box{border-radius: 0;}
@@ -341,6 +345,19 @@
       > div{margin-bottom: 20px;}
       a{text-decoration: underline;font-size: 18px;}
     }
+  }
+  .program-intro-price{
+    background: $PRIMARY_COLOR;height: 76px;padding: 0 30px;position: fixed;bottom: 0;left: 0;right: 0;z-index: 10;
+    display: flex;justify-content: space-between;align-items: center;
+    @media (max-width: 320px) {
+      padding: 0 15px;
+    }
+    .text-1{
+      font-size: 13px;color: #d1ffdc;
+      &::after{content: '';display: inline-block;width: 25px;height: 25px;vertical-align: bottom;background: url('../images/icon-butterfly.svg') no-repeat 0 0;margin-left: 4px;}
+    }
+    .text-2{font-size: 15px;margin-top: 2px;color: #fff;}
+    .price{font-size: 28px;color: #fff;}
   }
 }
 
