@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    @@include('@@webRoot/_include/_head.html')
+  </head>
+
+  <body>
+    <div id="wrap">
+      @@include('@@webRoot/_include/_header.html', { "title": "Day 3 오디오", })
+      <div id="container">
+        <main id="main">
+          <!-- 실컨텐츠 -->
+          <button type="button" data-component="modal" data-component-target="#modal-program-intro" id="btn">프로그램 구독안내</button>
+          <!-- //실컨텐츠 -->
+        </main>
+      </div>
+    </div>
+    @@include('@@webRoot/_include/_modal.html')
+  </body>
+</html>
