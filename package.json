@@ -12,7 +12,6 @@
     "@babel/core": "^7.17.2",
     "@babel/preset-env": "^7.16.11",
     "@babel/register": "^7.17.0",
-    "babel-eslint": "^8.2.6",
     "del": "^6.0.0",
     "eslint": "^8.23.0",
     "eslint-plugin-html": "^7.1.0",

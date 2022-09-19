@@ -336,7 +336,7 @@
     .program-intro-guide{
       li{
         position: relative;padding-left: 14px;
-        &::before{content: '';width: 6px;height: 6px;background: #000;border-radius: 50%;position: absolute;left: 0;top: 7px;}
+        &::before{content: '';width: 6px;height: 6px;background: #000;border-radius: 50%;position: absolute;left: 0;top: 8px;}
         & + li{margin-top: 20px;}
       }
     }
@@ -347,11 +347,14 @@
     }
   }
   .program-intro-price{
-    background: $PRIMARY_COLOR;height: 76px;padding: 0 30px;position: fixed;bottom: 0;left: 0;right: 0;z-index: 10;
-    display: flex;justify-content: space-between;align-items: center;
+    background: $PRIMARY_COLOR;height: 76px;position: fixed;bottom: 0;left: 0;right: 0;z-index: 10;display: flex;justify-content: space-between;align-items: center;box-sizing: content-box;
+    padding-left: 30px;padding-right: 30px;
+    padding-bottom: calc(constant(safe-area-inset-bottom));
+    padding-bottom: calc(env(safe-area-inset-bottom));
     @media (max-width: 320px) {
-      padding: 0 15px;
+      padding-left: 15px;padding-right: 15px;
     }
+    .text{transform: translateY(-2px);}
     .text-1{
       font-size: 13px;color: #d1ffdc;
       &::after{content: '';display: inline-block;width: 25px;height: 25px;vertical-align: bottom;background: url('../images/icon-butterfly.svg') no-repeat 0 0;margin-left: 4px;}

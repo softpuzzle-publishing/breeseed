@@ -24,6 +24,7 @@ const paths = {
   lib: src + "/assets/lib/**",
 };
 
+// eslint-disable-next-line no-unused-vars
 function done(cb) {
   console.log("Finished");
   cb();
