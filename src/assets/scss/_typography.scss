@@ -1,0 +1,20 @@
+.text-heading{
+  font-size: 24px;letter-spacing: -1.44px;font-weight: 400;margin-bottom: 20px;
+  @media (max-width: 320px) {
+    font-size: 20px;
+  }
+}
+.text-basis{
+  font-size: 15px;letter-spacing: -0.9px;
+  @media (max-width: 320px) {
+    font-size: 14px;
+  }
+}
+.text-desc{font-size: 13px;color: $GRAY_COLOR;letter-spacing: -0.78px;}
+
+.menu-title{
+  font-size: 18px;letter-spacing: -0.72px;margin-bottom: 15px;
+  @media (max-width: 320px) {
+    font-size: 16px;
+  }
+}

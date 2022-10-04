@@ -12,13 +12,15 @@ body{overflow-x: hidden;}
   }
 }
 
-.page-title{
-  font-size: 18px;font-weight: 400;height: 50px;margin-bottom: 0;text-align: center;padding: 0 40px;display: flex;align-items: center;justify-content: center;
-  @media (max-width: 320px) {
-    font-size: 16px;
+.the-header{
+  .page-title{
+    font-size: 18px;font-weight: 400;height: 50px;margin-bottom: 0;text-align: center;padding: 0 40px;display: flex;align-items: center;justify-content: center;
+    @media (max-width: 320px) {
+      font-size: 16px;
+    }
   }
+  .btn-back{position: absolute;left: 0;top: 50%;transform: translateY(-50%);}
 }
-.btn-back{position: absolute;left: 0;top: 50%;transform: translateY(-50%);}
 
 .container,
 .container-fluid{
@@ -28,7 +30,8 @@ body{overflow-x: hidden;}
   }
 }
 
-.menubar{
+.the-menubar{
+  .menubar{
     position: fixed;left: 0;right: 0;bottom: 0;
     display: flex;text-align: center;background: #fff;z-index: $Z_INDEX_MENUBAR;
     a{
@@ -55,6 +58,7 @@ body{overflow-x: hidden;}
         span::before{background-image: url('../images/icon-gnb-person-off.svg');}
         &.active span::before{background-image: url('../images/icon-gnb-person-on.svg');}
     }
+  }
 }
 
 #footer{

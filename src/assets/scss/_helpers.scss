@@ -47,3 +47,27 @@
 .m-b-15 { margin-bottom: 15px !important; }
 .m-b-30 { margin-bottom: 30px !important; }
 
+.collapse{
+  &:not(.show){display: none;}
+}
+
+@mixin text-variant($color) {
+  color: $color !important;
+}
+@mixin bg-variant($color) {
+  background-color: $color !important;
+}
+@mixin border-variant($color) {
+  border-color: $color !important;
+}
+@each $color, $value in $THEME_COLORS {
+  .text-#{$color} {
+    @include text-variant($value);
+  }
+  .bg-#{$color} {
+    @include bg-variant($value);
+  }
+  .border-#{$color} {
+    @include border-variant($value);
+  }
+}
