@@ -2,47 +2,51 @@
 <html lang="ko">
 
 <head>
-    @@include('@@webRoot/_include/_head.html')
+  @@include('@@webRoot/_include/_head.html')
 </head>
 
 <body>
-    <div id="wrap">
+  <div id="wrap">
 
-        @@include('@@webRoot/_include/_header.html', {
-            "title": "구매내역",
-        })
-        <div id="container">
-            <main id="main">
+    @@include('@@webRoot/_include/_header.html', {
+    "title": "구매내역",
+    })
+    <div id="container">
+      <main id="main">
 
-                <!-- 실컨텐츠 -->
-                <div class="has-bottom-button">
-                    <div class="flex-grow-1">
-                        <div class="history-empty">
-                            <i class="icon-list-empty"></i>
-                            <p>구매 내역이 없습니다.</p>
-                        </div>
-                    </div>
-                    <div class="program-recommand">
-                        <h2>마음챙김 프로그램</h2>
-                        <div class="program-item">
-                            <a href="#none" class="program-thumb lock"> <!-- 구독전 .lock 추가 -->
-                                <img src="../assets/images/@thumbnail.png" alt="">
-                                <span class="badge bg-danger">Premium</span>
-                                <!-- <span class="badge bg-primary">구독중</span> -->
-                            </a>
-                            <div class="program-title">프로그램제목프로그램제목프로그램멕스스물두자</div>
-                            <div class="program-type">35일 프로그램</div>
-                            <div class="program-desc">프로그램간략설명프로그램간략설명프로그램간략설명프로그램간략설명프로그램간략설명프로그램간략설명오십자내외</div>
-                        </div>
-                    </div>
-                </div>
-                <!-- //실컨텐츠 -->
-
-            </main>
+        <!-- 실컨텐츠 -->
+        <div class="has-bottom-button">
+          <div class="flex-grow-1">
+            <div class="history-restore">
+              <button type="button" class="btn btn-flat w-100">구매내역 복원</button>
+            </div>
+            <div class="history-empty">
+              <i class="icon-list-empty"></i>
+              <p>구매 내역이 없습니다.</p>
+            </div>
+          </div>
+          <div class="program-recommand">
+            <h2>마음챙김 프로그램</h2>
+            <div class="program-item">
+              <a href="#none" class="program-thumb lock">
+                <!-- 구독전 .lock 추가 -->
+                <img src="../assets/images/@thumbnail.png" alt="">
+                <span class="badge bg-danger">Premium</span>
+                <!-- <span class="badge bg-primary">구독중</span> -->
+              </a>
+              <div class="program-title">프로그램제목프로그램제목프로그램멕스스물두자</div>
+              <div class="program-type">35일 프로그램</div>
+              <div class="program-desc">프로그램간략설명프로그램간략설명프로그램간략설명프로그램간략설명프로그램간략설명프로그램간략설명오십자내외</div>
+            </div>
+          </div>
         </div>
+        <!-- //실컨텐츠 -->
 
+      </main>
     </div>
-    @@include('@@webRoot/_include/_modal.html')
+
+  </div>
+  @@include('@@webRoot/_include/_modal.html')
 </body>
 
 </html>

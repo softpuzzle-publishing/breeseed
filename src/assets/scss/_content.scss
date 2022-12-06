@@ -38,8 +38,12 @@
     }
 }
 
+.auto-login{
+  margin-top: 40px;
+}
+
 .login-menu{
-    display: flex;justify-content: center;align-items: center;margin-top: 50px;
+    display: flex;justify-content: center;align-items: center;margin-bottom: 30px;
     a{font-size: 15px;letter-spacing: -0.9px;}
 }
 
@@ -104,6 +108,17 @@
 
 .intro{
     height: 100vh;position: relative;
+    .intro-header{
+      position: absolute;width: 100%;left: 0;top: 0;display: flex;align-items: center;justify-content: center;padding: 12px 30px;
+      text-align: center;z-index: 2;
+      h1{font-size: 18px;font-weight: 400;line-height: 1.44;margin-bottom: 0;color: #fff;}
+      .btn-close{
+        position: absolute;right: 30px;top: 50%;transform: translateY(-50%);background-image: url('../images/icon-close-white.svg');
+        @media (max-width: 320px) {
+          right: 10px;background-size: 1.5rem;
+        }
+      }
+    }
     .swiper-container,
     .swiper-wrapper{height: 100%;}
     .swiper-slide{color: #fff;overflow: hidden;}
@@ -160,17 +175,17 @@
 }
 
 .back-area{
-    position: absolute;left: 0;right: 0;top: 0;z-index: -1;padding: 50px 30px 0;height: 300px;
+    position: absolute;left: 0;right: 0;top: 0;padding: 50px 30px 0;height: 300px;
     .bg{background: $PRIMARY_COLOR url('../images/bg-around.svg') no-repeat 50% 0;background-size: 100% auto;position: fixed;left: 0;right: 0;top: 0;height: 300px;}
     .group{
-      position: absolute;bottom: 126px;left: 30px;right: 30px;
+      position: fixed;top: 56px;left: 30px;right: 30px;
       @media (max-width: 320px) {
         left: 15px;right: 15px;bottom: 155px;
       }
     }
     .logo{color: #fff;font-size: 32px;font-weight: 400;margin-bottom: 20px;}
     .special{
-        background: $SECONDARY_COLOR;color: #56b36b;border-radius: 15px;padding: 1rem;text-align: center;font-size: 18px;letter-spacing: -0.72px;
+        background: $SECONDARY_COLOR;color: #56b36b;border-radius: 15px; padding: 1rem; text-align: center; font-size: 18px; letter-spacing: -0.72px;width: 100%; position: relative;
     }
 }
 
@@ -198,6 +213,12 @@
 }
 .leave-reason-title{font-size: 13px;letter-spacing: -0.52px;border-bottom: 1px solid #000;padding-bottom: 15px;margin-bottom: 1.5rem;}
 
+.history-restore{
+  .btn{
+    background: #f8f8f8;position: relative;text-align: left;border-color: #f8f8f8;padding-left: 20px;margin-bottom: 10px;
+    &::after{content: '';display: block;width: 30px;height: 30px;background: url('../images/icon-arrow-right.svg') no-repeat 0 0;position: absolute;right: 5px;top: 50%;transform: translateY(-50%);}
+  }
+}
 
 .history-empty{
     display: flex;flex-direction: column;align-items: center;justify-content: center;background: #f8f8f8;min-height: 140px;border-radius: 10px;overflow: hidden;margin-bottom: 30px;
@@ -490,7 +511,9 @@
   }
   .level-icon{
     position: absolute;right: 20px;top: 50%;transform: translateY(-50%);
-    i{display: block;background-position: 0 0;background-repeat: no-repeat;background-size: contain;width: 100px;height: 100px;}
+    i{display: block;width: 100px;height: 100px;
+      img{width: 100%;height: 100%;object-fit: contain;}
+    }
     @media (max-width: 320px) {
       right: 15px;
       i{width: 80px;height: 80px;}
@@ -509,56 +532,6 @@
         }
       }
     }
-  }
-  &[data-theme="1"]{
-    i{background-image: url('../images/seed-level-1-0.svg');}
-    &[data-level="1"] i{background-image: url('../images/seed-level-1-1.svg');}
-    &[data-level="2"] i{background-image: url('../images/seed-level-1-2.svg');}
-    &[data-level="3"] i{background-image: url('../images/seed-level-1-3.svg');}
-    &[data-level="4"] i{background-image: url('../images/seed-level-1-4.svg');}
-    &[data-level="5"] i{background-image: url('../images/seed-level-1-5.svg');}
-    &[data-level="6"] i{background-image: url('../images/seed-level-1-6.svg');}
-    &[data-level="7"] i{background-image: url('../images/seed-level-1-7.svg');}
-  }
-  &[data-theme="2"]{
-    i{background-image: url('../images/seed-level-2-0.svg');}
-    &[data-level="1"] i{background-image: url('../images/seed-level-2-1.svg');}
-    &[data-level="2"] i{background-image: url('../images/seed-level-2-2.svg');}
-    &[data-level="3"] i{background-image: url('../images/seed-level-2-3.svg');}
-    &[data-level="4"] i{background-image: url('../images/seed-level-2-4.svg');}
-    &[data-level="5"] i{background-image: url('../images/seed-level-2-5.svg');}
-    &[data-level="6"] i{background-image: url('../images/seed-level-2-6.svg');}
-    &[data-level="7"] i{background-image: url('../images/seed-level-2-7.svg');}
-  }
-  &[data-theme="3"]{
-    i{background-image: url('../images/seed-level-3-0.svg');}
-    &[data-level="1"] i{background-image: url('../images/seed-level-3-1.svg');}
-    &[data-level="2"] i{background-image: url('../images/seed-level-3-2.svg');}
-    &[data-level="3"] i{background-image: url('../images/seed-level-3-3.svg');}
-    &[data-level="4"] i{background-image: url('../images/seed-level-3-4.svg');}
-    &[data-level="5"] i{background-image: url('../images/seed-level-3-5.svg');}
-    &[data-level="6"] i{background-image: url('../images/seed-level-3-6.svg');}
-    &[data-level="7"] i{background-image: url('../images/seed-level-3-7.svg');}
-  }
-  &[data-theme="4"]{
-    i{background-image: url('../images/seed-level-4-0.svg');}
-    &[data-level="1"] i{background-image: url('../images/seed-level-4-1.svg');}
-    &[data-level="2"] i{background-image: url('../images/seed-level-4-2.svg');}
-    &[data-level="3"] i{background-image: url('../images/seed-level-4-3.svg');}
-    &[data-level="4"] i{background-image: url('../images/seed-level-4-4.svg');}
-    &[data-level="5"] i{background-image: url('../images/seed-level-4-5.svg');}
-    &[data-level="6"] i{background-image: url('../images/seed-level-4-6.svg');}
-    &[data-level="7"] i{background-image: url('../images/seed-level-4-7.svg');}
-  }
-  &[data-theme="5"]{
-    i{background-image: url('../images/seed-level-5-0.svg');}
-    &[data-level="1"] i{background-image: url('../images/seed-level-5-1.svg');}
-    &[data-level="2"] i{background-image: url('../images/seed-level-5-2.svg');}
-    &[data-level="3"] i{background-image: url('../images/seed-level-5-3.svg');}
-    &[data-level="4"] i{background-image: url('../images/seed-level-5-4.svg');}
-    &[data-level="5"] i{background-image: url('../images/seed-level-5-5.svg');}
-    &[data-level="6"] i{background-image: url('../images/seed-level-5-6.svg');}
-    &[data-level="7"] i{background-image: url('../images/seed-level-5-7.svg');}
   }
 }
 

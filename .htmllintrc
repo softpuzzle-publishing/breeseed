@@ -12,6 +12,7 @@
   "tag-name-lowercase": false,
   "link-req-noopener": false,
   "line-end-style": false,
+  "ids-class-no-ad": false,
   "raw-ignore-regex": "@@for.*{",
   "line-no-trailing-whitespace": false
 }

@@ -62,12 +62,15 @@
     img{width: 100%;height: 100%;object-fit: cover;position: absolute;top: 0;}
     &.day5{padding-top: 31.746031746%;}
     &.lock{
-        &::after{content: '';display: block;width: 30px;height: 30px;background: url('../images/icon-lock.svg');position: absolute;left: 10px;bottom: 10px;}
+        &::after{content: '';display: block;width: 30px;height: 30px;background: url('../images/icon-lock.svg');position: absolute;left: 10px;bottom: 10px;z-index: 1;}
     }
     &.watched{
-        &::after{content: '';display: block;width: 30px;height: 30px;background: url('../images/icon-watched.svg') no-repeat 0 0;position: absolute;left: 10px;bottom: 10px;}
+        &::after{content: '';display: block;width: 30px;height: 30px;background: url('../images/icon-watched.svg') no-repeat 0 0;position: absolute;left: 10px;bottom: 10px;z-index: 1;}
     }
-    .badge{position: absolute;right: 10px;top: 10px;}
+    &.dimed{
+        &::before{content: '';position: absolute;left: 0;top: 0;bottom: 0;right: 0;background: rgba(0,0,0,0.6);z-index: 1;}
+    }
+    .badge{position: absolute;right: 10px;top: 10px;z-index: 1;}
 }
 
 .program-item-history{
@@ -234,4 +237,8 @@
 .privacy-agree{
   margin-top: 40px;
   strong{font-size: 15px;font-weight: 400;color: $PRIMARY_COLOR;display: block;margin-bottom: 10px;}
+}
+
+.required{
+  color: $DANGER_COLOR;margin-left: 1px;font-weight: 400;
 }

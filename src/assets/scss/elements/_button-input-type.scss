@@ -2,6 +2,5 @@
   position: absolute;right: 0;top:50%;transform: translateY(-50%);
   .form-control[type=text] ~ &{
       .icon-eye-off{background-image: url('../images/icon-eye-on.svg');}
-  }
-  ~ .btn-input-x{right: 40px;}
+  }  
 }
