@@ -60,10 +60,12 @@ let Common = {
       btn.addEventListener("click", function (e) {
         e.preventDefault();
         this.closest(".modal").classList.remove("show");
+        document.querySelector("body").classList.remove("modal-open");
       });
     });
 
     function modalShow(target) {
+      document.querySelector("body").classList.add("modal-open");
       document.querySelector(target).classList.add("show");
     }
   },

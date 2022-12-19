@@ -69,52 +69,54 @@
               <label class="form-check-label" for="voiceFeail"> 여자 보이스 </label>
             </div>
           </div>
-          <section class="theme">
-            <div class="theme-number">테마01</div>
-            <div class="theme-title">테마타이틀테마타이틀테마타이틀 테마타이틀테마타이틀테마타이틀</div>
-            @@for (var i = 1; i < 8; i++) { <div class="theme-day" id="contents`+ i +`">
-              <strong>Day `+ i +`</strong>
-              <p>데이교육설명문구데이교육설명문구데이교육설명문구</p>
+          <div class="theme-wrap">
+            <section class="theme">
+              <div class="theme-number">테마01</div>
+              <div class="theme-title">테마타이틀테마타이틀테마타이틀 테마타이틀테마타이틀테마타이틀</div>
+              @@for (var i = 1; i < 8; i++) { <div class="theme-day" id="contents`+ i +`">
+                <strong>Day `+ i +`</strong>
+                <p>데이교육설명문구데이교육설명문구데이교육설명문구</p>
+          </div>
+          <div class="program-item">
+            <a href="#none" class="program-thumb watched dimed">
+              <!-- 청취 완료 .watched 추가 -->
+              <img src="../assets/images/@thumbnail.png" alt="" />
+              <span class="badge bg-primary">필수</span>
+            </a>
+            <div class="program-title">프로그램제목프로그램제목프로그램멕스스물두자</div>
+            <div class="program-type">오디오 ㅣ 10분</div>
+            <div class="program-desc">데이원컨텐츠간략설명데이원컨텐츠간략설명</div>
+          </div>
+          <div class="program-item">
+            <a href="#none" class="program-thumb dimed">
+              <img src="../assets/images/@thumbnail.png" alt="" />
+              <span class="badge border-primary bg-dark border border-2">보너스</span>
+            </a>
+            <div class="program-title">프로그램제목프로그램제목프로그램멕스스물두자</div>
+            <div class="program-type">오디오 ㅣ 10분</div>
+            <div class="program-desc">데이원컨텐츠간략설명데이원컨텐츠간략설명</div>
+          </div>
+          <div class="program-item">
+            <a href="#none" class="program-thumb lock dimed">
+              <!-- 구독전 .lock 추가 -->
+              <img src="../assets/images/@thumbnail.png" alt="" />
+              <span class="badge bg-primary">필수</span>
+            </a>
+            <div class="program-title">오늘 당신의 하루는 어땠나요. 지금 기록해 볼까요?</div>
+            <div class="program-type">과제</div>
+          </div>
+          <div class="program-item">
+            <a href="#none" class="program-thumb">
+              <img src="../assets/images/@thumbnail.png" alt="" />
+              <span class="badge border-primary bg-dark border border-2">보너스</span>
+            </a>
+            <div class="program-title">데이원체화하기타이틀데이원체화하기타</div>
+            <div class="program-type">체화하기</div>
+            <div class="program-desc">데이원컨텐츠간략설명데이원컨텐츠간략설명</div>
+          </div>
+          }
+          </section>
         </div>
-        <div class="program-item">
-          <a href="#none" class="program-thumb watched dimed">
-            <!-- 청취 완료 .watched 추가 -->
-            <img src="../assets/images/@thumbnail.png" alt="" />
-            <span class="badge bg-primary">필수</span>
-          </a>
-          <div class="program-title">프로그램제목프로그램제목프로그램멕스스물두자</div>
-          <div class="program-type">오디오 ㅣ 10분</div>
-          <div class="program-desc">데이원컨텐츠간략설명데이원컨텐츠간략설명</div>
-        </div>
-        <div class="program-item">
-          <a href="#none" class="program-thumb dimed">
-            <img src="../assets/images/@thumbnail.png" alt="" />
-            <span class="badge border-primary bg-dark border border-2">보너스</span>
-          </a>
-          <div class="program-title">프로그램제목프로그램제목프로그램멕스스물두자</div>
-          <div class="program-type">오디오 ㅣ 10분</div>
-          <div class="program-desc">데이원컨텐츠간략설명데이원컨텐츠간략설명</div>
-        </div>
-        <div class="program-item">
-          <a href="#none" class="program-thumb lock dimed">
-            <!-- 구독전 .lock 추가 -->
-            <img src="../assets/images/@thumbnail.png" alt="" />
-            <span class="badge bg-primary">필수</span>
-          </a>
-          <div class="program-title">오늘 당신의 하루는 어땠나요. 지금 기록해 볼까요?</div>
-          <div class="program-type">과제</div>
-        </div>
-        <div class="program-item">
-          <a href="#none" class="program-thumb">
-            <img src="../assets/images/@thumbnail.png" alt="" />
-            <span class="badge border-primary bg-dark border border-2">보너스</span>
-          </a>
-          <div class="program-title">데이원체화하기타이틀데이원체화하기타</div>
-          <div class="program-type">체화하기</div>
-          <div class="program-desc">데이원컨텐츠간략설명데이원컨텐츠간략설명</div>
-        </div>
-        }
-        </section>
     </div>
     <script>
       /* 첫 진입시 여정맵 show */
@@ -163,8 +165,13 @@
           e.preventDefault();
           document.querySelector(".theme-order .active").classList.remove("active");
           this.parentElement.classList.add("active");
-          document.querySelector(this.getAttribute("href")).scrollIntoView({
-            behavior: "smooth",
+          var target = document.querySelector(this.getAttribute("href"));
+          var targetTop = target.offsetTop;
+          console.log(targetTop);
+          var myScroll = document.querySelector('.theme-wrap');
+          myScroll.scroll({
+            top: targetTop,
+            behavior: 'smooth'
           });
         });
       });
