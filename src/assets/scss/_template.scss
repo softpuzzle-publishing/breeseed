@@ -3,6 +3,7 @@
 .icon-template-pencil{width: 48px;height: 40px;background-image: url('../images/icon-template-pencil.svg');}
 
 article.contents{
+  margin-bottom: 30px;
   section{
     position: relative;padding-bottom: 60px;margin-top: 60px;
     &::after{content: '';display: block;width: 78vw;height: 1px;background: #000;position: absolute;bottom: 0;}
