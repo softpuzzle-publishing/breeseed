@@ -1,88 +1,93 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    @@include('@@webRoot/_include/_head.html')
-  </head>
 
-  <body>
-    <div id="wrap">
-      @@include('@@webRoot/_include/_header.html', { "title": "마이 페이지", "back": "false" })
-      <div id="container">
-        <main id="main">
-          <!-- 실컨텐츠 -->
-          <div class="has-bottom-button">
-            <div class="flex-grow-1">
-              <div class="my-nick"><span>달콤한피클샐러드레싱</span> 님</div>
-              <!-- 마이메뉴 -->
-              <h2 class="menu-title">마이메뉴</h2>
-              <ul class="menu-list">
-                <li><a href="../my/my_info.html">내 계정</a></li>
-                <li><a href="">평점 남기기</a></li>
-                <li><a href="../my/my_history_list.html">구매내역</a></li>
-              </ul>
-              <!-- 알림 -->
-              <h2 class="menu-title m-t-40">알림</h2>
-              <ul class="menu-list">
-                <li>
-                  <label for="alarmPush" class="label">푸시 알림</label>
-                  <div class="form-check form-switch label-empty">
-                    <input class="form-check-input" type="checkbox" value="" id="alarmPush" checked />
-                  </div>
-                </li>
-                <li>
-                  <label for="alarmEvent" class="label">프로모션/이벤트 알림 수신</label>
-                  <div class="form-check form-switch label-empty">
-                    <input class="form-check-input" type="checkbox" value="" id="alarmEvent" />
-                  </div>
-                </li>
-              </ul>
-              <!-- 정보 -->
-              <h2 class="menu-title m-t-40">정보</h2>
-              <ul class="menu-list">
-                <li><a href="../util/terms.html">약관 및 정책</a></li>
-                <li><a href="">오픈소스 라이선스</a></li>
-                <li>
-                  <a href="../util/version.html" class="d-flex justify-content-between align-items-center">
-                    버전정보
-                    <span class="text-primary">1.0.0</span>
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <footer id="footer">
-              <div class="container-fluid">
-                <a href="#none" class="company-info-toggler" data-component="collapse" role="button" aria-expanded="false" aria-controls="toggle-company-info">사업자 정보</a>
-                <script>
-                  document.querySelector(".company-info-toggler").addEventListener("click", function (e) {
-                    e.preventDefault();
-                    var bool = this.getAttribute("aria-expanded");
-                    if (bool === "false") {
-                      this.setAttribute("aria-expanded", "true");
-                    } else {
-                      this.setAttribute("aria-expanded", "false");
-                    }
-                    document.getElementById("toggle-company-info").classList.toggle("show");
-                  });
-                </script>
-                <dl class="company-info collapse" id="toggle-company-info">
-                  <dt>상호</dt>
-                  <dd>(주)메디플러스솔루션</dd>
-                  <dt>주소</dt>
-                  <dd><address>(02880) 서울 성북구 성북로 39, 2층</address></dd>
-                  <dt>사업자등록번호</dt>
-                  <dd>215-87-76985</dd>
-                  <dt>통신판매신고번호</dt>
-                  <dd>제 2019-서울성북-1562 호</dd>
-                </dl>
-                <p class="copyright">© 2022 Medi Plus Solution Co. Ltd. All rights reserved</p>
-              </div>
-            </footer>
+<head>
+  @@include('@@webRoot/_include/_head.html')
+</head>
+
+<body>
+  <div id="wrap">
+    @@include('@@webRoot/_include/_header.html', { "title": "마이 페이지", "back": "false" })
+    <div id="container">
+      <main id="main">
+        <!-- 실컨텐츠 -->
+        <div class="has-bottom-button">
+          <div class="flex-grow-1">
+            <div class="my-nick"><span>달콤한피클샐러드레싱</span> 님</div>
+            <!-- 마이메뉴 -->
+            <h2 class="menu-title">마이메뉴</h2>
+            <ul class="menu-list">
+              <li><a href="../my/my_info.html">내 계정</a></li>
+              <li><a href="">평점 남기기</a></li>
+              <li><a href="../my/my_history_list.html">구매내역</a></li>
+            </ul>
+            <!-- 알림 -->
+            <h2 class="menu-title m-t-40">알림</h2>
+            <ul class="menu-list">
+              <li>
+                <label for="alarmPush" class="label">푸시 알림</label>
+                <div class="form-check form-switch label-empty">
+                  <input class="form-check-input" type="checkbox" value="" id="alarmPush" checked />
+                </div>
+              </li>
+              <li>
+                <label for="alarmEvent" class="label">프로모션/이벤트 알림 수신</label>
+                <div class="form-check form-switch label-empty">
+                  <input class="form-check-input" type="checkbox" value="" id="alarmEvent" />
+                </div>
+              </li>
+            </ul>
+            <!-- 정보 -->
+            <h2 class="menu-title m-t-40">정보</h2>
+            <ul class="menu-list">
+              <li><a href="../util/terms.html">약관 및 정책</a></li>
+              <li><a href="">오픈소스 라이선스</a></li>
+              <li>
+                <a href="../util/version.html" class="d-flex justify-content-between align-items-center">
+                  버전정보
+                  <span class="text-primary">1.0.0</span>
+                </a>
+              </li>
+            </ul>
           </div>
-          <!-- //실컨텐츠 -->
-        </main>
-      </div>
-      @@include('@@webRoot/_include/_menubar.html')
+          <footer id="footer">
+            <div class="container-fluid">
+              <a href="#none" class="company-info-toggler" data-component="collapse" role="button" aria-expanded="false" aria-controls="toggle-company-info">사업자 정보</a>
+              <script>
+                document.querySelector(".company-info-toggler").addEventListener("click", function (e) {
+                  e.preventDefault();
+                  var bool = this.getAttribute("aria-expanded");
+                  if (bool === "false") {
+                    this.setAttribute("aria-expanded", "true");
+                  } else {
+                    this.setAttribute("aria-expanded", "false");
+                  }
+                  document.querySelector("#toggle-company-info").classList.toggle("show");
+                  document.querySelector("#toggle-company-info").scrollIntoView();
+                });
+              </script>
+              <dl class="company-info collapse" id="toggle-company-info">
+                <dt>상호</dt>
+                <dd>(주)메디플러스솔루션</dd>
+                <dt>주소</dt>
+                <dd>
+                  <address>(02880) 서울 성북구 성북로 39, 2층</address>
+                </dd>
+                <dt>사업자등록번호</dt>
+                <dd>215-87-76985</dd>
+                <dt>통신판매신고번호</dt>
+                <dd>제 2019-서울성북-1562 호</dd>
+              </dl>
+              <p class="copyright">© 2022 Medi Plus Solution Co. Ltd. All rights reserved</p>
+            </div>
+          </footer>
+        </div>
+        <!-- //실컨텐츠 -->
+      </main>
     </div>
-    @@include('@@webRoot/_include/_modal.html')
-  </body>
+    @@include('@@webRoot/_include/_menubar.html')
+  </div>
+  @@include('@@webRoot/_include/_modal.html')
+</body>
+
 </html>

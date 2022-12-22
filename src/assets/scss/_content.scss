@@ -106,6 +106,17 @@
     .desc{font-size: 13px;line-height: 1.54;letter-spacing: -0.78px;color: $GRAY_COLOR;margin-top: 6px;margin-bottom: 30px;}
 }
 
+/* html.review-form-html{
+  height: 100%;
+  body{height: 100%;}
+  #wrap{height: 100%;}
+  #container{height: 100%;}
+  #main{height: 100%;}
+  .has-bottom-button{height: auto;min-height: 0;position: relative;}
+  .flex-grow-1{flex-grow: initial !important;}
+  .bottom-btn-area{position: absolute;left: 0;right: 0;bottom: 15px;}
+} */
+
 .intro{
     height: 100vh;position: relative;
     .intro-header{
@@ -445,6 +456,9 @@
 .btn-stage-map{background: url('../images/icon-map.svg') no-repeat 0 0;width: 30px;height: 30px;}
 .btn-grow-seed{
   display: inline-block;background: url('../images/icon-flower.svg') no-repeat 0 0;width: 30px;height: 30px;position: fixed;right: 30px;top: 10px;z-index: $Z_INDEX_GROW_SEED;
+  &.active{
+    &::after{content: '';display: block;width: 10px;height: 10px;border-radius: 50%;background: $DANGER_COLOR;position: absolute;right: 0;top: 0;}
+  }
   @media (max-width: 320px) {
     right: 15px
   }
@@ -560,7 +574,7 @@
   dd + dt{margin-top: 30px;}
 }
 .seed-elements{
-  margin-top: 30px;
+  margin-top: 30px;padding-bottom: 70px;
   &::before{content: '';display: block;width: 100px;height: 2px;background: #000;margin-bottom: 20px;}
   strong{
     display: block;color: $PRIMARY_COLOR;font-size: 24px;letter-spacing: -1.44px;font-weight: 400;
