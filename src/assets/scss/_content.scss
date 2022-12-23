@@ -633,9 +633,9 @@
 }
 
 .map{
-  margin: 0;position: fixed;left: 0;top: 0;bottom: 0;right: 0;z-index: $Z_INDEX_MAP;overflow-y: auto;transition: .6s ease-in-out;transform: translateX(-100%);
-  &.show{transform: translateX(0);}
-  svg{max-width: none;}
+  margin: 0;position: fixed;left: -100vw;top: 0;bottom: 0;right: 0;z-index: $Z_INDEX_MAP;overflow-y: auto;transition: .6s ease-in-out;width: 100vw;overflow-x: hidden;
+  &.show{left: 0;}
+  svg{max-width: none;vertical-align: top;}
   .line {
     stroke: $PRIMARY_COLOR;fill: transparent;stroke-dasharray: 210;stroke-dashoffset: 54;z-index: 2;opacity: 0;
   }
@@ -691,8 +691,8 @@
 }
 
 .map-theme-group{
-  overflow: hidden;
-  > div{height: 100vh;background-color: $PRIMARY_COLOR;background-repeat: no-repeat;background-position: 0 0;background-size: 100% auto;position: relative;}
+  overflow: hidden;background: $PRIMARY_COLOR;
+  > div{height: 100vh;background-color: $PRIMARY_COLOR;background-repeat: no-repeat;background-position: 0 0;background-size: 100% auto;position: relative;overflow: hidden;}
   &.theme-1 .theme-a{background-image: url('../images/bg-map-01-01.svg');}
   &.theme-1 .theme-b{background-image: url('../images/bg-map-01-02.svg');}
   &.theme-2 .theme-a{background-image: url('../images/bg-map-02-01.svg');}
@@ -711,7 +711,7 @@
   .tail{
     position: relative;margin-top: 0 !important;height: 0;
     .pipe-area{bottom: auto;top: -30px;}
-    .pipe{width: 12px;height: calc((100vh - 420px) / 2 + 30px);}
+    .pipe{width: 12px;height: calc((100vh - 419px) / 2 + 30px);}
   }
   .pipe-area{position: absolute;left: 50%;bottom: 30px;transform: translateX(-50%);}
 
@@ -741,7 +741,7 @@
 
   .theme-a{
     .block:nth-of-type(1){
-      .pipe{width: 12px;height: calc((100vh - 420px) / 2 + 30px);}
+      .pipe{width: 12px;height: calc((100vh - 419px) / 2 + 30px);}
     }
   }
   .theme-b{

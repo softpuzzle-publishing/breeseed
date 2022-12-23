@@ -12,7 +12,7 @@
       <main id="main">
         <!-- 실컨텐츠 -->
         @@include('@@webRoot/_include/_map.html')
-        <div class="program">
+        <div class="program show">
           <aside id="aside">
             <div class="sidebar">
               <div class="go-stage-map">
@@ -116,6 +116,23 @@
           </div>
           }
           </section>
+          <div class="modal slide-up" id="modal-grow-up" tabindex="-1">
+            <div class="modal-backdrop" data-component-close="modal"></div>
+            <div class="modal-dialog">
+              <div class="modal-content overflow-visible">
+                <div class="modal-body">
+                  <h1 class="slide-up-title"><span class="text-primary">햇살 비추기</span> 성공</h1>
+                  <div class="grow-up-success grow-up-success-1">
+                    <!-- grow-up-success-1 ~ 4 -->
+                    오늘의 과제도 파이팅 해주세요!
+                  </div>
+                  <div class="m-t-40">
+                    <button type="button" class="btn btn-primary w-100" data-component-close="modal">닫기</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
     </div>
     <script>
