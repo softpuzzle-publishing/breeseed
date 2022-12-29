@@ -217,7 +217,8 @@
 }
 
 .my-nick{
-    background: $PRIMARY_COLOR;font-size: 18px;color: #fff;letter-spacing: -0.72px;border-radius: 10px;padding: 17px 20px;margin-bottom: 30px;
+    background: $PRIMARY_COLOR;font-size: 18px;color: #fff;letter-spacing: -0.72px;border-radius: 10px;padding: 17px 20px;margin-bottom: 30px;display: flex;align-items: center;
+    span{margin-right: 3px;}
 }
 
 .leave-top-text{font-size: 15px;margin-bottom: 10px;letter-spacing: -0.9px;
