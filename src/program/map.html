@@ -2,60 +2,74 @@
 <html lang="ko">
 
 <head>
-    @@include('@@webRoot/_include/_head.html')
+  @@include('@@webRoot/_include/_head.html')
 </head>
 
 <body>
-    <div id="wrap">
+  <div id="wrap">
 
-        <div id="container">
-            <main id="main" class="p-0">
+    <div id="container">
+      <main id="main" class="p-0">
 
-                <!-- 실컨텐츠 -->
-                @@include('@@webRoot/_include/_map.html')
-                <div style="background: #fff;position: fixed;left: 0;top: 0;z-index: 999;padding: 3px;font-size: 12px">
-                  <button id="btn1" style="background-color: #ddd;padding: 3px;">처음 시작</button>
-                  <button id="btn2" style="background-color: #ddd;padding: 3px;">7day 완료</button>
-                </div>
-
-                <script>
-                  /* 처음시작 */
-                  document.querySelector('#btn1').addEventListener('click', function(){
-                    //씨앗에는 .start
-                    document.querySelector('[data-day="0"]').classList.add('start');
-                    //day에는 .filled 추가
-                    document.querySelector('[data-day="1"]').classList.add('filled');
-                    setTimeout(function(){
-                      document.querySelector('.theme-1 .theme-a').scrollIntoView({
-                          behavior: 'smooth'
-                      });
-                    },1500);
-                  });
-
-                  /* 테마 단위로 완료했을 때 */
-                  document.querySelector('#btn2').addEventListener('click', function(){
-                    document.querySelector('.theme-1 .theme-b').scrollIntoView({
-                    });
-                    document.querySelector('[data-day="7"]').setAttribute('data-required','Y');
-                    document.querySelector('[data-day="7"]').setAttribute('data-bonus','N');
-                    document.querySelector('[data-day="7"]').setAttribute('data-today','N');
-                    //4day, 7day, 11day 등 각 섹션 마지막 데이 완료시 tail에 .filled 추가
-                    document.querySelector('[data-day="7"]').nextElementSibling.classList.add('filled');
-                    //섹션 스크롤 이동
-                    setTimeout(function(){
-                      document.querySelector('.theme-2 .theme-a').scrollIntoView({
-                        behavior: 'smooth'
-                      });
-                    },1250);
-                    document.querySelector('[data-day="8"]').classList.add('filled');
-                    document.querySelector('[data-day="8"]').setAttribute('data-today','Y');
-                  });
-                </script>
-                <!-- //실컨텐츠 -->
-
-            </main>
+        <!-- 실컨텐츠 -->
+        @@include('@@webRoot/_include/_map.html')
+        <div style="background: #fff;position: fixed;left: 0;top: 0;z-index: 999;padding: 3px;font-size: 12px">
+          <button id="btn1" style="background-color: #ddd;padding: 3px;">처음 시작</button>
+          <button id="btn2" style="background-color: #ddd;padding: 3px;">14day</button>
         </div>
+
+        <script>
+          /* 처음시작 */
+          document.querySelector('#btn1').addEventListener('click', function () {
+            //씨앗에는 .start
+            document.querySelector('[data-day="0"]').classList.add('start');
+            //day에는 .filled 추가
+            document.querySelector('[data-day="1"]').classList.add('filled');
+            setTimeout(function () {
+              document.querySelector('.theme-1 .theme-a').scrollIntoView({
+                behavior: 'smooth'
+              });
+            }, 1500);
+          });
+
+          /* 테마 단위로 완료했을 때 */
+          const todayElement = document.querySelector('[data-today="Y"]');
+          const today = todayElement.getAttribute('data-day');
+          const todayTheme = todayElement.closest('.map-theme-group');
+          const todayThemeItems = todayTheme.querySelectorAll(".block");
+
+          todayThemeItems.forEach((item) => {
+            if (item === todayElement) {
+              console.log(item);
+              return false;
+            }
+            item.classList.add('filled');
+          });
+
+
+          /* document.querySelector('#btn2').addEventListener('click', function () {
+            document.querySelector('.theme-1 .theme-b').scrollIntoView({
+            });
+            document.querySelector('[data-day="8"]').setAttribute('data-required', 'Y');
+            document.querySelector('[data-day="8"]').setAttribute('data-bonus', 'N');
+            document.querySelector('[data-day="8"]').setAttribute('data-today', 'N');
+            //4day, 7day, 11day 등 각 섹션 마지막 데이 완료시 tail에 .filled 추가
+            document.querySelector('[data-day="8"]').nextElementSibling.classList.add('filled');
+            //섹션 스크롤 이동
+            setTimeout(function () {
+              document.querySelector('.theme-2 .theme-a').scrollIntoView({
+                behavior: 'smooth'
+              });
+            }, 1250);
+            document.querySelector('[data-day="9"]').classList.add('filled');
+            document.querySelector('[data-day="9"]').setAttribute('data-today', 'Y');
+          }); */
+        </script>
+        <!-- //실컨텐츠 -->
+
+      </main>
     </div>
+  </div>
 </body>
 
 </html>
