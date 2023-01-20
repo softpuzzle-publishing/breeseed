@@ -79,6 +79,8 @@ article.contents{
 
 .btn-top{
   width: 60px;height: 60px;position: fixed;bottom: 90px;right: 30px;background: url('../images/icon-top.svg') no-repeat 0 0;background-size: contain;
+  margin-bottom: calc(constant(safe-area-inset-bottom));
+  margin-bottom: calc(env(safe-area-inset-bottom));
   .modal &{
     bottom: 30px;
   }

@@ -15,7 +15,7 @@
         @@include('@@webRoot/_include/_map.html')
         <div style="background: #fff;position: fixed;left: 0;top: 0;z-index: 999;padding: 3px;font-size: 12px">
           <button id="btn1" style="background-color: #ddd;padding: 3px;">처음 시작</button>
-          <button id="btn2" style="background-color: #ddd;padding: 3px;">14day</button>
+          <button id="btn2" style="background-color: #ddd;padding: 3px;">today 14day일 경우</button>
         </div>
 
         <script>
@@ -34,16 +34,54 @@
 
           /* 테마 단위로 완료했을 때 */
           const todayElement = document.querySelector('[data-today="Y"]');
-          const today = todayElement.getAttribute('data-day');
           const todayTheme = todayElement.closest('.map-theme-group');
-          const todayThemeItems = todayTheme.querySelectorAll(".block");
+          const todayThemeB = todayTheme.querySelector('.theme-b');
+          const todayThemeDays = todayTheme.querySelectorAll(".block");
+          const todayBeforeThemes = [];
+          const filledInterval = 500;
 
-          todayThemeItems.forEach((item) => {
-            if (item === todayElement) {
-              console.log(item);
-              return false;
+          //today theme 이전 엘리먼트
+          function getPreviousSiblings(elem) {
+            while (elem = elem.previousElementSibling) {
+              todayBeforeThemes.push(elem);
             }
-            item.classList.add('filled');
+          }
+
+          function todayAnimation() {
+            /* today 이전 날짜 fill */
+            getPreviousSiblings(todayTheme);
+            todayBeforeThemes.forEach((theme) => {
+              theme.querySelectorAll(".block").forEach((day) => {
+                day.classList.add('filled');
+              });
+              theme.querySelectorAll(".seed-wrap").forEach((day) => {
+                day.classList.add('start');
+              });
+            });
+            /* //today 이전 날짜 fill */
+            todayTheme.scrollIntoView({});
+            try {
+              todayThemeDays.forEach((day, idx) => {
+                setTimeout(function () {
+                  day.classList.add('filled');
+                }, idx * filledInterval);
+                console.log(idx);
+                if (idx > 4) {
+                  setTimeout(function () {
+                    todayThemeB.scrollIntoView();
+                  }, (4 * filledInterval) + 850);
+                }
+                if (day === todayElement) {
+                  throw "today equal";
+                }
+              });
+            } catch (e) {
+              console.log('amination end');
+            }
+          }
+
+          document.querySelector('#btn2').addEventListener('click', function () {
+            todayAnimation();
           });
 
 
