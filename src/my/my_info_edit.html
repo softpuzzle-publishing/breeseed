@@ -25,7 +25,7 @@
               <div class="row gx-3 align-items-center">
                 <div class="col">
                   <div class="position-relative">
-                    <input type="text" class="form-control" id="" placeholder="10자 내외, 한글/영문/숫자 포함 입력" value="메디플러스솔루션" maxlength="10" inputmode="text" autocapitalize="off" />
+                    <input type="text" class="form-control" id="" placeholder="10자 내외, 한글/영문/숫자 포함 입력" value="메디플러스솔루션1" maxlength="10" inputmode="text" autocapitalize="off" />
                     <button type="button" class="btn-input-x" aria-label="삭제"><i class="icon-x"></i></button>
                   </div>
                 </div>
@@ -61,6 +61,18 @@
     </div>
   </div>
   @@include('@@webRoot/_include/_modal.html')
+
+  <script>
+    var textFieldInput = document.querySelectorAll(".form-control");
+    textFieldInput.forEach(function (input) {
+      input.addEventListener("focus", function () {
+        document.querySelector(".has-bottom-button").classList.add("min-height-0");
+      });
+      input.addEventListener("blur", function () {
+        document.querySelector(".has-bottom-button").classList.remove("min-height-0");
+      });
+    });
+  </script>
 </body>
 
 </html>

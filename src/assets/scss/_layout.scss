@@ -95,6 +95,9 @@ body{overflow-x: hidden;}
   //100vh - header height - main's padding-top
   min-height: calc(100vh - $HEADER_HEIGHT - 30px - constant(safe-area-inset-top));
   min-height: calc(100vh - $HEADER_HEIGHT - 30px - env(safe-area-inset-top));
+  &.min-height-0{
+    & > .flex-grow-1{flex-grow: initial !important;}
+  }
 }
 
 .bottom-btn-area{
