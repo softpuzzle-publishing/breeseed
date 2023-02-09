@@ -103,7 +103,7 @@ function server(done) {
     root: "./dist/",
     livereload: true,
     host: "192.168.0.138",
-    port: 9400,
+    port: 9401,
   });
 
   done();

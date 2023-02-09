@@ -67,6 +67,7 @@
     textFieldInput.forEach(function (input) {
       input.addEventListener("focus", function () {
         document.querySelector(".has-bottom-button").classList.add("min-height-0");
+        setTimeout(() => window.scrollTo(0, 0), 200);
       });
       input.addEventListener("blur", function () {
         document.querySelector(".has-bottom-button").classList.remove("min-height-0");

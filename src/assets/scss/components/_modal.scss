@@ -14,6 +14,11 @@
 
 .modal-content { position: relative; display: flex; flex-direction: column; width: 100%; pointer-events: auto; background-color: #fff; background-clip: padding-box; border: 1px solid rgba(0, 0, 0, 0.2); border-radius: 10px; outline: 0; max-height: 100%; overflow: hidden; }
 
+.modal-overflow-y-auto{
+  overflow-x: hidden;
+  max-height: calc(100% - 40px);overflow: auto;
+}
+
 .modal-backdrop {
   position: fixed; top: 0; left: 0; z-index: -1; width: 100vw; height: 100vh; background-color: rgba(0,0,0,0.7);
 }
@@ -81,7 +86,15 @@
       max-width: 250px;
     }
   }
+  .modal-header{
+    .btn-close{right: 20px;}
+    & + .modal-body{padding: 10px 20px;}
+  }
+  .modal-content{width: 100%;margin: 30px auto;}
   .modal-body { padding-top: 40px; padding-bottom: 20px; }
+  .modal-overflow-y-auto{
+    max-height: calc(100vh - 200px);
+  }
   .modal-footer {
     padding: 0;
     .btn { border-color: transparent !important; background: transparent !important; }
@@ -106,32 +119,13 @@
     }
   }
   .modal-footer{background: #fff;}
-  .modal-overflow-y-auto{
-    overflow-x: hidden;
-    max-height: calc(100% - 40px);overflow: auto;
-  }
   &.show {
     .modal-content { opacity: 1; transform: translateY(0); }
   }
 }
 
-.modal.normal{
-  .modal-header{
-    .btn-close{right: 20px;}
-  }
-  .modal-content{max-width: 315px;width: 100%;margin: 30px auto;}
-  .modal-body{padding: 10px 20px;}
-  .modal-overflow-y-auto{
-    overflow-x: hidden;
-    max-height: calc(100vh - 190px);overflow: auto;
-  }
-  .modal-footer {
-    padding: 0;
-    .btn { border-color: transparent !important; background: transparent !important; }
-  }
-  .notice-title{margin-bottom: 10px;font-size: 18px;letter-spacing: -.72px;text-align: center;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;max-height:2.8em;}
-  .notice-desc{font-size: 15px;letter-spacing: -0.9px}
-}
+.notice-title{margin-bottom: 15px;font-size: 18px;letter-spacing: -.72px;text-align: center;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;max-height:2.8em;}
+.notice-desc{font-size: 15px;letter-spacing: -0.9px}
 
 .alert-text {
   text-align: center; font-size: .9375rem; letter-spacing: -0.9px; word-break: keep-all;

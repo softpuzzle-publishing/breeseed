@@ -68,7 +68,7 @@ body{overflow-x: hidden;}
   }
 }
 
-#footer{
+.company-info-wrap{
   background: #404040; margin-left: -30px; margin-right: -30px; color: #fff; margin-bottom: -30px; margin-top: 20px;
   $padding-bottom: 90px;
   padding-bottom: $padding-bottom;
@@ -113,4 +113,15 @@ body{overflow-x: hidden;}
   padding-bottom: $padding-bottom;
   padding-bottom: calc(constant(safe-area-inset-bottom) + $padding-bottom);
   padding-bottom: calc(env(safe-area-inset-bottom) + $padding-bottom);
+}
+
+body.is-program{
+  height: 100vh;overflow: hidden;overscroll-behavior: none;width: 100vw;
+  #header + #container{height: 100vh;}
+  #main{
+    height: calc(100vh - 50px);background: red;
+    $padding-top: 30px;
+    padding-top: calc(constant(safe-area-inset-top) + $padding-top);
+    padding-top: calc(env(safe-area-inset-top) + $padding-top);
+  }
 }

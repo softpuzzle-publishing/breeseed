@@ -676,7 +676,13 @@
                   <span class="tit">마음챙김 바로 듣기</span>
                 </span>
                 <span class="button">
-                  <i class="icon-play"></i>
+                  <!-- 오디오 재생 아이콘 -->
+                  <i class="icon-play">
+                    <audio ref="sampleM" src="https://devstream.breeseed.com/stream/audio/pro_5week_sample_M.m3u8" />
+                  </i>
+                  <!-- 오디오 일시정지 아이콘 -->
+                  <i class="icon-pause"></i>
+
                 </span>
               </a>
               <a href="#none" class="sample-audio">
@@ -689,7 +695,7 @@
                   <span class="tit">마음챙김 바로 듣기</span>
                 </span>
                 <span class="button">
-                  <i class="icon-play"></i>
+                  <i class="icon-pause"></i>
                 </span>
               </a>
             </div>
@@ -841,7 +847,7 @@
 </div>
 
 <!-- modal : 공지사항 sample -->
-<div class="modal normal" id="modal-notice" tabindex="-1">
+<div class="modal alert" id="modal-notice" tabindex="-1">
   <div class="modal-backdrop" data-component-close="modal"></div>
   <div class="modal-dialog">
     <div class="modal-content">

@@ -5,7 +5,7 @@
   @@include('@@webRoot/_include/_head.html')
 </head>
 
-<body class="overflow-hidden">
+<body>
   <div id="wrap">
     @@include('@@webRoot/_include/_header.html', { "title": "프로그램명", "back" : "false" })
     <div id="container">
@@ -245,6 +245,10 @@
   @@include('@@webRoot/_include/_menubar.html')
   </div>
   @@include('@@webRoot/_include/_modal.html')
+
+  <script>
+    document.querySelector("body").classList.add("is-program");
+  </script>
 </body>
 
 </html>
