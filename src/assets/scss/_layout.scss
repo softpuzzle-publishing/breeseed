@@ -119,9 +119,9 @@ body.is-program{
   height: 100vh;overflow: hidden;overscroll-behavior: none;width: 100vw;
   #header + #container{height: 100vh;}
   #main{
-    height: calc(100vh - 50px);background: red;
-    $padding-top: 30px;
-    padding-top: calc(constant(safe-area-inset-top) + $padding-top);
-    padding-top: calc(env(safe-area-inset-top) + $padding-top);
+    padding: 0;position: relative;
+    height: calc(100vh - 50px - 60px);
+    height: calc(100vh - 50px - 60px - constant(safe-area-inset-top) - constant(safe-area-inset-bottom));
+    height: calc(100vh - 50px - 60px - env(safe-area-inset-top) - env(safe-area-inset-bottom));
   }
 }

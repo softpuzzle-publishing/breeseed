@@ -5,7 +5,7 @@
   @@include('@@webRoot/_include/_head.html')
 </head>
 
-<body>
+<body class="is-program">
   <div id="wrap">
     @@include('@@webRoot/_include/_header.html', { "title": "프로그램명", "back" : "false" })
     <div id="container">
@@ -173,6 +173,7 @@
       /* 명상 홈 이동 버튼 */
       document.querySelector(".btn-program-back").addEventListener("click", function () {
         //document.querySelector('.program').classList.remove('show');
+        console.log(43);
         document.querySelector(".map").classList.remove("show");
       });
 
@@ -245,7 +246,6 @@
   @@include('@@webRoot/_include/_menubar.html')
   </div>
   @@include('@@webRoot/_include/_modal.html')
-
   <script>
     document.querySelector("body").classList.add("is-program");
   </script>
