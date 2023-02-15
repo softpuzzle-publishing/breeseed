@@ -24,15 +24,22 @@
               <!-- <div class="fake-textarea" contenteditable="true">내가 등록한 리뷰 내용내가 등록한 리뷰 내용내가 등록한 리뷰 내용내가 등록한 리뷰 내용 내가 등록한 리뷰 내용내가 등록한 리뷰 내용</div> -->
               <textarea class="form-control" rows="3">과제설명다설줄과제설명다설줄과제설명다설줄과제설명다설줄과제설명다설줄과제설명다설줄과제설명다설줄과제설명다설줄과제설명다설줄과제설명다설줄과제설명다설줄과제설명다설줄과제설명다설줄과제설명다설줄과제설명다설줄과제설명다설줄과제설명다설줄과제설명다설줄과제설명글자수백자내외권장</textarea>
               <textarea class="form-control" rows="3" disabled>과제설명다설줄과제설명다설줄과제설명다설줄과제설명다설줄과제설명다설줄과제설명다설줄과제설명다설줄과제설명다설줄과제설명다설줄과제설명다설줄과제설명다설줄과제설명다설줄과제설명다설줄과제설명다설줄과제설명다설줄과제설명다설줄과제설명다설줄과제설명다설줄과제설명글자수백자내외권장</textarea>
-              <!-- <script>
+              <script>
                 const textarea = document.querySelector('.review-form textarea');
                 textarea.addEventListener('focus', function () {
                   document.querySelector('.has-bottom-button').classList.add('min-height-0');
+                  setTimeout(() => window.scrollTo(
+                    {
+                      top: 0,
+                      left: 0,
+                      behavior: 'smooth'
+                    }), 150
+                  );
                 });
                 textarea.addEventListener('blur', function () {
                   document.querySelector('.has-bottom-button').classList.remove('min-height-0');
                 })
-              </script> -->
+              </script>
               <div class="length-count">
                 <strong>0</strong> / 250
               </div>

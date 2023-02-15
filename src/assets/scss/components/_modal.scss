@@ -31,7 +31,7 @@
     padding-top: 14px;
   }
   .btn-close {
-    position: absolute; right: 30px; top: 50%; transform: translateY(-50%);
+    position: absolute; right: 30px; top: 10px;
     @media(max-width:320px) {
       right: 10px; background-size: 1.5rem;
     }
@@ -69,7 +69,10 @@
     padding-top: calc(constant(safe-area-inset-top));
     padding-top: calc(env(safe-area-inset-top));
   }
-  .modal-header { border-radius: 0; }
+  .modal-header {
+    border-radius: 0;
+    .modal-title { padding: 0 25px; }
+  }
   .modal-body { overflow-y: auto;height: calc(100% - 1rem); }
   .modal-footer {
     border-radius: 0;
