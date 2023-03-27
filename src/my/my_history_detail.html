@@ -2,90 +2,96 @@
 <html lang="ko">
 
 <head>
-    @@include('@@webRoot/_include/_head.html')
+  @@include('@@webRoot/_include/_head.html')
 </head>
 
 <body>
-    <div id="wrap">
+  <div id="wrap">
 
-        @@include('@@webRoot/_include/_header.html', {
-            "title": "구매 상세",
-        })
-        <div id="container">
-            <main id="main">
+    @@include('@@webRoot/_include/_header.html', {
+    "title": "구매 상세",
+    })
+    <div id="container">
+      <main id="main">
 
-                <!-- 실컨텐츠 -->
-                <div class="page-bottom-padding">
-                    <div class="program-item program-item-history border-bottom-0">
-                        <a href="my_history_detail.html">
-                            <div class="program-thumb">
-                                <img src="../assets/images/@thumbnail.png" alt="">
-                            </div>
-                            <div class="program-info">
-                                <div class="program-date">
-                                    <span>2022-05-13</span>
-                                    <span class="text-primary">결제완료</span>
-                                </div>
-                                <div class="program-title">프로그램제목프로그램제목프로그램멕스스물두자</div>
-                                <div class="program-code">구매코드 : MXG0BK7D4A</div>
-                                <div class="program-price">9,900원</div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="payment-info">
-                        <div class="box">
-                            <h2 class="m-b-10">결제정보</h2>
-                            <dl>
-                                <dt>상품 가격</dt>
-                                <dd>9,900원</dd>
-                            </dl>
-                            <div class="d-flex justify-content-between align-items-center m-b-10">
-                                <h2>결제금액</h2>
-                                <div>9,900원</div>
-                            </div>
-                            <dl>
-                                <dt>결제방법</dt>
-                                <dd>Play 스토어 / 인앱결제</dd>
-                            </dl>
-                        </div>
-                    </div>
-                    <div class="payment-guide">
-                        <strong>프로그램 환불 요청하기</strong>
-                        <!-- case1. google play -->
-                        <p class="text-desc">
-                            Google Play를 통해 프로그램을 구매한 경우 <br>
-                            <a href="" class="text-primary text-underline">Play 스토어를 통해 환불을 요청</a>해야합니다. <br>
-                            링크 접속 &gt; 주문내역 &gt; 취소할 내역 선택 &gt; 환불요청 <br>
-                            <span class="text-danger">48시간이 지나지 않았다면 Google Play를 통해 환불을 요청할 수 있습니다. 자세한 내용은 <a href="" class="text-primary text-underline">Google Play 환불정책</a>을 확인해주세요.</span>
-                        </p>
-                        <!-- case2. apple store -->
-                        <p class="text-desc">
-                            Apple 스토어에서 구매한 경우 <br>
-                            <a href="" class="text-primary text-underline">Apple 지원팀에 문의</a>해주세요. <br>
-                            앱스토어 &gt; 계정 &gt; 구입내역 &gt; 취소할 내역 선택 &gt; 환불요청 <br>
-                            <span class="text-danger">7일 이내 구매를 취소할 수 있으나, 디지털 콘텐츠의 경우 전자상거래법에 따라 그 권리가 제한될 수 있습니다. 자세한 내용은 <a href="" class="text-primary text-underline">Apple 미디어 서비스 이용 약관</a>을 확인해주세요.</span>
-                        </p>
-                        <ul class="dot-list m-t-30">
-                            <li>구매 후 7일 이내, 환불이 가능합니다.</li>
-                            <li>구매 후 7일 경과시, 컨텐츠 이용여부와 상관없이 환불이 불가합니다.</li>
-                        </ul>
-                    </div>
-                    <div class="feedback invalid d-block m-t-10">2022-05-13 환불완료</div>
-                    <div class="feedback valid d-block m-t-10">2022-05-13 구매후 7일 경과</div>
-                    <div class="refund-reason">
-                        <h2>환불 사유</h2>
-                        <div class="box">
-                          환불 사유 작성시 노출
-                        </div>
-                    </div>
+        <!-- 실컨텐츠 -->
+        <div class="page-bottom-padding">
+          <div class="program-item program-item-history border-bottom-0">
+            <a href="my_history_detail.html">
+              <div class="program-thumb">
+                <img src="../assets/images/@thumbnail.png" alt="">
+              </div>
+              <div class="program-info">
+                <div class="program-date">
+                  <span>2022-05-13</span>
+                  <span class="text-primary">결제완료</span>
                 </div>
-                <!-- //실컨텐츠 -->
-
-            </main>
+                <div class="program-title">프로그램제목프로그램제목프로그램멕스스물두자</div>
+                <div class="program-code">구매코드 : MXG0BK7D4A</div>
+                <div class="program-price">9,900원 <span class="v-flag-badge"><i>70% 할인</i></span></div>
+              </div>
+            </a>
+          </div>
+          <div class="payment-info">
+            <div class="box">
+              <h2 class="m-b-10">결제정보</h2>
+              <dl>
+                <dt>상품 가격</dt>
+                <dd>9,900원</dd>
+              </dl>
+              <dl>
+                <dt>할인 가격</dt>
+                <dd>9,900원</dd>
+              </dl>
+              <div class="divider"></div>
+              <div class="d-flex justify-content-between align-items-center m-b-10">
+                <h2>결제금액</h2>
+                <strong>9,900원</strong>
+              </div>
+              <dl>
+                <dt>결제방법</dt>
+                <dd>Play 스토어 / 인앱결제</dd>
+              </dl>
+            </div>
+          </div>
+          <div class="text-desc m-t-10">2023.10.27 - 2023.12.27 (이용기간 000일)</div>
+          <div class="payment-guide">
+            <strong>프로그램 환불 요청하기</strong>
+            <!-- case1. google play -->
+            <p class="text-desc">
+              Google Play를 통해 프로그램을 구매한 경우 <br>
+              <a href="" class="text-primary text-underline">Play 스토어를 통해 환불을 요청</a>해야합니다. <br>
+              링크 접속 &gt; 주문내역 &gt; 취소할 내역 선택 &gt; 환불요청 <br>
+              <span class="text-danger">48시간이 지나지 않았다면 Google Play를 통해 환불을 요청할 수 있습니다. 자세한 내용은 <a href="" class="text-primary text-underline">Google Play 환불정책</a>을 확인해주세요.</span>
+            </p>
+            <!-- case2. apple store -->
+            <p class="text-desc">
+              Apple 스토어에서 구매한 경우 <br>
+              <a href="" class="text-primary text-underline">Apple 지원팀에 문의</a>해주세요. <br>
+              앱스토어 &gt; 계정 &gt; 구입내역 &gt; 취소할 내역 선택 &gt; 환불요청 <br>
+              <span class="text-danger">7일 이내 구매를 취소할 수 있으나, 디지털 콘텐츠의 경우 전자상거래법에 따라 그 권리가 제한될 수 있습니다. 자세한 내용은 <a href="" class="text-primary text-underline">Apple 미디어 서비스 이용 약관</a>을 확인해주세요.</span>
+            </p>
+            <ul class="dot-list m-t-30">
+              <li>구매 후 7일 이내, 환불이 가능합니다.</li>
+              <li>구매 후 7일 경과시, 컨텐츠 이용여부와 상관없이 환불이 불가합니다.</li>
+            </ul>
+          </div>
+          <div class="feedback invalid d-block m-t-10">2022-05-13 환불완료</div>
+          <div class="feedback valid d-block m-t-10">2022-05-13 구매후 7일 경과</div>
+          <div class="refund-reason">
+            <h2>환불 사유</h2>
+            <div class="box">
+              환불 사유 작성시 노출
+            </div>
+          </div>
         </div>
+        <!-- //실컨텐츠 -->
 
+      </main>
     </div>
-    @@include('@@webRoot/_include/_modal.html')
+
+  </div>
+  @@include('@@webRoot/_include/_modal.html')
 </body>
 
 </html>

@@ -260,13 +260,15 @@ padding-bottom: calc(env(safe-area-inset-bottom) + $padding-bottom);
 
 .payment-info{
   margin-top: -10px;font-size: 15px;
-  h2{font-size: 15px;letter-spacing: -0.9px;margin-bottom: 0;}
+  h2{font-size: 15px;line-height: 1.4;letter-spacing: -0.9px;margin-bottom: 0;color: #000;}
+  strong{font-weight: 400;color: #000;display: block;}
   dl{
-      font-size: 13px;color: $GRAY_COLOR;border-bottom: 1px solid $BORDER_COLOR;margin-bottom: 10px;padding-bottom: 10px;
-      dt{clear: left;float: left;}
-      dd{text-align: right;}
-      &:last-of-type{border-bottom: 0;padding-bottom: 0;margin-bottom: 0;}
+    font-size: 13px;color: $GRAY_COLOR;
+    dt{clear: left;float: left;}
+    dd{text-align: right;}
+    & + dl{margin-top: 10px;}
   }
+  .divider{width: 100%;height: 1px;background: $BORDER_COLOR;margin: 16px 0 10px;}
 }
 
 .payment-guide{
@@ -298,113 +300,121 @@ span{font-size: 18px;margin-left: 4px;}
 }
 
 .program-intro{
-$padding-bottom: 76px;
-padding-bottom: $padding-bottom;
-padding-bottom: calc(constant(safe-area-inset-bottom) + $padding-bottom);
-padding-bottom: calc(env(safe-area-inset-bottom) + $padding-bottom);
-.section + .section{margin-top: 60px;}
-.image{text-align: center;}
-.box{border-radius: 0;}
-.who-needs{
-  li{
-    background-repeat: no-repeat;background-position: 0 0;background-size: cover;color: #beffcd;font-size: 15px;width: 100%;min-height: 97px;padding: 20px;display: flex;align-items: center;
-    &:nth-child(1){background-image: url('../images/bg-program-intro-1.png');}
-    &:nth-child(2){background-image: url('../images/bg-program-intro-2.png');}
-    &:nth-child(3){background-image: url('../images/bg-program-intro-3.png');}
-    &:nth-child(4){background-image: url('../images/bg-program-intro-4.png');}
-    &:nth-child(5){background-image: url('../images/bg-program-intro-5.png');}
-    & + li{margin-top: 10px;}
-  }
-}
-.program-intro-theme{
-  margin-top: 60px;
-  li{
-    padding-left: 40px;position: relative;padding-bottom: 40px;
-    &::before{content: '';width: 1px;height: 100%;background: $PRIMARY_COLOR;position: absolute;left: 9.5px;top: 0;}
-    &:last-of-type{
-      padding-bottom: 0;
-      &::before{display: none;}
-    }
-  }
-  .box{
-    position: relative;
-    &::before{content: '';display: block;width: 20px;height: 20px;border-radius: 50%;background-color: $PRIMARY_COLOR;position: absolute;left: -40px;top: 0;}
-    &::after{content: '';display: block;width: 10px;height: 10px;border-radius: 50%;background: #fff;position: absolute;left: -35px;top: 5px;}
-  }
-  .week{font-size: 13px;color: $GRAY_COLOR;}
-  .number{font-size: 15px;color: $DARK_COLOR;margin-top: 10px;}
-  .title{font-size: 18px;color: $PRIMARY_COLOR;}
-  .desc{font-size: 13px;color: $GRAY_COLOR;margin-top: 6px;}
-}
-.section.bg-primary{
-  padding: 0;margin-left: -30px;margin-right: -30px;
-  @media (max-width: 320px) {
-    margin-left: -15px;margin-right: -15px;
-  }
-  .ready-for-you{
-    padding: 60px 30px 0;background: url('../images/bg-program-intro-garden.svg') 0 100% no-repeat;background-size: 100% auto;
-    @media (max-width: 320px) {
-      padding-left: 15px;padding-right: 15px;
-    }
-  }
-  .experience{
-    padding: 40px 30px;background: #339349;
-    @media (max-width: 320px) {
-      padding-left: 15px;padding-right: 15px;
-    }
-    p{text-align: center;font-size: 18px;color: #fff;margin-bottom: 20px;}
-    .sample-audio{
-      background: #fff;border-radius: 20px;display: flex;align-items: center; padding: 10px;max-width: 318px;margin: 0 auto;
-      & + .sample-audio{margin-top: 15px;}
-      .thumb{flex: 0 0 60px}
-      .info{
-        margin: 0 10px;flex-grow: 1;
-        .tit{display: block;font-size: 18px;margin-top: 5px;}
-        .voice{font-size: 15px;vertical-align: middle;}
-      }
-      .button{flex: 0 0 38px;width: 38px;height: 38px;background: #000;border-radius: 50%;display: flex;align-items: center;justify-content: center;margin-right: 13px;}
-      @media (max-width: 320px) {
-        .thumb{flex: 0 0 50px;}
-        .info .tit{font-size: 16px;}
-        .button{margin-right: 0;}
-      }
-    }
-  }
-}
-.section-last{
-  background: #f8f8f8;margin-left: -30px;margin-right: -30px;margin-bottom: -30px;padding: 40px 30px;
-  @media (max-width: 320px) {
-    margin-left: -15px;margin-right: -15px;padding-left: 15px;padding-right: 15px;
-  }
-  .program-intro-guide{
+  $padding-bottom: 76px;
+  padding-bottom: $padding-bottom;
+  padding-bottom: calc(constant(safe-area-inset-bottom) + $padding-bottom);
+  padding-bottom: calc(env(safe-area-inset-bottom) + $padding-bottom);
+  .section + .section{margin-top: 60px;}
+  .image{text-align: center;}
+  .box{border-radius: 0;}
+  .who-needs{
     li{
-      position: relative;padding-left: 14px;
-      &::before{content: '';width: 6px;height: 6px;background: #000;border-radius: 50%;position: absolute;left: 0;top: 8px;}
-      & + li{margin-top: 20px;}
+      background-repeat: no-repeat;background-position: 0 0;background-size: cover;color: #beffcd;font-size: 15px;width: 100%;min-height: 97px;padding: 20px;display: flex;align-items: center;
+      &:nth-child(1){background-image: url('../images/bg-program-intro-1.png');}
+      &:nth-child(2){background-image: url('../images/bg-program-intro-2.png');}
+      &:nth-child(3){background-image: url('../images/bg-program-intro-3.png');}
+      &:nth-child(4){background-image: url('../images/bg-program-intro-4.png');}
+      &:nth-child(5){background-image: url('../images/bg-program-intro-5.png');}
+      & + li{margin-top: 10px;}
     }
   }
-  .links{
-    margin-top: 35px;
-    > div{margin-bottom: 20px;}
-    a{text-decoration: underline;font-size: 18px;}
+  .program-intro-theme{
+    margin-top: 60px;
+    li{
+      padding-left: 40px;position: relative;padding-bottom: 40px;
+      &::before{content: '';width: 1px;height: 100%;background: $PRIMARY_COLOR;position: absolute;left: 9.5px;top: 0;}
+      &:last-of-type{
+        padding-bottom: 0;
+        &::before{display: none;}
+      }
+    }
+    .box{
+      position: relative;
+      &::before{content: '';display: block;width: 20px;height: 20px;border-radius: 50%;background-color: $PRIMARY_COLOR;position: absolute;left: -40px;top: 0;}
+      &::after{content: '';display: block;width: 10px;height: 10px;border-radius: 50%;background: #fff;position: absolute;left: -35px;top: 5px;}
+    }
+    .week{font-size: 13px;color: $GRAY_COLOR;}
+    .number{font-size: 15px;color: $DARK_COLOR;margin-top: 10px;}
+    .title{font-size: 18px;color: $PRIMARY_COLOR;}
+    .desc{font-size: 13px;color: $GRAY_COLOR;margin-top: 6px;}
   }
-}
-.program-intro-price{
-  background: $PRIMARY_COLOR;height: 76px;position: fixed;bottom: 0;left: 0;right: 0;z-index: 10;display: flex;justify-content: space-between;align-items: center;box-sizing: content-box;
-  padding-left: 30px;padding-right: 30px;
-  padding-bottom: calc(constant(safe-area-inset-bottom));
-  padding-bottom: calc(env(safe-area-inset-bottom));
-  @media (max-width: 320px) {
-    padding-left: 15px;padding-right: 15px;
+  .section.bg-primary{
+    padding: 0;margin-left: -30px;margin-right: -30px;
+    @media (max-width: 320px) {
+      margin-left: -15px;margin-right: -15px;
+    }
+    .ready-for-you{
+      padding: 60px 30px 0;background: url('../images/bg-program-intro-garden.svg') 0 100% no-repeat;background-size: 100% auto;
+      @media (max-width: 320px) {
+        padding-left: 15px;padding-right: 15px;
+      }
+    }
+    .experience{
+      padding: 40px 30px;background: #339349;
+      @media (max-width: 320px) {
+        padding-left: 15px;padding-right: 15px;
+      }
+      p{text-align: center;font-size: 18px;color: #fff;margin-bottom: 20px;}
+      .sample-audio{
+        background: #fff;border-radius: 20px;display: flex;align-items: center; padding: 10px;max-width: 318px;margin: 0 auto;
+        & + .sample-audio{margin-top: 15px;}
+        .thumb{flex: 0 0 60px}
+        .info{
+          margin: 0 10px;flex-grow: 1;
+          .tit{display: block;font-size: 18px;margin-top: 5px;}
+          .voice{font-size: 15px;vertical-align: middle;}
+        }
+        .button{flex: 0 0 38px;width: 38px;height: 38px;background: #000;border-radius: 50%;display: flex;align-items: center;justify-content: center;margin-right: 13px;}
+        @media (max-width: 320px) {
+          .thumb{flex: 0 0 50px;}
+          .info .tit{font-size: 16px;}
+          .button{margin-right: 0;}
+        }
+      }
+    }
   }
-  .text{transform: translateY(-2px);}
-  .text-1{
-    font-size: 13px;color: #d1ffdc;
-    &::after{content: '';display: inline-block;width: 25px;height: 25px;vertical-align: bottom;background: url('../images/icon-butterfly.svg') no-repeat 0 0;margin-left: 4px;}
+  .section-last{
+    background: #f8f8f8;margin-left: -30px;margin-right: -30px;margin-bottom: -30px;padding: 40px 30px;
+    @media (max-width: 320px) {
+      margin-left: -15px;margin-right: -15px;padding-left: 15px;padding-right: 15px;
+    }
+    .program-intro-guide{
+      li{
+        position: relative;padding-left: 14px;
+        &::before{content: '';width: 6px;height: 6px;background: #000;border-radius: 50%;position: absolute;left: 0;top: 8px;}
+        & + li{margin-top: 20px;}
+      }
+    }
+    .links{
+      margin-top: 35px;
+      > div{margin-bottom: 20px;}
+      a{text-decoration: underline;font-size: 18px;}
+    }
   }
-  .text-2{font-size: 15px;margin-top: 2px;color: #fff;}
-  .price{font-size: 28px;color: #fff;}
-}
+  .program-intro-price{
+    background: $PRIMARY_COLOR;height: 76px;position: fixed;bottom: 0;left: 0;right: 0;z-index: 10;display: flex;justify-content: space-between;align-items: center;box-shadow: 0 -6px 6px 0 rgba(0, 0, 0, 0.16);box-sizing: content-box;
+    padding-left: 30px;padding-right: 30px;
+    padding-bottom: calc(constant(safe-area-inset-bottom));
+    padding-bottom: calc(env(safe-area-inset-bottom));
+    @media (max-width: 320px) {
+      padding-left: 15px;padding-right: 15px;
+    }
+    .text{transform: translateY(-2px);}
+    .text-1{
+      font-size: 13px;color: #d1ffdc;
+      &::after{content: '';display: inline-block;width: 25px;height: 25px;vertical-align: bottom;background: url('../images/icon-butterfly.svg') no-repeat 0 0;margin-left: 4px;}
+    }
+    .text-2{font-size: 15px;margin-top: 2px;color: #fff;}
+    .price{
+      position: relative;
+      .final{font-size: 28px;color: #fff;display: block;text-align: right;font-weight: 900;line-height: 1.2;padding-top: 2px;}
+      .discount{
+        del{font-size: 13px;letter-spacing: 00.78px;color: #97ebaa;}
+        em{font-size: 13px;font-weight: 700;color: #ffeb00;}
+      }
+      .tooltip{background: url('../images/bg-tooltip.svg') no-repeat 0 0;width: 162px;height: 56px;color: #000;color: #890404;font-size: 13px;font-weight: 700;position: absolute;right: -11px;top: -42px;text-align: center;padding: 13px 0 0;}
+    }
+  }
 }
 
 .sidebar{

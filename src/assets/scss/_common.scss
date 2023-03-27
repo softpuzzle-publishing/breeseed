@@ -91,7 +91,10 @@
         span + span::before{content: '|';color: $GRAY_COLOR;margin: 0 6px;}
     }
     .program-code{font-size: 13px;color: $GRAY_COLOR;margin-top: 5px;}
-    .program-price{font-size: 15px;margin-top: 4px;}
+    .program-price{
+      font-size: 15px;margin-top: 4px;
+      .v-flag-badge{transform: translateY(-1px);margin-left: 5px;}
+    }
     .feedback{margin-top: 10px;}
 }
 

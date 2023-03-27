@@ -85,6 +85,9 @@
           </div>
         </div>
         <script>
+          document.addEventListener("DOMContentLoaded", function (event) {
+            document.getElementById('modal-inactive-account').classList.add('show')
+          });
           /* 스크롤 내릴때 상단 effect */
           const $background = document.querySelector(".back-area");
           let opacity;

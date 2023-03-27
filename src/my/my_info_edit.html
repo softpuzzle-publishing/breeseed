@@ -66,11 +66,17 @@
     var textFieldInput = document.querySelectorAll(".form-control");
     textFieldInput.forEach(function (input) {
       input.addEventListener("focus", function () {
-        document.querySelector(".has-bottom-button").classList.add("min-height-0");
-        setTimeout(() => window.scrollTo(0, 0), 200);
+        /* document.querySelector(".has-bottom-button").classList.add("min-height-0"); */
+        /* setTimeout(() => window.scrollTo(
+          {
+            top: 0,
+            left: 0,
+            behavior: 'smooth'
+          }), 160
+        ); */
       });
       input.addEventListener("blur", function () {
-        document.querySelector(".has-bottom-button").classList.remove("min-height-0");
+        /* document.querySelector(".has-bottom-button").classList.remove("min-height-0"); */
       });
     });
   </script>
